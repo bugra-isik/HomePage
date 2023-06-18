@@ -6,11 +6,14 @@ import Main from "./components/Main";
 import Nav from "./components/Nav";
 import MainContext, { useState } from "./context/Context";
 
+
 export default function Page() {
   const [data, setData] = useState({
     theme: "-dark",
     logo: "/logodark.png",
-    switchColor:"#94999e"
+    switchColor: "#94999e",
+    nav: { anasayfa: "zort" },
+    mainColor:"#1b1d1e"
   });
   return (
     <MainContext.Provider value={{ data, setData }}>
@@ -21,6 +24,7 @@ export default function Page() {
               <Nav />
               <Main />
               <Footer />
+              
             </div>
           </div>
         </div>
