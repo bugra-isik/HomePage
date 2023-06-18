@@ -31,7 +31,7 @@ export default function Nav() {
         <ul style={{alignSelf:"center"}}>
           <li>
             <a className={`a${data.theme}`} href="">
-              Anasayfa
+              Anasayfa Kaka
             </a>
           </li>
           <li>
