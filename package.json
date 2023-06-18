@@ -6,7 +6,8 @@
     "dev": "next dev -p 8080",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -19,6 +20,8 @@
     "react-icons": "^4.9.0"
   },
   "devDependencies": {
+    "eslint": "8.43.0",
+    "eslint-config-next": "13.4.6",
     "sass": "^1.63.3"
   }
 }
