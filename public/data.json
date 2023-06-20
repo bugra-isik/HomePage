@@ -1,0 +1,16 @@
+{
+  "theme": "-dark",
+  "logo": "/logodark.png",
+  "switchColor": "#94999e",
+  "mainColor": "#1b1d1e",
+  "nav": {
+    "anasayfa": "jsonanasayfa",
+    "anasayfa2": "zort",
+    "anasayfa3": "zort"
+  },
+  "nav2": {
+    "anasayfa": "zort",
+    "anasayfa2": "zort",
+    "anasayfa3": "zort"
+  }
+}
