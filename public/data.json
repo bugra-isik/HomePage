@@ -1,16 +1,12 @@
 {
-  "theme": "-dark",
-  "logo": "/logodark.png",
-  "switchColor": "#94999e",
-  "mainColor": "#1b1d1e",
+  "theme": ["-dark", "-light"],
+  "logo": ["/logodark.png", "/logolight.png"],
+  "switchColor": ["#94999e", "#44494b"],
+  "mainColor": ["#1b1d1e", "#eaebec"],
   "nav": {
-    "anasayfa": "jsonanasayfa",
-    "anasayfa2": "zort",
-    "anasayfa3": "zort"
-  },
-  "nav2": {
-    "anasayfa": "zort",
-    "anasayfa2": "zort",
-    "anasayfa3": "zort"
+    "1": ["Ana sayfa", "Home"],
+    "2": ["Projeler", "Projects"],
+    "3": ["Hakkımda", "About"],
+    "4": ["İletişim", "Contact"]
   }
 }

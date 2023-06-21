@@ -4,21 +4,32 @@ import Image from "next/image";
 import Footer from "./components/Footer";
 import Main from "./components/Main";
 import Nav from "./components/Nav";
-import MainContext, { useState } from "./context/Context";
+import MainContext, {
+  useState,
+  useEffect,
+  useContext,
+} from "./context/Context";
 
 export default function Page() {
-  const [data, setData] = useState({
-    theme: "-dark",
-    logo: "/logodark.png",
-    switchColor: "#94999e",
-    nav: { anasayfa: "zort" },
-    mainColor: "#1b1d1e",
-  });
+  const [data, setData] = useState();
+  const [arr, setArr] = useState(0);
+
+  useEffect(() => {
+    fetch("data.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data);
+      })
+      .catch((error) => {
+        console.error("API hatası:", error);
+      });
+  }, []);
+
   return (
-    <MainContext.Provider value={{ data, setData }}>
+    <MainContext.Provider value={{ data, setData, arr, setArr }}>
       <div>
-        <div className={`bg-1${data.theme}`}>
-          <div className={`bg-2${data.theme}`}>
+        <div className={`bg-1${data?.theme[arr]}`}>
+          <div className={`bg-2${data?.theme[arr]}`}>
             <div className="bg-3">
               <Nav />
               <Main />

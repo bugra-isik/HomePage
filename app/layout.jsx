@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{metadata.title}</title>
       </head>
-      <body style={{backgroundColor:"red"}}>
+      <body style={{backgroundColor:"#1b1d1e"}}>
         <Page />
       </body>
     </html>
