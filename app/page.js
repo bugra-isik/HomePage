@@ -30,11 +30,9 @@ export default function Page() {
       <div>
         <div className={`bg-1${data?.theme[arr]}`}>
           <div className={`bg-2${data?.theme[arr]}`}>
-            <div className="bg-3">
-              <Nav />
-              <Main />
-              <Footer />
-            </div>
+            <Nav />
+            <Main />
+            <Footer />
           </div>
         </div>
       </div>

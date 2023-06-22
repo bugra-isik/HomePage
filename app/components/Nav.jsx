@@ -1,7 +1,7 @@
 "use client";
 
 import LightModeIcon from "@mui/icons-material/LightMode";
-import { Switch, Label, Divider, Skeleton } from "@mui/material";
+import { Switch, Divider, Skeleton } from "@mui/material";
 import { useContext, useState } from "react";
 import MainContext from "../context/Context";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
@@ -10,40 +10,25 @@ import Link from "next/link";
 export default function Nav() {
   const { data, arr, setArr } = useContext(MainContext);
 
+  const list = data?.nav.map((item, index) => (
+    <Link className={`a${data?.theme[arr]}`} href={item[1]}>
+      <li key={index}>{item[arr]}</li>
+    </Link>
+  ));
+
   function switchTheme() {
     setArr((parameter) => (parameter === 0 ? 1 : 0));
   }
 
   return (
     <div>
-      <nav style={{ backgroundColor: data?.mainColor[arr] }}>
+      <nav style={{ backgroundColor: data?.navColor[arr] ,borderBottom:`0.1px solid ${data?.dividerColor[arr]}`}}>
         <ul>
-          <Link href={"/app"}>
-            <img id="logo" src={data?.logo[arr]} alt="Logo" />
+          <Link href={"#home"}>
+            <img id="logo" src={data?.logo[arr]} alt="" />
           </Link>
         </ul>
-        <ul style={{ gap: "3vw" }}>
-          <li>
-            <a className={`a${data?.theme[arr]}`} href="">
-              {data?.nav[1][0]}
-            </a>
-          </li>
-          <li>
-            <a className={`a${data?.theme[arr]}`} href="">
-            {data?.nav[2][0]}
-            </a>
-          </li>
-          <li>
-            <a className={`a${data?.theme[arr]}`} href="">
-            {data?.nav[3][0]}
-            </a>
-          </li>
-          <li>
-            <a className={`a${data?.theme[arr]}`} href="">
-            {data?.nav[4][0]}
-            </a>
-          </li>
-        </ul>
+        <ul style={{ gap: "3vw" }}>{list}</ul>
         <ul className="themeSwitchSection">
           <li style={{ display: "flex", alignItems: "center" }}>
             <DarkModeIcon
@@ -51,7 +36,6 @@ export default function Nav() {
               fontSize="large"
             />
             <Switch
-              {...Label}
               onClick={switchTheme}
               style={{ color: data?.switchColor[arr] }}
             />

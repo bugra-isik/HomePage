@@ -4,15 +4,32 @@ $dark-2: #44494b
 $light-1: #94999e
 $light-2: #ebebec
 
-//! COLORS
-$white: #ffffff
-$text-color-dark: #1b1d1e
-$text-color-light: #eaebec
-$transparent: #00000000
+//! BACKGROUND COLORS   
 $bg-dark: #1b1d1e
-$bg-white: #eaebec
+$bg-white: #f3f6f9
+$bg-blue: #0a1929
+$bg-blue-1: #143252
+$bg-blue-2: #003b75
+$bg-blue-3: #66b2ff
+$bg-blue-4: #bbccdd
+
+//! LOGO COLORS
+$logo-light-mid: #f3f6f9
+$logo-light-side: #94c9ff
+
+$logo-dark-mid: #0a1929
+$logo-dark-side: #003b75
+
+//! TEXT COLORS
+$text-color-dark: #0a1929
+$text-color-light: #f3f6f9
+
+//! COLORS
+$white: #f3f6f9
+$transparent: #00000000
 
 //! FONT
+$font-family-ibm: 'IBM Plex Sans', sans-serif
 $font-family-roboto: 'Roboto', sans-serif
 $font-family-montserrat: 'Montserrat', sans-serif
 $font-family-open-sans: 'Open Sans', sans-serif
@@ -21,6 +38,7 @@ $desktop-font-size: 1.25rem
 $tablet-font-size: 1rem
 $mobile-font-size: 0.75rem
 
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;300;400;700&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap')
@@ -32,8 +50,6 @@ $mobile-font-size: 0.75rem
     list-style: none
     text-decoration: none
 
-
-    
 .emptyblock
     display: block
     height: 50000px
@@ -41,12 +57,11 @@ $mobile-font-size: 0.75rem
 .bg-1-dark
     width: 100%
     height: 100vh
-    background-color: $bg-dark
+    background-color: $bg-blue
     background-image: url(/fdark.png)
     background-size: 6%
     background-attachment: fixed
     z-index: 1
-    color: $text-color-dark
 .bg-1-light
     width: 100%
     height: 100vh
@@ -57,7 +72,7 @@ $mobile-font-size: 0.75rem
 .bg-2-dark
     width: 100%
     height: 100vh
-    background: -webkit-linear-gradient(90deg, $bg-dark 0%, #00000000 45%, #00000000 55%, $bg-dark 100%)
+    background: -webkit-linear-gradient(90deg, $bg-blue 0%, #00000000 45%, #00000000 55%, $bg-blue 100%)
     position: fixed
 .bg-2-light
     width: 100%
@@ -97,13 +112,13 @@ nav
             color: $text-color-light
 
             &:hover
-                color: #4ec9b0
+                color: $logo-light-side
         .a-light
             display: flex
             align-items: center
             color: $text-color-dark
             &:hover
-                color: #194b3f
+                color: $logo-dark-side
         #logo
             display: flex
             align-items: center
