@@ -4,14 +4,9 @@ $dark-2: #44494b
 $light-1: #94999e
 $light-2: #ebebec
 
-//! BACKGROUND COLORS   
-$bg-dark: #1b1d1e
-$bg-white: #f3f6f9
-$bg-blue: #0a1929
-$bg-blue-1: #143252
-$bg-blue-2: #003b75
-$bg-blue-3: #66b2ff
-$bg-blue-4: #bbccdd
+//! BACKGROUND COLORS  
+$bg-white: #e2e8f0
+$bg-blue: #0f172a
 
 //! LOGO COLORS
 $logo-light-mid: #f3f6f9
@@ -37,6 +32,10 @@ $desktop-font-size-xl: 1.5rem
 $desktop-font-size: 1.25rem
 $tablet-font-size: 1rem
 $mobile-font-size: 0.75rem
+
+@tailwind base
+@tailwind components
+@tailwind utilities
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;300;400;700&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap')
@@ -83,17 +82,24 @@ $mobile-font-size: 0.75rem
 nav
     font-family: $font-family-montserrat
     padding: 5vh
-    text-align: center
     height: 10vh
     display: flex
     justify-content: space-between
     align-items: center
     font-size: 24px
+    user-select: none
 
     .themeSwitchSection
         width: 20vw
         display: flex
         justify-content: center
+        gap: 0.5vw
+        --scale-factor: calc(100vw / 1200)
+        transform: scale(var(--scale-factor))
+
+        li
+            display: flex
+            align-items: center
 
     ul
         display: flex

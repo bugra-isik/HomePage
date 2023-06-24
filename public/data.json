@@ -1,13 +1,13 @@
 {
   "theme": ["-dark", "-light"],
   "logo": ["/logodark.png", "/logolight.png"],
-  "switchColor": ["#94999e", "#44494b"],
-  "navColor": ["#0a1929", "#f3f6f9"],
-  "dividerColor": ["#102842", "#d6e0ea"],
+  "switchColor": ["#e2e8f0", "#0f172a"],
+  "navColor": ["#020617", "#f1f5f9"],
+  "dividerColor": ["#1e293b", "#cbd5e1"],
   "nav": [
-    ["Ana sayfa", "Home"],
-    ["Projeler", "Projects"],
-    ["Hakkımda", "About"],
-    ["İletişim", "Contact"]
+    ["Ana sayfa", "Home", { "id": 1 }],
+    ["Projeler", "Projects", { "id": 2 }],
+    ["Hakkımda", "About", { "id": 3 }],
+    ["İletişim", "Contact", { "id": 4 }]
   ]
 }

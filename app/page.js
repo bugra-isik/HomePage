@@ -32,7 +32,7 @@ export default function Page() {
           <div className={`bg-2${data?.theme[arr]}`}>
             <Nav />
             <Main />
-            <Footer />
+            {/* <Footer /> */}
           </div>
         </div>
       </div>
