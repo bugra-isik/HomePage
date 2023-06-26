@@ -12,7 +12,7 @@ import Switch from "./toggleSwitch/Switch";
 export default function Nav() {
   const { data, arr, setArr } = useContext(MainContext);
   const [enabled, setEnabled] = useState(false);
-  const [width, setWidth] = useState(null);
+  const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     function handleResize() {
