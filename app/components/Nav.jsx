@@ -12,14 +12,16 @@ import Switch from "./toggleSwitch/Switch";
 export default function Nav() {
   const { data, arr, setArr } = useContext(MainContext);
   const [enabled, setEnabled] = useState(false);
-  const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState();
 
   useEffect(() => {
+    
     function handleResize() {
       setWidth(window.innerWidth);
     }
 
     window.addEventListener("resize", handleResize);
+    
   }, [width]);
 
   const list = data?.nav.map((item, index) => (
@@ -28,11 +30,13 @@ export default function Nav() {
     </Link>
   ));
 
-  var scalex = width / 1400;
+
+  const size = useWindowSize();
+  
 
   return (
     <div>
-      {width}
+      {size.width}
       <nav
         style={{
           backgroundColor: data?.navColor[arr],
