@@ -10,7 +10,6 @@ import Footer from "./Footer";
 import Switch from "./toggleSwitch/Switch";
 
 export default function Nav() {
-  const scale = window.innerWidth;
   const { data, arr, setArr } = useContext(MainContext);
   const [enabled, setEnabled] = useState(false);
   const [width, setWidth] = useState(null);
@@ -19,8 +18,9 @@ export default function Nav() {
     function handleResize() {
       setWidth(window.innerWidth);
     }
+
     window.addEventListener("resize", handleResize);
-  }, []);
+  }, [width]);
 
   const list = data?.nav.map((item, index) => (
     <Link key={`${item[2].id}`} className={`a${data?.theme[arr]}`} href={"#"}>
