@@ -1,5 +1,6 @@
 "use client";
 
+import { useWindowSize } from "@uidotdev/usehooks";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import { useContext, useState, useRef, useEffect } from "react";
 import MainContext from "../context/Context";
@@ -12,17 +13,7 @@ export default function Nav() {
   const scale = window.innerWidth;
   const { data, arr, setArr } = useContext(MainContext);
   const [enabled, setEnabled] = useState(false);
-  const [width, setWidth] = useState(window.innerWidth);
-
-  const list = data?.nav.map((item, index) => (
-    <Link
-      key={`${item[2].id}`}
-      className={`a${data?.theme[arr]}`}
-      href={item[1]}
-    >
-      <li>{item[arr]}</li>
-    </Link>
-  ));
+  const [width, setWidth] = useState(null);
 
   useEffect(() => {
     function handleResize() {
@@ -30,6 +21,12 @@ export default function Nav() {
     }
     window.addEventListener("resize", handleResize);
   }, []);
+
+  const list = data?.nav.map((item, index) => (
+    <Link key={`${item[2].id}`} className={`a${data?.theme[arr]}`} href={"#"}>
+      <li>{item[arr]}</li>
+    </Link>
+  ));
 
   var scalex = width / 1400;
 
