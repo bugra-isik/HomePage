@@ -1,5 +1,3 @@
-"use client";
-
 import { useWindowSize } from "@uidotdev/usehooks";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import { useContext, useState, useRef, useEffect } from "react";
@@ -12,46 +10,58 @@ import Switch from "./toggleSwitch/Switch";
 export default function Nav() {
   const { data, arr, setArr } = useContext(MainContext);
   const [enabled, setEnabled] = useState(false);
-  const [width, setWidth] = useState();
 
-  useEffect(() => {
-    
-    function handleResize() {
-      setWidth(window.innerWidth);
-    }
+  const switchSize = useWindowSize();
+  const navLinksSize = useWindowSize();
 
-    window.addEventListener("resize", handleResize);
-    
-  }, [width]);
+  const scaleSwitch = switchSize.width / 1400;
+  const scaleNavLinks = navLinksSize.width / 1400;
 
   const list = data?.nav.map((item, index) => (
-    <Link key={`${item[2].id}`} className={`a${data?.theme[arr]}`} href={"#"}>
-      <li>{item[arr]}</li>
+    <Link
+      className="font-mono"
+      key={`${item[2].id}`}
+      href={"#"}
+      style={{ color: "#fff" }}
+    >
+      <li
+        className={`hover:text-${data.navLinkColor[arr]} , text-${data.textColor[arr]}`}
+      >
+        {item[arr]}
+      </li>
     </Link>
   ));
 
-
-  const size = useWindowSize();
-  
-
   return (
     <div>
-      {size.width}
       <nav
+        className="justify-between select-none  text-2xl items-center flex"
         style={{
           backgroundColor: data?.navColor[arr],
           borderBottom: `0.5vh solid ${data?.dividerColor[arr]}`,
+          padding: "5vh",
+          height: "7vw",
         }}
       >
         <ul>
-          <Link href={"#home"}>
+          <Link
+            href={"#home"}
+            style={{
+              display: "flex",
+              width: "20vw",
+              height: "auto",
+            }}
+          >
             <img id="logo" src={data?.logo[arr]} alt="" />
           </Link>
         </ul>
-        <ul style={{ gap: "3vw" }}>{list}</ul>
         <ul
-        // style={{ transform: `scale(${scalex})` }}
+          className="flex"
+          style={{ gap: "3vw", transform: `scale(${scaleNavLinks})` }}
         >
+          {list}
+        </ul>
+        <ul style={{ transform: `scale(${scaleSwitch})` }}>
           <Switch />
         </ul>
       </nav>

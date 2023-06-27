@@ -28,8 +28,25 @@ export default function Page() {
   return (
     <MainContext.Provider value={{ data, setData, arr, setArr }}>
       <div>
-        <div className={`bg-1${data?.theme[arr]}`}>
-          <div className={`bg-2${data?.theme[arr]}`}>
+        <div
+          style={{
+            width: "100%",
+            height: "100vh",
+            backgroundColor: `${data?.backgroundColor[arr]}`,
+            backgroundImage: `url(${data?.square[arr]})`,
+            backgroundSize: "6%",
+            backgroundAttachment: "fixed",
+            zIndex: 1,
+          }}
+        >
+          <div
+            className="fixed"
+            style={{
+              width: "100%",
+              height: "100vh",
+              background: `-webkit-linear-gradient(90deg, ${data?.backgroundColor[arr]} 0%, #00000000 45%, #00000000 55%, ${data?.backgroundColor[arr]} 100%)`,
+            }}
+          >
             <Nav />
             <Main />
             {/* <Footer /> */}

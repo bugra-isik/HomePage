@@ -1,9 +1,13 @@
 {
   "theme": ["-dark", "-light"],
   "logo": ["/logodark.png", "/logolight.png"],
+  "square": ["/fdark.png", "/flight.png"],
+  "backgroundColor": ["#0f172a", "#e2e8f0"],
   "switchColor": ["#e2e8f0", "#0f172a"],
   "navColor": ["#020617", "#f1f5f9"],
+  "navLinkColor": ["amber-500", "blue-800"],
   "dividerColor": ["#1e293b", "#cbd5e1"],
+  "textColor": ["slate-100","slate-950"],
   "nav": [
     ["Ana sayfa", "Home", { "id": 1 }],
     ["Projeler", "Projects", { "id": 2 }],
