@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import Footer from "./components/Footer";
-import Main from "./components/Main";
-import Nav from "./components/Nav";
+import Main from "./components/main/Main";
+import Nav from "./components/nav/Nav";
 import MainContext, {
   useState,
   useEffect,
@@ -13,6 +13,11 @@ import MainContext, {
 export default function Page() {
   const [data, setData] = useState();
   const [arr, setArr] = useState(0);
+  const [click, setClick] = useState("");
+
+  useEffect(() => {
+    localStorage.setItem("theme", arr);
+  }, [arr]);
 
   useEffect(() => {
     fetch("data.json")
@@ -26,17 +31,18 @@ export default function Page() {
   }, []);
 
   return (
-    <MainContext.Provider value={{ data, setData, arr, setArr }}>
+    <MainContext.Provider
+      value={{ data, setData, arr, setArr, click, setClick }}
+    >
       <div>
         <div
+          className="bg-fixed z-10"
           style={{
             width: "100%",
             height: "100vh",
             backgroundColor: `${data?.backgroundColor[arr]}`,
             backgroundImage: `url(${data?.square[arr]})`,
             backgroundSize: "6%",
-            backgroundAttachment: "fixed",
-            zIndex: 1,
           }}
         >
           <div

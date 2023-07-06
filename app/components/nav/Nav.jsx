@@ -1,15 +1,20 @@
 import { useWindowSize } from "@uidotdev/usehooks";
-import LightModeIcon from "@mui/icons-material/LightMode";
 import { useContext, useState, useRef, useEffect } from "react";
-import MainContext from "../context/Context";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
+import LanguageSwitch from "./languageSwitch/LanguageSwitch";
 import Link from "next/link";
-import Footer from "./Footer";
 import Switch from "./toggleSwitch/Switch";
+import MainContext from "../../context/Context";
 
 export default function Nav() {
-  const { data, arr, setArr } = useContext(MainContext);
+  const { data, arr, setArr, setClick } = useContext(MainContext);
   const [enabled, setEnabled] = useState(false);
+
+  const handleClick = (value) => {
+        setClick(value);
+  };
+  const reload = () => {
+    window.location.reload();
+  };
 
   const switchSize = useWindowSize();
   const navLinksSize = useWindowSize();
@@ -17,15 +22,17 @@ export default function Nav() {
   const scaleSwitch = switchSize.width / 1400;
   const scaleNavLinks = navLinksSize.width / 1400;
 
+  const zort = navLinksSize.width;
+
   const list = data?.nav.map((item, index) => (
     <Link
-      className="font-mono"
       key={`${item[2].id}`}
-      href={"#"}
-      style={{ color: "#fff" }}
+      href={`#${item[1]}`}
+      style={{ color: "#fff", fontFamily: ["Montserrat", "sans-serif"] ,fontSize:"16px"}}
     >
       <li
-        className={`hover:text-${data.navLinkColor[arr]} , text-${data.textColor[arr]}`}
+        className={`hover:text-${data?.navLinkColor[arr]}  text-${data?.textColor[arr]}`}
+        onClick={() => handleClick(item[1])}
       >
         {item[arr]}
       </li>
@@ -39,13 +46,13 @@ export default function Nav() {
         style={{
           backgroundColor: data?.navColor[arr],
           borderBottom: `0.5vh solid ${data?.dividerColor[arr]}`,
-          padding: "5vh",
-          height: "7vw",
+          padding: "3vw",
+          height: "5vw",
         }}
       >
         <ul>
-          <Link
-            href={"#home"}
+          <li
+            onClick={reload}
             style={{
               display: "flex",
               width: "20vw",
@@ -53,7 +60,7 @@ export default function Nav() {
             }}
           >
             <img id="logo" src={data?.logo[arr]} alt="" />
-          </Link>
+          </li>
         </ul>
         <ul
           className="flex"
@@ -61,8 +68,15 @@ export default function Nav() {
         >
           {list}
         </ul>
-        <ul style={{ transform: `scale(${scaleSwitch})` }}>
-          <Switch />
+        <ul
+          className={`hover:text-${data?.navLinkColor[arr]} text-${data?.textColor[arr]} flex  select-none  text-2xl items-center gap-16 items-center`}
+        >
+          <li>
+            <LanguageSwitch />
+          </li>
+          <li style={{ transform: `scale(${scaleSwitch})` }}>
+            <Switch />
+          </li>
         </ul>
       </nav>
     </div>

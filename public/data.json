@@ -9,7 +9,7 @@
   "dividerColor": ["#1e293b", "#cbd5e1"],
   "textColor": ["slate-100","slate-950"],
   "nav": [
-    ["Ana sayfa", "Home", { "id": 1 }],
+    ["Ana Sayfa", "Home", { "id": 1 }],
     ["Projeler", "Projects", { "id": 2 }],
     ["Hakkımda", "About", { "id": 3 }],
     ["İletişim", "Contact", { "id": 4 }]

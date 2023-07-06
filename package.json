@@ -16,6 +16,7 @@
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.5",
     "@uidotdev/usehooks": "^2.0.1",
+    "animate.css": "^4.1.1",
     "next": "13.4.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
