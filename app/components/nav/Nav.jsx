@@ -5,12 +5,13 @@ import Link from "next/link";
 import Switch from "./toggleSwitch/Switch";
 import MainContext from "../../context/Context";
 
+
 export default function Nav() {
-  const { data, arr, setArr, setClick } = useContext(MainContext);
+  const { data, arr, setArr, setClick, langArr } = useContext(MainContext);
   const [enabled, setEnabled] = useState(false);
 
   const handleClick = (value) => {
-        setClick(value);
+    setClick(value);
   };
   const reload = () => {
     window.location.reload();
@@ -18,67 +19,79 @@ export default function Nav() {
 
   const switchSize = useWindowSize();
   const navLinksSize = useWindowSize();
+  const logoSize = useWindowSize();
 
-  const scaleSwitch = switchSize.width / 1400;
-  const scaleNavLinks = navLinksSize.width / 1400;
+  const scaleSwitch = switchSize.width / 2811;
+  const scaleNavLinks = navLinksSize.width / 1800;
+  const scaleLogo = logoSize.width / 1581;
 
-  const zort = navLinksSize.width;
+  // const Li = styled.li`
+  //   color: ${data?.textColor2[arr]};
+
+  //   font-size: 1.5rem;
+  //   font-family: "Inter", sans-serif;
+  // `;
 
   const list = data?.nav.map((item, index) => (
-    <Link
-      key={`${item[2].id}`}
-      href={`#${item[1]}`}
-      style={{ color: "#fff", fontFamily: ["Montserrat", "sans-serif"] ,fontSize:"16px"}}
-    >
-      <li
-        className={`hover:text-${data?.navLinkColor[arr]}  text-${data?.textColor[arr]}`}
+    <Link key={`${item[2].id}`} href={`#${item[1]}`} style={{}}>
+      <div
+        className={`hover:text-${data?.navLinkColor[arr]}  text-${data?.textColor[arr]}  zort `}
         onClick={() => handleClick(item[1])}
       >
-        {item[arr]}
-      </li>
+        {item[langArr]}
+      </div>
     </Link>
   ));
 
   return (
-    <div>
+    <>
       <nav
-        className="justify-between select-none  text-2xl items-center flex"
+        className="select-none  flex items-center justify-between  "
         style={{
           backgroundColor: data?.navColor[arr],
-          borderBottom: `0.5vh solid ${data?.dividerColor[arr]}`,
-          padding: "3vw",
-          height: "5vw",
+          borderBottom: `0.3vw solid ${data?.dividerColor[arr]}`,
+          padding: "0vw 10vw",
+          height: "7.5vw",
         }}
       >
-        <ul>
-          <li
-            onClick={reload}
-            style={{
-              display: "flex",
-              width: "20vw",
-              height: "auto",
-            }}
-          >
-            <img id="logo" src={data?.logo[arr]} alt="" />
-          </li>
-        </ul>
+        {/* -------------------------------------------------------------------------------------- */}
         <ul
-          className="flex"
-          style={{ gap: "3vw", transform: `scale(${scaleNavLinks})` }}
+          onClick={reload}
+          style={{
+            display: "flex",
+            width: "30vw",
+            cursor: "pointer",
+            // transform: `scale(${0.5})`,
+          }}
+        >
+          <img title="Librouse!" id="logo" src={data?.logo[arr]} alt="" />
+        </ul>
+        {/* -------------------------------------------------------------------------------------- */}
+        <ul
+          className="flex items-center justify-center "
+          style={{
+            width: "75vw",
+            gap: "3vw",
+            transform: `scale(${scaleNavLinks})`,
+          }}
         >
           {list}
         </ul>
+        {/* -------------------------------------------------------------------------------------- */}
         <ul
-          className={`hover:text-${data?.navLinkColor[arr]} text-${data?.textColor[arr]} flex  select-none  text-2xl items-center gap-16 items-center`}
+          style={{}}
+          className={`flex  select-none justify-between items-center gap-5`}
         >
-          <li>
-            <LanguageSwitch />
-          </li>
-          <li style={{ transform: `scale(${scaleSwitch})` }}>
+          <div style={{ gap: "3vw", transform: `scale(${scaleNavLinks})` }}>
+            <LanguageSwitch />{" "}
+          </div>
+
+          <div style={{ transform: `scale(${scaleSwitch})` }}>
             <Switch />
-          </li>
+          </div>
         </ul>
+        {/* -------------------------------------------------------------------------------------- */}
       </nav>
-    </div>
+    </>
   );
 }

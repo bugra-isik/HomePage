@@ -1,34 +1,53 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect, useRef } from "react";
 import MainContext from "../../../context/Context";
 
 const LanguageSwitch = () => {
+  const { setLangArr, data, langArr, arr } = useContext(MainContext);
+
+  useEffect(() => {
+    if (localStorage.getItem("lang") == 1) {
+      ref.current.click();
+    } else {
+    }
+  }, []);
+
+  const ref = useRef();
+
   const [lang, setLang] = useState();
   const [lang2, setLang2] = useState("hidden");
 
-
-  const [style, setStyle] = useState(null);
-
-
-
-  const [style2, setStyle2] = useState(null);
-
   function handle() {
-    setLang((parameter) => (parameter === "hidden" ? "" : "hidden"));
-    setLang2((parameter) => (parameter === "hidden" ? "" : "hidden"));
-
-    setStyle({transform: "translateY(-20px)"})
+    setLang((p) => (p === "hidden" ? "" : "hidden"));
+    setLang2((p) => (p === "hidden" ? "" : "hidden"));
+    setLangArr((p) => (p == 0 ? 1 : 0));
   }
 
-  return (
-    <div onClick={handle} className="language-switch flex flex-col gap-16">
-      <button className={lang} type="button" style={ style }>
-        {"TR"}
-      </button>
-      <button className={lang2} type="button" style={ style2 }>
-        {"EN"}
-      </button>
+  // const Langs = styled.h1`
+  /* color: ${data?.navLinkColor2[arr]}; */
+  /* cursor: pointer; */
+  /* font-size: 1.5rem; */
+
+  /* &:hover { */
+  /* color: ${data?.navLinkColor3[arr]}; */
+  /* } */
+  // `;
+
+  const mouseOver = data?.content.mouseOverText.langButton[langArr];
+  const langs = ["TR", "EN"];
+  const langClass = [lang, lang2];
+
+  const items = langs.map((value, index) => (
+    <div
+      className={langClass[index]}
+      ref={ref}
+      title={mouseOver}
+      onClick={handle}
+    >
+      {value}
     </div>
-  );
+  ));
+
+  return <>{items}</>;
 };
 
 export default LanguageSwitch;

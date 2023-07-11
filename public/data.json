@@ -6,12 +6,27 @@
   "switchColor": ["#e2e8f0", "#0f172a"],
   "navColor": ["#020617", "#f1f5f9"],
   "navLinkColor": ["amber-500", "blue-800"],
+  "navLinkColor2": ["#f59e0b","#1e40af"],
+  "navLinkColor3": ["#fdba74","#60a5fa"],
   "dividerColor": ["#1e293b", "#cbd5e1"],
-  "textColor": ["slate-100","slate-950"],
+  "textColor": ["slate-100", "slate-950"],
+  "textColor2": ["#f1f5f9", "#020617"],
   "nav": [
     ["Ana Sayfa", "Home", { "id": 1 }],
     ["Projeler", "Projects", { "id": 2 }],
     ["Hakkımda", "About", { "id": 3 }],
     ["İletişim", "Contact", { "id": 4 }]
-  ]
+  ],
+  "content": {
+    "siteState": [
+      "Site yapım aşamasındadır.",
+      "The site is under construction."
+    ],
+    "mouseOverText": {
+      "langButton": [
+        "To switch to English, Click here.",
+        "Türkçe'ye geçmek için buraya tıklayın."
+      ]
+    }
+  }
 }

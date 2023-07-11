@@ -1,7 +1,9 @@
 import "./main.sass";
+import "animate.css";
 import { Inter } from "next/font/google";
 import Context from "./context/Context.jsx";
 import Page from "./page";
+import { Margin } from "@mui/icons-material";
 
 export const metadata = {
   title: "Librouse",
@@ -18,7 +20,9 @@ export default function RootLayout({ children }) {
         <title>{metadata.title}</title>
         <script src="https://cdn.tailwindcss.com"></script>
       </head>
-      <body style={{backgroundColor:"#1b1d1e"}}>
+      <body
+        
+      >
         <Page />
       </body>
     </html>
