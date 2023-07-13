@@ -1,47 +1,23 @@
 "use client";
 
-import Home from "./Home";
-import MainContext, { useState, useEffect } from "./context/Context";
+import Main from "@/components/main/Main";
+import Nav from "@/components/nav/Nav";
+import Footer from "@/components/footer/Footer";
+import MainContext from "@/context/Context";
+import { useContext } from "react";
+
 
 export default function Page() {
-  const [data, setData] = useState();
-  const [arr, setArr] = useState(0);
-  const [langArr, setLangArr] = useState(0);
-  const [click, setClick] = useState(null);
+  const { arr, data } = useContext(MainContext);
 
-  useEffect(() => {
-    localStorage.setItem("theme", arr);
-  }, [arr]);
-
-  useEffect(() => {
-    localStorage.setItem("lang", langArr);
-  }, [langArr]);
-
-  useEffect(() => {
-    fetch("data.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-      })
-      .catch((error) => {
-        console.error("API hatası:", error);
-      });
-  }, [fetch("data.json")]);
+  //             Dark theme - Ligt Theme
+  const theme = ["gray-900", "gray-300"];
 
   return (
-    <MainContext.Provider
-      value={{
-        data,
-        setData,
-        arr,
-        setArr,
-        click,
-        setClick,
-        langArr,
-        setLangArr,
-      }}
-    >
-      <Home />
-    </MainContext.Provider>
+    <div className={`p-5 pb-96 bg-${theme[arr]} min-h-screen`}>
+      <Nav />
+      <Main />
+      <Footer />
+    </div>
   );
 }

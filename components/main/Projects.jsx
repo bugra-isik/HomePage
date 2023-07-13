@@ -7,7 +7,7 @@
 export default function Projects() {
   return (
     <>
-      <section>
+      <section className="text-9xl">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
         eligendi quis quaerat? Alias doloremque odio, cupiditate sapiente
         exercitationem perspiciatis culpa animi deserunt suscipit, aperiam

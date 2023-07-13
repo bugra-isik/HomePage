@@ -1,27 +1,30 @@
 "use client";
 
-import MainContext, { useContext } from "../../context/Context";
-import Switch from "../nav/toggleSwitch/Switch";
 import Projects from "./Projects";
 import About from "./About";
 import Contact from "./Contact";
 import Home from "./Home";
-import styled from "styled-components";
+import { useContext } from "react";
+import MainContext from "@/context/Context";
 
 export default function Main() {
   const { click, data, arr, langArr } = useContext(MainContext);
 
-  // const Main = styled.main`
-  //   color: ${data?.textColor2[arr]};
-  //   font-size: 5rem;
-  //   margin: 10vw 10vw 0vw 10vw;
-  //   text-align: justify;
-  // `;
-
+  const bgColor = ["#030712", "#f9fafb"];
   return (
     <>
-      <div>
-        {click === null && <>{data?.content.siteState[langArr]}</>}
+      <main
+        style={{ backgroundColor: bgColor[arr] }}
+        className={`text-amber-500 min-h-screen mt-5 rounded-md font-hyperlegible`}
+      >
+        {click === null && (
+          <div
+            style={{ color: bgColor[arr == 1 ? 0 : 1] }}
+            className=" 2xl:text-5xl lg:text-3xl sm:text-xl  text-sm text-center "
+          >
+            {data?.content.siteState[langArr]}
+          </div>
+        )}
         {click === "Home" && <Home />}
         {click === "Projects" && (
           <>
@@ -38,7 +41,7 @@ export default function Main() {
             <Contact />
           </>
         )}
-      </div>
+      </main>
     </>
   );
 }

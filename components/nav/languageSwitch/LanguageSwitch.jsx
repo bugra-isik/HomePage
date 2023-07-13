@@ -1,5 +1,6 @@
+
+import MainContext from "@/context/Context";
 import React, { useContext, useState, useEffect, useRef } from "react";
-import MainContext from "../../../context/Context";
 
 const LanguageSwitch = () => {
   const { setLangArr, data, langArr, arr } = useContext(MainContext);
@@ -22,23 +23,17 @@ const LanguageSwitch = () => {
     setLangArr((p) => (p == 0 ? 1 : 0));
   }
 
-  // const Langs = styled.h1`
-  /* color: ${data?.navLinkColor2[arr]}; */
-  /* cursor: pointer; */
-  /* font-size: 1.5rem; */
-
-  /* &:hover { */
-  /* color: ${data?.navLinkColor3[arr]}; */
-  /* } */
-  // `;
-
   const mouseOver = data?.content.mouseOverText.langButton[langArr];
   const langs = ["TR", "EN"];
   const langClass = [lang, lang2];
 
+  const bgColor = ["gray-100","gray-950"];
+  const hover=["amber-500","blue-800"]
+
   const items = langs.map((value, index) => (
     <div
-      className={langClass[index]}
+      key={index}
+      className={`${langClass[index]} text-4xl  cursor-pointer navpage-${arr}`}
       ref={ref}
       title={mouseOver}
       onClick={handle}
@@ -51,3 +46,4 @@ const LanguageSwitch = () => {
 };
 
 export default LanguageSwitch;
+

@@ -1,35 +1,27 @@
 {
-  "name": "my-app",
+  "name": "home-page",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 8080",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "export": "next export"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/css": "^11.11.2",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@headlessui/react": "^1.7.15",
-    "@mui/icons-material": "^5.11.16",
-    "@mui/material": "^5.13.5",
+    "@mui/icons-material": "^5.14.0",
+    "@mui/material": "^5.14.0",
     "@uidotdev/usehooks": "^2.0.1",
-    "animate.css": "^4.1.1",
-    "next": "^13.4.9",
+    "autoprefixer": "10.4.14",
+    "eslint": "8.44.0",
+    "eslint-config-next": "13.4.9",
+    "next": "13.4.9",
+    "postcss": "8.4.25",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.9.0"
-  },
-  "devDependencies": {
-    "@types/node": "20.3.1",
-    "autoprefixer": "^10.4.14",
-    "eslint": "8.43.0",
-    "eslint-config-next": "13.4.6",
-    "postcss": "^8.4.25",
-    "sass": "^1.63.3",
-    "tailwindcss": "^3.3.2"
+    "tailwindcss": "3.3.2"
   }
 }
