@@ -1,0 +1,293 @@
+[
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "Boşlukta yaratamazsınız. Hayat size malzeme verir ve hayaller yeni başlangıçları teşvik edebilir.",
+      "You can't create in a vacuum. Life gives you the material and dreams can propel new beginnings."
+    ],
+    "image": "/images/1.png",
+    "tag": ["CSS", "HTML", "JavaScript", "JavaScript", "JavaScript"],
+    "link": "https://nextjs.org/"
+  },
+
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "Bir adama bir balık verin ve onu bir günlüğüne doyurun. Ona balık tutmayı öğretirseniz bir ömür boyu doyurursunuz.",
+      "Give a man a fish and you feed him for a day. Teach him how to fish and you feed him for a lifetime."
+    ],
+    "image": "/images/2.png",
+    "tag": ["Bootstrap", "HTML", "JavaScript"],
+    "link": "http//www.com"
+  },
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "Sonuçlara odaklanırsanız asla değişmezsiniz. Değişime odaklanırsanız, sonuç alırsınız.",
+      "If you focus on results, you will never change. If you focus on change, you will get results."
+    ],
+    "image": "/images/3.png",
+    "tag": ["Tailwind", "NextJS"],
+    "link": "http//www.com"
+  },
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "Sonuçlara odaklanırsanız asla değişmezsiniz. Değişime odaklanırsanız, sonuç alırsınız.",
+      "If you focus on results, you will never change. If you focus on change, you will get results."
+    ],
+    "image": "/images/4.png",
+    "tag": ["Tailwind", "NextJS"],
+    "link": "http//www.com"
+  },
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "Sonuçlara odaklanırsanız asla değişmezsiniz. Değişime odaklanırsanız, sonuç alırsınız.",
+      "If you focus on results, you will never change. If you focus on change, you will get results."
+    ],
+    "image": "/images/5.png",
+    "tag": ["Tailwind", "NextJS"],
+    "link": "http//www.com"
+  },
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "Sonuçlara odaklanırsanız asla değişmezsiniz. Değişime odaklanırsanız, sonuç alırsınız.",
+      "If you focus on results, you will never change. If you focus on change, you will get results."
+    ],
+    "image": "/images/6.png",
+    "tag": ["Tailwind", "NextJS"],
+    "link": "http//www.com"
+  },
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "Sonuçlara odaklanırsanız asla değişmezsiniz. Değişime odaklanırsanız, sonuç alırsınız.",
+      "If you focus on results, you will never change. If you focus on change, you will get results."
+    ],
+    "image": "/images/7.png",
+    "tag": ["Tailwind", "NextJS"],
+    "link": "http//www.com"
+  },
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "Sonuçlara odaklanırsanız asla değişmezsiniz. Değişime odaklanırsanız, sonuç alırsınız.",
+      "If you focus on results, you will never change. If you focus on change, you will get results."
+    ],
+    "image": "/images/8.png",
+    "tag": ["Tailwind", "NextJS"],
+    "link": "http//www.com"
+  },
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "Sonuçlara odaklanırsanız asla değişmezsiniz. Değişime odaklanırsanız, sonuç alırsınız.",
+      "If you focus on results, you will never change. If you focus on change, you will get results."
+    ],
+    "image": "/images/9.png",
+    "tag": ["Tailwind", "NextJS"],
+    "link": "http//www.com"
+  },
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "Sonuçlara odaklanırsanız asla değişmezsiniz. Değişime odaklanırsanız, sonuç alırsınız.",
+      "If you focus on results, you will never change. If you focus on change, you will get results."
+    ],
+    "image": "/images/10.png",
+    "tag": ["Tailwind", "NextJS"],
+    "link": "http//www.com"
+  },
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "Sonuçlara odaklanırsanız asla değişmezsiniz. Değişime odaklanırsanız, sonuç alırsınız.",
+      "If you focus on results, you will never change. If you focus on change, you will get results."
+    ],
+    "image": "/images/10.png",
+    "tag": ["Tailwind", "NextJS"],
+    "link": "http//www.com"
+  },
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "Sonuçlara odaklanırsanız asla değişmezsiniz. Değişime odaklanırsanız, sonuç alırsınız.",
+      "If you focus on results, you will never change. If you focus on change, you will get results."
+    ],
+    "image": "/images/10.png",
+    "tag": ["Tailwind", "NextJS"],
+    "link": "http//www.com"
+  },
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "Sonuçlara odaklanırsanız asla değişmezsiniz. Değişime odaklanırsanız, sonuç alırsınız.",
+      "If you focus on results, you will never change. If you focus on change, you will get results."
+    ],
+    "image": "/images/10.png",
+    "tag": ["Tailwind", "NextJS"],
+    "link": "http//www.com"
+  },
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "Sonuçlara odaklanırsanız asla değişmezsiniz. Değişime odaklanırsanız, sonuç alırsınız.",
+      "If you focus on results, you will never change. If you focus on change, you will get results."
+    ],
+    "image": "/images/10.png",
+    "tag": ["Tailwind", "NextJS"],
+    "link": "http//www.com"
+  },
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "Sonuçlara odaklanırsanız asla değişmezsiniz. Değişime odaklanırsanız, sonuç alırsınız.",
+      "If you focus on results, you will never change. If you focus on change, you will get results."
+    ],
+    "image": "/images/10.png",
+    "tag": ["Tailwind", "NextJS"],
+    "link": "http//www.com"
+  },
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "Sonuçlara odaklanırsanız asla değişmezsiniz. Değişime odaklanırsanız, sonuç alırsınız.",
+      "If you focus on results, you will never change. If you focus on change, you will get results."
+    ],
+    "image": "/images/10.png",
+    "tag": ["Tailwind", "NextJS"],
+    "link": "http//www.com"
+  },
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "Sonuçlara odaklanırsanız asla değişmezsiniz. Değişime odaklanırsanız, sonuç alırsınız.",
+      "If you focus on results, you will never change. If you focus on change, you will get results."
+    ],
+    "image": "/images/10.png",
+    "tag": ["Tailwind", "NextJS"],
+    "link": "http//www.com"
+  },
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "Sonuçlara odaklanırsanız asla değişmezsiniz. Değişime odaklanırsanız, sonuç alırsınız.",
+      "If you focus on results, you will never change. If you focus on change, you will get results."
+    ],
+    "image": "/images/10.png",
+    "tag": ["Tailwind", "NextJS"],
+    "link": "http//www.com"
+  },
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "Sonuçlara odaklanırsanız asla değişmezsiniz. Değişime odaklanırsanız, sonuç alırsınız.",
+      "If you focus on results, you will never change. If you focus on change, you will get results."
+    ],
+    "image": "/images/10.png",
+    "tag": ["Tailwind", "NextJS"],
+    "link": "http//www.com"
+  },
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "Sonuçlara odaklanırsanız asla değişmezsiniz. Değişime odaklanırsanız, sonuç alırsınız.",
+      "If you focus on results, you will never change. If you focus on change, you will get results."
+    ],
+    "image": "/images/10.png",
+    "tag": ["Tailwind", "NextJS"],
+    "link": "http//www.com"
+  },
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "Sonuçlara odaklanırsanız asla değişmezsiniz. Değişime odaklanırsanız, sonuç alırsınız.",
+      "If you focus on results, you will never change. If you focus on change, you will get results."
+    ],
+    "image": "/images/10.png",
+    "tag": ["Tailwind", "NextJS"],
+    "link": "http//www.com"
+  },
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "Sonuçlara odaklanırsanız asla değişmezsiniz. Değişime odaklanırsanız, sonuç alırsınız.",
+      "If you focus on results, you will never change. If you focus on change, you will get results."
+    ],
+    "image": "/images/10.png",
+    "tag": ["Tailwind", "NextJS"],
+    "link": "http//www.com"
+  },
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "Sonuçlara odaklanırsanız asla değişmezsiniz. Değişime odaklanırsanız, sonuç alırsınız.",
+      "If you focus on results, you will never change. If you focus on change, you will get results."
+    ],
+    "image": "/images/10.png",
+    "tag": ["Tailwind", "NextJS"],
+    "link": "http//www.com"
+  },
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "Sonuçlara odaklanırsanız asla değişmezsiniz. Değişime odaklanırsanız, sonuç alırsınız.",
+      "If you focus on results, you will never change. If you focus on change, you will get results."
+    ],
+    "image": "/images/10.png",
+    "tag": ["Tailwind", "NextJS"],
+    "link": "http//www.com"
+  },
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "Sonuçlara odaklanırsanız asla değişmezsiniz. Değişime odaklanırsanız, sonuç alırsınız.",
+      "If you focus on results, you will never change. If you focus on change, you will get results."
+    ],
+    "image": "/images/10.png",
+    "tag": ["Tailwind", "NextJS"],
+    "link": "http//www.com"
+  },
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "Sonuçlara odaklanırsanız asla değişmezsiniz. Değişime odaklanırsanız, sonuç alırsınız.",
+      "If you focus on results, you will never change. If you focus on change, you will get results."
+    ],
+    "image": "/images/10.png",
+    "tag": ["Tailwind", "NextJS"],
+    "link": "http//www.com"
+  },
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "Sonuçlara odaklanırsanız asla değişmezsiniz. Değişime odaklanırsanız, sonuç alırsınız.",
+      "If you focus on results, you will never change. If you focus on change, you will get results."
+    ],
+    "image": "/images/10.png",
+    "tag": ["Tailwind", "NextJS"],
+    "link": "http//www.com"
+  },
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "Sonuçlara odaklanırsanız asla değişmezsiniz. Değişime odaklanırsanız, sonuç alırsınız.",
+      "If you focus on results, you will never change. If you focus on change, you will get results."
+    ],
+    "image": "/images/10.png",
+    "tag": ["Tailwind", "NextJS"],
+    "link": "http//www.com"
+  },
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "Sonuçlara odaklanırsanız asla değişmezsiniz. Değişime odaklanırsanız, sonuç alırsınız.",
+      "If you focus on results, you will never change. If you focus on change, you will get results."
+    ],
+    "image": "/images/10.png",
+    "tag": ["Tailwind", "NextJS"],
+    "link": "http//www.com"
+  }
+]

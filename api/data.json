@@ -1,0 +1,20 @@
+{
+  "logo": ["/logodark.png", "/logolight.png"],
+  "nav": [
+    ["Ana Sayfa", "Home"],
+    ["Projeler", "Projects"]
+  ],
+  "content": {
+    "siteState": ["Site yapım aşamasında.", "The site is under construction."],
+    "mouseOverText": {
+      "langButton": [
+        "To switch to English, Click here.",
+        "Türkçe'ye geçmek için buraya tıklayın."
+      ],
+      "themeSwitch": [
+        "Tema arasında geçiş yapmak için buraya tıklayın.",
+        "To switch between the  themes, click here."
+      ]
+    }
+  }
+}
