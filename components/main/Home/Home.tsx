@@ -20,9 +20,7 @@ export default function Home() {
     contents: string[];
   }
   const about: {
-    name: string[];
-    title: string;
-    social: any;
+    social: any[];
     aboutMe: Header;
     tech: Header & { links: string[] };
   } = data;
@@ -40,93 +38,95 @@ export default function Home() {
     <BiLogoTailwindCss key={BiLogoTailwindCss} />,
   ];
 
+  const textColor: string[] = [
+    "text-[#e06e3c]",
+    "text-[#3963e9]",
+    "text-[#3178c6]",
+    "text-[#149eca]",
+    "text-[#38bdf8]",
+  ];
+  const iconColor: string[] = [
+    "text-[#e06e3c]",
+    "text-[#3963e9]",
+    "text-[#3178c6]",
+    "text-[#149eca]",
+    "text-[#38bdf8]",
+  ];
+  const techBg: string[] = ["bg-[#1c1c1c]", "bg-[#f8f8f8]"];
+  const techBgHover: string[] = ["hover:bg-[#292929]", "hover:bg-[#ebebeb]"];
   const text: string[] = ["text-yellow", "text-blue"];
   const bg: string[] = ["bg-yellow", "bg-blue"];
   const tailwind: string = "drop-shadow transition duration-300";
-  const greetings: string[] = ["Merhaba!", "Hi!"];
   const header: string =
-    "text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl font-black";
+    "text-xs sm:text-xl lg:text-3xl 2xl:text-5xl font-black";
+
+  const social = about.social.map((item, index) => (
+    <Link
+      key={index}
+      href={item.link}
+      target="_blank"
+      className={`${techBg[arr]} ${techBgHover[arr]} flex items-center gap-[0.5dvw] p-[0.5dvw] rounded-xl`}
+    >
+      {socialIcons[index]}
+      {item.name}
+    </Link>
+  ));
 
   return (
     <>
-      <header className="mb-[5dvw]">
-        <h1 className={`${tailwind} ${header} `}>
-          <span className={`${text[arr]}  transition-colors duration-300`}>
-            {greetings[langArr]}
-          </span>{" "}
-          {about.name[langArr]}
-        </h1>
-        <h3 className="flex gap-10">
-          {about.social.map(
-            (item: string, index: number) => console.log(item),
-            // <Link
-            //   key={index}
-            //   href={item.islink}
-            //   target="_blank"
-            //   className="flex"
-            // >
-            //   {socialIcons[index]} {item}
-            // </Link>
-          )}
-        </h3>
-      </header>
-      {/* ----------------------------------------------------------------------------------------------- */}
-      <section className={`mb-[5dvw] text-justify `}>
-        <div className="flex items-center justify-between">
+      <section className={`mb-[4dvw] text-justify `}>
+        <header className="mb-[2dvw] flex items-center justify-between">
           <h1
-            className={`${text[arr]} ${tailwind} ${header} pr-5 drop-shadow-2xl`}
+            className={`${text[arr]} ${tailwind} ${header} select-none pr-5 drop-shadow-2xl`}
           >
             {about.aboutMe.header[langArr].toUpperCase()}
           </h1>
-          <div className={`h-1 grow rounded-l-full ${bg[arr]} transition-colors duration-300`}></div>
-        </div>
+          <div
+            className={`h-[0.2dvw] grow rounded-l-full ${bg[arr]} transition-colors duration-300`}
+          ></div>
+        </header>
         <p
-          className={`${tailwind} text-base sm:text-lg lg:text-xl 2xl:text-2xl`}
+          className={`${tailwind} text-[6px] leading-[0.5rem] sm:text-xs lg:text-base 2xl:text-2xl pb-[1dvw]`}
         >
           {about.aboutMe.contents[langArr]}
         </p>
+        <div className={`flex gap-[2dvw] text-[6px] leading-[0.5rem] sm:text-xs lg:text-base 2xl:text-2xl`}>{social}</div>
       </section>
       {/* ----------------------------------------------------------------------------------------------- */}
       <section>
-        <div className="flex items-center justify-between">
-          <h1 className={`${text[arr]} ${tailwind} ${header} pr-5`}>
+        <header className="mb-[2dvw] flex items-center justify-between">
+          <h1 className={`${text[arr]} ${tailwind} ${header} select-none pr-5`}>
             {about.tech.header[langArr].toUpperCase()}
           </h1>
-          <div className={`h-1 grow rounded-l-full ${bg[arr]} transition-colors duration-300`}></div>
-        </div>
-        <section className={`${tailwind} flex flex-wrap`}>
+          <div
+            className={`h-[0.2dvw] grow rounded-l-full ${bg[arr]} transition-colors duration-300`}
+          ></div>
+        </header>
+        <section
+          id="techs"
+          className={`${tailwind} container flex grow select-none items-center justify-between `}
+        >
           {about.tech.contents.map((item, index) => (
             <Link
               href={about.tech.links[index]}
               key={index}
               target="_blank"
-              className="flex"
+              className={`${techBg[arr]} ${techBgHover[arr]} rounded-xl container flex h-[10dvw] w-[10dvw] flex-col items-center justify-center gap-[1.2dvw] transition duration-300`}
             >
-              {icons[index]}
-              {item}
+              <i
+                className={`${iconColor[index]} text-lg sm:text-3xl lg:text-5xl  2xl:text-8xl`}
+              >
+                {icons[index]}
+              </i>
+              <p
+                className={`${textColor[index]} text-[7,5px] sm:text-xs  lg:text-xl 2xl:text-3xl `}
+              >
+                {item}
+              </p>
             </Link>
           ))}
         </section>
       </section>
-      {/* <Typing /> */}
     </>
   );
-}
-
-{
-  /* <Link
-            href={about.social.linkedIn.link}
-            target="_blank"
-            className="flex"
-          >
-            {<BsLinkedin />} {about.social.linkedIn.name}
-          </Link>
-          <Link
-            href={about.social.linkedIn.link}
-            target="_blank"
-            className="flex"
-          >
-            {<BsGithub />}
-            {about.social.linkedIn.name}
-          </Link> */
 }

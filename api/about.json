@@ -1,29 +1,20 @@
 {
-  "name": [
-    "benim adım Buğra & Web Geliştirme ile ilgileniyorum.",
-    "my name is Bugra & I am involved in Web Development."
-  ],
-  "title": "Web Developer",
   "social": [
     {
-      "linkedIn": {
-        "name": "bugra-isik",
-        "islink": "https://linkedin.com/in/bugra-isik"
-      }
+      "name": "bugra-isik",
+      "link": "https://linkedin.com/in/bugra-isik"
     },
     {
-      "github": {
-        "name": "bugra-isik",
-        "link": "https://github.com/bugra-isik"
-      }
+      "name": "bugra-isik",
+      "link": "https://github.com/bugra-isik"
     }
   ],
 
   "aboutMe": {
     "header": ["hakkımda", "about"],
     "contents": [
-      "Yazılım geliştirme konusunda hevesliyim ve kendimi sürekli geliştirmek için çabalıyorum. Yazılım dünyasının sınırsız potansiyelini keşfetmek ve teknolojik yenilikleri kucaklamak benim için büyük bir heyecan kaynağı. Deneyim açısından henüz yolun başındayım ancak kendimi bağımsız olarak yazılım öğrenmeye adadım. Kendi projelerim üzerinde çalışırken, destek için çevrimiçi kaynaklardan ve topluluklardan yararlanarak becerilerimi geliştirmeye çalıştım. Analitik düşünme becerilerimi kullanarak karmaşık sorunları çözmek ve pratik çözümler üretmek için çabalıyorum.",
-      "I am enthusiastic about software development and constantly strive to improve myself. Exploring the limitless  potential of the software world and embracing technological innovations are a great source of excitement for me. In terms of experience, I am still at the beginning of    my journey, but I have been dedicating myself to learning software independently. While working on my own    projects, I have tried to enhance my skills by leveraging    online resources and communities for support. I strive to    solve complex problems and generate practical solutions    using my analytical thinking skills"
+      "Merhaba! benim adım Buğra & Web Geliştirme ile ilgileniyorum. Yazılım geliştirme konusunda hevesliyim ve kendimi sürekli geliştirmek için çabalıyorum. Yazılım dünyasının sınırsız potansiyelini keşfetmek ve teknolojik yenilikleri kucaklamak benim için büyük bir heyecan kaynağı. Deneyim açısından henüz yolun başındayım ancak kendimi bağımsız olarak yazılım öğrenmeye adadım. Kendi projelerim üzerinde çalışırken, destek için çevrimiçi kaynaklardan ve topluluklardan yararlanarak becerilerimi geliştirmeye çalıştım.",
+      "Hi! my name is Bugra & I am involved in Web Development. I am enthusiastic about software development and constantly strive to improve myself. Exploring the limitless  potential of the software world and embracing technological innovations are a great source of excitement for me. In terms of experience, I am still at the beginning of my journey, but I have been dedicating myself to learning software independently. While working on my own projects, I have tried to enhance my skills by leveraging online resources and communities for support."
     ]
   },
   "tech": {
@@ -33,7 +24,7 @@
       "https://www.w3schools.com/html/",
       "https://www.w3schools.com/css/",
       "https://www.typescriptlang.org/",
-      "https://nextjs.org/",
+      "https://react.dev/",
       "https://tailwindcss.com/"
     ]
   }

@@ -12,7 +12,7 @@ export default function Logo() {
   const hover: string[] = ["hover:text-yellow2", "hover:text-blue2"];
 
   const tailwind =
-    "transition duration-700 cursor-pointer font-ibm text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl";
+    "transition duration-700 cursor-pointer font-hyperlegible text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl";
 
   return (
     <>
