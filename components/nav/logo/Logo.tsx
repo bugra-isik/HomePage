@@ -8,20 +8,19 @@ export default function Logo() {
     window.location.reload();
   }, []);
 
-  const themes: string[] = ["text-yellow", "text-blue"];
-  const hover: string[] = ["hover:text-yellow2", "hover:text-blue2"];
-
-  const tailwind =
-    "transition duration-700 cursor-pointer font-hyperlegible text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl";
+  const textColor: string[] = ["text-[#141414]", "text-[#fcfcfc]"];
+  const hover: string[] = ["hover:bg-yellow2", "hover:bg-blue2"];
+  const bgColor: string[] = ["bg-yellow", "bg-blue"];
 
   return (
     <>
       <li
         title="Librouse!"
         onClick={() => reload()}
-        className={`${themes[arr]} ${tailwind} ${hover[arr]} font-black`}
+        className={`${textColor[arr]} ${hover[arr]} ${bgColor[arr]} cursor-pointer  p-[0.25dvw] font-hyperlegible text-[7.5px] font-black transition duration-300 
+        sm:text-[12.5px] lg:text-[20px] 2xl:text-[30px]`}
       >
-        {langArr == 0 ? "Buğra" : "Bugra"}
+        {langArr == 0 ? "./BUGRA" : "./BUGRA"}
       </li>
     </>
   );

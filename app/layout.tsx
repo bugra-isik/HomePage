@@ -34,8 +34,8 @@ export default function RootLayout({
     <html
       lang="en"
       style={{
-        scrollbarWidth: "none",
         scrollbarColor: scrollBar[arr],
+        scrollbarWidth: "none",
         scrollBehavior: "smooth",
       }}
     >

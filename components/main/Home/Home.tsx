@@ -1,16 +1,15 @@
 import data from "@/api/about.json";
 import MainContext from "@/context/Context";
 import Link from "next/link";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { useContext } from "react";
 import {
-  BiLogoHtml5,
   BiLogoCss3,
-  BiLogoTypescript,
-  BiLogoTailwindCss,
+  BiLogoHtml5,
   BiLogoReact,
+  BiLogoTailwindCss,
+  BiLogoTypescript,
 } from "react-icons/bi";
-import Typing from "./Typing";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 export default function Home() {
   const { langArr, arr } = useContext(MainContext);
@@ -26,8 +25,8 @@ export default function Home() {
   } = data;
 
   const socialIcons: React.ReactElement[] = [
-    <BsLinkedin key={BsLinkedin} />,
-    <BsGithub key={BsGithub} />,
+    <BsLinkedin key={BsLinkedin} className="text-[#0274b3]" />,
+    <BsGithub key={BsGithub} className="text-[#010409] " />,
   ];
 
   const icons: React.ReactElement[] = [
@@ -45,18 +44,10 @@ export default function Home() {
     "text-[#149eca]",
     "text-[#38bdf8]",
   ];
-  const iconColor: string[] = [
-    "text-[#e06e3c]",
-    "text-[#3963e9]",
-    "text-[#3178c6]",
-    "text-[#149eca]",
-    "text-[#38bdf8]",
-  ];
   const techBg: string[] = ["bg-[#1c1c1c]", "bg-[#f8f8f8]"];
   const techBgHover: string[] = ["hover:bg-[#292929]", "hover:bg-[#ebebeb]"];
   const text: string[] = ["text-yellow", "text-blue"];
   const bg: string[] = ["bg-yellow", "bg-blue"];
-  const tailwind: string = "drop-shadow transition duration-300";
   const header: string =
     "text-xs sm:text-xl lg:text-3xl 2xl:text-5xl font-black";
 
@@ -65,10 +56,30 @@ export default function Home() {
       key={index}
       href={item.link}
       target="_blank"
-      className={`${techBg[arr]} ${techBgHover[arr]} flex items-center gap-[0.5dvw] p-[0.5dvw] rounded-xl`}
+      className={`${techBg[arr]} ${techBgHover[arr]} flex items-center gap-[0.5dvw] rounded-xl p-[0.5dvw] drop-shadow-lg transition duration-300`}
     >
       {socialIcons[index]}
       {item.name}
+    </Link>
+  ));
+
+  const tech = about.tech.contents.map((item, index) => (
+    <Link
+      href={about.tech.links[index]}
+      key={index}
+      target="_blank"
+      className={`${techBg[arr]} ${techBgHover[arr]} container flex h-[10dvw] w-[10dvw] flex-col items-center justify-center gap-[1.2dvw] rounded-xl drop-shadow-lg transition duration-300`}
+    >
+      <i
+        className={`${textColor[index]} text-lg sm:text-3xl lg:text-5xl  2xl:text-8xl`}
+      >
+        {icons[index]}
+      </i>
+      <p
+        className={`${textColor[index]} text-[7,5px] sm:text-xs  lg:text-xl 2xl:text-3xl `}
+      >
+        {item}
+      </p>
     </Link>
   ));
 
@@ -77,7 +88,7 @@ export default function Home() {
       <section className={`mb-[4dvw] text-justify `}>
         <header className="mb-[2dvw] flex items-center justify-between">
           <h1
-            className={`${text[arr]} ${tailwind} ${header} select-none pr-5 drop-shadow-2xl`}
+            className={`${text[arr]}  ${header} select-none pr-5 drop-shadow-2xl transition duration-300`}
           >
             {about.aboutMe.header[langArr].toUpperCase()}
           </h1>
@@ -86,16 +97,22 @@ export default function Home() {
           ></div>
         </header>
         <p
-          className={`${tailwind} text-[6px] leading-[0.5rem] sm:text-xs lg:text-base 2xl:text-2xl pb-[1dvw]`}
+          className={` pb-[1dvw] text-[6px] leading-[0.5rem] transition duration-300 sm:text-xs lg:text-base 2xl:text-2xl`}
         >
           {about.aboutMe.contents[langArr]}
         </p>
-        <div className={`flex gap-[2dvw] text-[6px] leading-[0.5rem] sm:text-xs lg:text-base 2xl:text-2xl`}>{social}</div>
+        <div
+          className={`flex gap-[2dvw] text-[6px] leading-[0.5rem] sm:text-xs lg:text-base 2xl:text-2xl `}
+        >
+          {social}
+        </div>
       </section>
       {/* ----------------------------------------------------------------------------------------------- */}
       <section>
-        <header className="mb-[2dvw] flex items-center justify-between">
-          <h1 className={`${text[arr]} ${tailwind} ${header} select-none pr-5`}>
+        <header className="mb-[2dvw] flex items-center justify-between ">
+          <h1
+            className={`${text[arr]} ${header} select-none pr-5 transition duration-300`}
+          >
             {about.tech.header[langArr].toUpperCase()}
           </h1>
           <div
@@ -104,27 +121,9 @@ export default function Home() {
         </header>
         <section
           id="techs"
-          className={`${tailwind} container flex grow select-none items-center justify-between `}
+          className={` container flex grow select-none items-center justify-between `}
         >
-          {about.tech.contents.map((item, index) => (
-            <Link
-              href={about.tech.links[index]}
-              key={index}
-              target="_blank"
-              className={`${techBg[arr]} ${techBgHover[arr]} rounded-xl container flex h-[10dvw] w-[10dvw] flex-col items-center justify-center gap-[1.2dvw] transition duration-300`}
-            >
-              <i
-                className={`${iconColor[index]} text-lg sm:text-3xl lg:text-5xl  2xl:text-8xl`}
-              >
-                {icons[index]}
-              </i>
-              <p
-                className={`${textColor[index]} text-[7,5px] sm:text-xs  lg:text-xl 2xl:text-3xl `}
-              >
-                {item}
-              </p>
-            </Link>
-          ))}
+          {tech}
         </section>
       </section>
     </>

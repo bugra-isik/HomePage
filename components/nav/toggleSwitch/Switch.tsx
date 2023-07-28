@@ -1,6 +1,6 @@
 import MainContext from "@/context/Context";
 import { useCallback, useContext, useEffect, useState } from "react";
-import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
+import { BiSolidMoon, BiSolidSun } from "react-icons/bi";
 
 /*--------------------------------------------------------------------------------*/
 
@@ -30,15 +30,15 @@ export default function ToggleSwitch() {
     <li title={mouseOver} className={`flex items-center justify-end gap-1 `}>
       <div
         onClick={() => switchTheme()}
-        className={`${moonCheck} cursor-pointer  text-lg  text-[#767676] transition duration-700`}
+        className={`${moonCheck} cursor-pointer  text-[6px] text-[#767676] transition duration-700  sm:text-[10px] lg:text-[16px] 2xl:text-[24px]`}
       >
-        <BsFillMoonStarsFill />
+        <BiSolidMoon />
       </div>
       <div
         onClick={() => switchTheme()}
-        className={`${sunCheck} cursor-pointer text-lg text-blue transition duration-700`}
+        className={`${sunCheck} cursor-pointer text-[6px] text-blue transition duration-700 sm:text-[10px] lg:text-[16px] 2xl:text-[24px]`}
       >
-        <BsFillSunFill />
+        <BiSolidSun />
       </div>
     </li>
   );

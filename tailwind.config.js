@@ -9,7 +9,9 @@ module.exports = {
     extend: {
       colors: {
         dark: "#161616",
+        dark2: "#141414bf",
         light: "#fcfcfc",
+        light2: "#f5f5f5bf",
         "dark-0.75": "rgba(22, 22, 22, 0.75)",
         "light-0.75": "rgba(252, 252, 252, 0.75)",
         yellow: "#eed272",
@@ -19,8 +21,10 @@ module.exports = {
       },
       backgroundImage: {
         grad: "radial-gradient(ellipse 80% 50% at 50% -20%,rgba(4, 0, 255, 0.5), rgba(255,255,255,0) )",
-        divider:
-          "radial-gradient(50% 100% at 50% 100%, rgba(28, 28, 28, 0.322) 0%, rgba(0, 0, 0, 0) 100%)",
+        dividerDark:
+          "radial-gradient(50% 100% at 50% 100%, #141414bf 0%, rgba(0, 0, 0, 0) 100%)",
+        dividerLight:
+          "radial-gradient(50% 100% at 50% 100%, #f5f5f5bf 0%, rgba(0, 0, 0, 0) 100%)",
       },
       fontFamily: {
         inter: [
