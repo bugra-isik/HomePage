@@ -24,9 +24,11 @@ export default function Home() {
     tech: Header & { links: string[] };
   } = data;
 
+  const github: string[] = ["text-[#ebebeb]", "text-[#010409]"];
+
   const socialIcons: React.ReactElement[] = [
     <BsLinkedin key={BsLinkedin} className="text-[#0274b3]" />,
-    <BsGithub key={BsGithub} className="text-[#010409] " />,
+    <BsGithub key={BsGithub} className={`${github[arr]} transition duration-300`} />,
   ];
 
   const icons: React.ReactElement[] = [
@@ -56,7 +58,7 @@ export default function Home() {
       key={index}
       href={item.link}
       target="_blank"
-      className={`${techBg[arr]} ${techBgHover[arr]} flex items-center gap-[0.5dvw] rounded-xl p-[0.5dvw] drop-shadow-lg transition duration-300`}
+      className={`${techBg[arr]} ${techBgHover[arr]} flex  items-center gap-[0.5dvw] rounded-xl p-1  drop-shadow-lg transition duration-300`}
     >
       {socialIcons[index]}
       {item.name}
@@ -68,7 +70,7 @@ export default function Home() {
       href={about.tech.links[index]}
       key={index}
       target="_blank"
-      className={`${techBg[arr]} ${techBgHover[arr]} container flex h-[10dvw] w-[10dvw] flex-col items-center justify-center gap-[1.2dvw] rounded-xl drop-shadow-lg transition duration-300`}
+      className={`${techBg[arr]} ${techBgHover[arr]} flex w-2/5 flex-col items-center justify-center gap-[1.2dvw] rounded drop-shadow-lg transition duration-300`}
     >
       <i
         className={`${textColor[index]} text-lg sm:text-3xl lg:text-5xl  2xl:text-8xl`}
@@ -109,7 +111,7 @@ export default function Home() {
       </section>
       {/* ----------------------------------------------------------------------------------------------- */}
       <section>
-        <header className="mb-[2dvw] flex items-center justify-between ">
+        <header className="mb-[2dvw] flex select-none items-center justify-between ">
           <h1
             className={`${text[arr]} ${header} select-none pr-5 transition duration-300`}
           >
@@ -121,7 +123,7 @@ export default function Home() {
         </header>
         <section
           id="techs"
-          className={` container flex grow select-none items-center justify-between `}
+          className={`flex flex-wrap justify-between gap-[5dvw] `}
         >
           {tech}
         </section>

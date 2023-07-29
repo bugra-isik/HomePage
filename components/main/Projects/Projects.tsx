@@ -5,44 +5,41 @@ import "./index.css";
 import Image from "next/image";
 import projectsApi from "@/api/projects.json";
 
-
 export default function Projects() {
   const projects: any[] = projectsApi;
   const { arr, langArr } = useContext(MainContext);
 
   const text: string[] = ["text-dark", "text-light"];
-  const text2: string[] = ["text-blue", "text-yellow"];
+  const tags: string[] = ["text-[#424242]", "text-[#eeeeee]"];
   const bg: string[] = ["bg-yellow", "bg-blue"];
 
   const grid = projects.map((item, index) => (
-    <div
+    <main
       key={index}
       className="flip-card h-40  bg-transparent font-hyperlegible "
     >
-      <div className="flip-card-inner relative h-full w-full">
-        <div
-          className={`${bg[arr]} flip-card-front container absolute flex h-full w-full flex-col justify-between rounded-2xl p-[1dvw] text-[26px] text-dark drop-shadow backdrop-blur transition  duration-300 `}
+      <section className=" flip-card-inner relative h-full w-full">
+        <article
+          className={`${bg[arr]} flip-card-front container absolute flex h-full w-full flex-col justify-between rounded-2xl p-[1dvw] text-dark drop-shadow backdrop-blur transition  duration-300 `}
         >
           <h1
-            className={`${text[arr]} title mt-[1dvw] text-[2em] font-black transition duration-300`}
+            className={`${text[arr]} title text-xs font-black transition duration-300 sm:text-xl lg:text-3xl 2xl:text-5xl`}
           >
             {item.name[langArr]} {index + 1}
           </h1>
-          <h2
-            className={`${text[arr]} hyphens-auto text-justify text-[.5em] transition duration-300`}
+          <p
+            className={`${text[arr]} hyphens-auto text-justify text-[4px] leading-[0.5rem] transition duration-300 sm:text-[6.6px] sm:leading-3 lg:text-xs 2xl:text-base`}
           >
             {item.content[langArr]}
-          </h2>
-          <section
-            className={`${text2[arr]} hover: flex flex-row flex-wrap gap-x-[1dvw] text-sm transition duration-300 `}
+          </p>
+          <ul
+            className={`${tags[arr]} hover: flex cursor-cell flex-row flex-wrap gap-x-[1dvw] text-[4px] leading-[0.5rem] transition duration-300  sm:text-[6.6px] sm:leading-3 lg:text-xs 2xl:text-base`}
           >
             {item.tag.map((item: any, index: number) => (
-              <button key={index} type="button">
-                #{item}
-              </button>
+              <li key={index}>#{item}</li>
             ))}
-          </section>
-        </div>
+          </ul>
+        </article>
         <div className="flip-card-back absolute flex h-full w-full drop-shadow">
           <Link
             className="h-full overflow-hidden"
@@ -57,14 +54,15 @@ export default function Projects() {
             />
           </Link>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   ));
 
   return (
     <>
-     
-      <div className="grid grid-cols-3 gap-[5dvw]">{grid}</div>
+      <div className="grid grid-cols-1 gap-[5dvw] sm:grid-cols-2 lg:grid-cols-3">
+        {grid}
+      </div>
     </>
   );
 }
