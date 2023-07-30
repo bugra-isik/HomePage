@@ -4,7 +4,7 @@ import MainContext from "@/context/Context";
 import Link from "next/link";
 import React, { useContext, useCallback, useState } from "react";
 
-export default function Links() {
+export default function LinksM() {
   const { data, arr, langArr, setClick, click, text } = useContext(MainContext);
 
   const [zort, setZort] = useState("");
@@ -22,7 +22,7 @@ export default function Links() {
   const list = data?.nav.map((item: any, index: number) => (
     <li
       key={index}
-      className={`hidden sm:flex items-center justify-between gap-[5dvw]  `}
+      className={`flex items-center justify-between gap-[5dvw]  `}
     >
       <Link
         href={`#${item[1].toLowerCase()}`}

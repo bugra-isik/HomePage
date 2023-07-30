@@ -10,8 +10,10 @@ module.exports = {
       colors: {
         dark: "#161616",
         dark2: "#141414bf",
+        dark3: "#1c1c1c",
         light: "#fcfcfc",
         light2: "#f5f5f5bf",
+        light3: "#f8f8f8",
         "dark-0.75": "rgba(22, 22, 22, 0.75)",
         "light-0.75": "rgba(252, 252, 252, 0.75)",
         yellow: "#eed272",

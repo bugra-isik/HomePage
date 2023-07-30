@@ -24,11 +24,14 @@ export default function Home() {
     tech: Header & { links: string[] };
   } = data;
 
-  const github: string[] = ["text-[#ebebeb]", "text-[#010409]"];
+  const github: string[] = ["text-light", "text-dark"];
 
   const socialIcons: React.ReactElement[] = [
-    <BsLinkedin key={BsLinkedin} className="text-[#0274b3]" />,
-    <BsGithub key={BsGithub} className={`${github[arr]} transition duration-300`} />,
+    <BsLinkedin key={BsLinkedin} className="text-yellow" />,
+    <BsGithub
+      key={BsGithub}
+      className={`${github[arr]} transition duration-300`}
+    />,
   ];
 
   const icons: React.ReactElement[] = [
@@ -39,19 +42,13 @@ export default function Home() {
     <BiLogoTailwindCss key={BiLogoTailwindCss} />,
   ];
 
-  const textColor: string[] = [
-    "text-[#e06e3c]",
-    "text-[#3963e9]",
-    "text-[#3178c6]",
-    "text-[#149eca]",
-    "text-[#38bdf8]",
-  ];
+  const techIconText: string[] = ["text-yellow", "text-blue"];
   const techBg: string[] = ["bg-[#1c1c1c]", "bg-[#f8f8f8]"];
   const techBgHover: string[] = ["hover:bg-[#292929]", "hover:bg-[#ebebeb]"];
   const text: string[] = ["text-yellow", "text-blue"];
   const bg: string[] = ["bg-yellow", "bg-blue"];
   const header: string =
-    "text-xs sm:text-xl lg:text-3xl 2xl:text-5xl font-black";
+    "text-xl sm:text-xl lg:text-3xl 2xl:text-5xl font-black";
 
   const social = about.social.map((item, index) => (
     <Link
@@ -70,15 +67,15 @@ export default function Home() {
       href={about.tech.links[index]}
       key={index}
       target="_blank"
-      className={`${techBg[arr]} ${techBgHover[arr]} flex w-2/5 flex-col items-center justify-center gap-[1.2dvw] rounded drop-shadow-lg transition duration-300`}
+      className={`${techBg[arr]} ${techBgHover[arr]} flex h-32 w-32 flex-col items-center justify-center gap-[1.2dvw] rounded drop-shadow-lg transition duration-300`}
     >
       <i
-        className={`${textColor[index]} text-lg sm:text-3xl lg:text-5xl  2xl:text-8xl`}
+        className={`${techIconText[arr]} text-5xl transition duration-300  sm:text-3xl lg:text-5xl 2xl:text-8xl`}
       >
         {icons[index]}
       </i>
       <p
-        className={`${textColor[index]} text-[7,5px] sm:text-xs  lg:text-xl 2xl:text-3xl `}
+        className={`${techIconText[arr]} text-base transition  duration-300 sm:text-xs lg:text-xl 2xl:text-3xl`}
       >
         {item}
       </p>
@@ -111,7 +108,7 @@ export default function Home() {
       </section>
       {/* ----------------------------------------------------------------------------------------------- */}
       <section>
-        <header className="mb-[2dvw] flex select-none items-center justify-between ">
+        <header className="mb-5 flex select-none items-center justify-between ">
           <h1
             className={`${text[arr]} ${header} select-none pr-5 transition duration-300`}
           >
@@ -123,7 +120,7 @@ export default function Home() {
         </header>
         <section
           id="techs"
-          className={`flex flex-wrap justify-between gap-[5dvw] `}
+          className={`flex flex-wrap items-center gap-[5dvw] `}
         >
           {tech}
         </section>

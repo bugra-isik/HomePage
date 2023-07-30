@@ -27,7 +27,10 @@ export default function ToggleSwitch() {
   const mouseOver = data?.content.mouseOverText.themeSwitch[langArr];
 
   return (
-    <li title={mouseOver} className={`flex items-center justify-end gap-1 `}>
+    <li
+      title={mouseOver}
+      className={`hidden  items-center justify-end gap-1 sm:flex `}
+    >
       <div
         onClick={() => switchTheme()}
         className={`${moonCheck} cursor-pointer  text-[6px] text-[#767676] transition duration-700  sm:text-[10px] lg:text-[16px] 2xl:text-[24px]`}
