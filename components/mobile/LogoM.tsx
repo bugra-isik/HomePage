@@ -1,7 +1,7 @@
 import MainContext from "@/context/Context";
 import { useContext, useCallback } from "react";
 
-export default function Logo() {
+export default function LogoM() {
   const { arr, langArr } = useContext(MainContext);
 
   const reload = useCallback(() => {
@@ -17,8 +17,7 @@ export default function Logo() {
       <li
         title="Librouse!"
         onClick={() => reload()}
-        className={`${textColor[arr]} ${hover[arr]} ${bgColor[arr]} cursor-pointer   font-hyperlegible text-3xl font-black transition duration-300 
-        sm:text-[12.5px] lg:text-[20px] 2xl:text-[30px]`}
+        className={`${textColor[arr]} ${hover[arr]} ${bgColor[arr]} px-2 cursor-pointer font-hyperlegible text-3xl font-black transition duration-300`}
       >
         {langArr == 0 ? "./BUGRA" : "./BUGRA"}
       </li>

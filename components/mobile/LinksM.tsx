@@ -22,7 +22,7 @@ export default function LinksM() {
   const list = data?.nav.map((item: any, index: number) => (
     <li
       key={index}
-      className={`flex items-center justify-between gap-[5dvw]  `}
+      className={`flex py-4 items-center justify-between`}
     >
       <Link
         href={`#${item[1].toLowerCase()}`}

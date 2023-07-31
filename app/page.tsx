@@ -4,6 +4,8 @@ import Nav from "@/components/nav/Nav";
 import MainContext from "@/context/Context";
 import { useContext, useState, useCallback, useRef } from "react";
 import Drawer from "../components/mobile/drawer";
+import NavM from "@/components/mobile/NavM";
+
 
 export default function Page() {
   const { arr, data } = useContext(MainContext);
@@ -17,6 +19,7 @@ export default function Page() {
     
       className={`${theme[arr]} relative inset-0 min-h-[100dvh] transition-colors duration-300`}
     >
+      <NavM/>
       <Drawer />
       <Nav />
       <Main />

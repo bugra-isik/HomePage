@@ -120,7 +120,7 @@ export default function Home() {
         </header>
         <section
           id="techs"
-          className={`flex flex-wrap items-center gap-[5dvw] `}
+          className={`grid grid-cols-2 sm:grid-cols-3 gap-[5dvw] justify-items-center `}
         >
           {tech}
         </section>

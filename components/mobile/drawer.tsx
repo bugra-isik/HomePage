@@ -14,32 +14,37 @@ export default function Drawer() {
   }, [setIsOpen, isOpen]);
 
   const drawerBg: string[] = ["bg-dark3", "bg-light3"];
+  const iconColor: string[] = ["text-yellow", "text-blue"];
 
   return (
     <div className="flex sm:hidden">
       <div
         className={`absolute inset-y-0 ${isOpen ? "left-0" : "-left-1/2"} ${
           drawerBg[arr]
-        }  z-50 w-1/2 overflow-hidden drop-shadow duration-500 ease-in-out`}
+        }  z-50 w-1/2 overflow-hidden drop-shadow  duration-300 ease-in-out`}
       >
         <div className="flex flex-col ">
-        <i className="flex justify-end text-5xl text-white">
-          <AiOutlineClose onClick={() => setIsOpen(!isOpen)} />
-        </i>
-        <ul className={``}>
-          <LinksM />
-        </ul>
-        <ul className="flex ">
-          <ToggleSwitchM />
-          <LanguageSwitchM />
-        </ul>
+          <i
+            className={`flex justify-end pr-2 pt-2 text-3xl ${iconColor[arr]} transition duration-300`}
+          >
+            <AiOutlineClose onClick={() => setIsOpen(!isOpen)} />
+          </i>
+          <ul
+            className={`mx-4 flex flex-col divide-y divide-[#3d3d3d] pt-10 text-3xl`}
+          >
+            <LinksM />
+          </ul>
+          <ul className="mx-4 flex pt-10 justify-between">
+            <ToggleSwitchM />
+            <LanguageSwitchM />
+          </ul>
         </div>
       </div>
       <div
         onClick={() => setIsOpen(false)}
         className={`${
           isOpen ? "left-0" : "-left-full"
-        } absolute inset-y-0 z-40 w-full  overflow-hidden bg-red-700/0 drop-shadow duration-500 ease-in-out`}
+        } absolute inset-y-0 z-40 w-full  overflow-hidden bg-red-700/0`}
       ></div>
     </div>
   );

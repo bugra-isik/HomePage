@@ -14,25 +14,24 @@ export default function Nav() {
 
   return (
     <header
-      className={`${navTheme[arr]} sticky top-0 z-30 mb-[5dvw] flex h-12 items-center drop-shadow-lg backdrop-blur transition duration-300 sm:h-[4dvw]`}
+      className={`${navTheme[arr]} sticky top-0 z-30 mb-[5dvw] hidden h-12 items-center drop-shadow-lg backdrop-blur transition duration-300 sm:flex sm:h-[4dvw]`}
     >
       <nav
         className={`container sticky left-0 right-0 top-0 mx-auto grid h-auto select-none grid-cols-4 items-stretch gap-5 px-10 font-inter text-[4.5px] font-medium sm:text-[7.5px] lg:text-[12px] 2xl:text-[18px]`}
       >
-        <ul className="">
-          <div onClick={() => setIsOpen(!isOpen)} className="sm:hidden text-5xl text-yellow">
-            <GiHamburgerMenu />
-          </div>
-        </ul>
-        <ul className={`col-span-1 flex h-[4dvw] items-center justify-start`}>
+        <ul className={`col-span-1  flex h-[4dvw] items-center justify-start`}>
           <Logo />
         </ul>
 
-        <ul className={`col-span-2 flex h-[4dvw] items-center justify-evenly`}>
+        <ul
+          className={`col-span-2 hidden h-[4dvw] items-center justify-evenly sm:flex`}
+        >
           <Links />
         </ul>
 
-        <ul className={`col-span-1 flex h-[4dvw] items-center justify-end`}>
+        <ul
+          className={`col-span-1 hidden h-[4dvw] items-center justify-end sm:flex`}
+        >
           <ul className="flex h-[4dvw]  w-1/3 items-center justify-between ">
             <ToggleSwitch />
             <LanguageSwitch />
