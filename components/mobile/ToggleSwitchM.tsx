@@ -30,13 +30,13 @@ export default function ToggleSwitchM() {
     <li title={mouseOver} className={`flex items-center justify-end gap-1 `}>
       <div
         onClick={() => switchTheme()}
-        className={`${moonCheck} cursor-pointer  text-xl text-[#767676] transition duration-700 `}
+        className={`${moonCheck} cursor-pointer  text-2xl text-[#767676] transition duration-700 `}
       >
         <BiSolidMoon />
       </div>
       <div
         onClick={() => switchTheme()}
-        className={`${sunCheck} cursor-pointer text-xl text-blue transition duration-700`}
+        className={`${sunCheck} cursor-pointer text-2xl text-blue transition duration-700`}
       >
         <BiSolidSun />
       </div>

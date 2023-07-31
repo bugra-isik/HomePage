@@ -28,12 +28,11 @@ export default function LanguageSwitchM() {
     "
     >
       <li
-        className={`${text[arr]} ${hoverColor[arr]} ${hidden[langArr]} transition duration-300`}
+        className={`${text[arr]} ${hoverColor[arr]} ${hidden[langArr]}  transition duration-300`}
         title={mouseOver}
         onClick={() => handle()}
       >
-        {" "}
-        <span className="fi fi-tr"></span>
+        <span className="text-2xl fi fi-tr"></span>
       </li>
       <li
         className={`${text[arr]} ${hoverColor[arr]} ${
@@ -43,7 +42,7 @@ export default function LanguageSwitchM() {
         title={mouseOver}
         onClick={() => handle()}
       >
-        <span className="fi fi-us"></span>
+        <span className="text-2xl fi fi-us"></span>
       </li>
     </div>
   );
