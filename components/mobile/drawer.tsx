@@ -19,22 +19,22 @@ export default function Drawer() {
   return (
     <div className="flex sm:hidden">
       <div
-        className={`absolute inset-y-0 ${isOpen ? "left-0" : "-left-3/4"} ${
+        className={`fixed h-full ${isOpen ? "left-0" : "-left-3/4"} ${
           drawerBg[arr]
         }  z-50 w-3/4 overflow-hidden drop-shadow  duration-300 ease-in-out`}
       >
-        <div className="flex flex-col ">
+        <div className="pl-8 flex flex-col ">
           <i
             className={`flex justify-end pr-2 pt-2 text-3xl ${iconColor[arr]} cursor-pointer transition duration-300`}
           >
             <AiOutlineClose onClick={() => setIsOpen(!isOpen)} />
           </i>
           <ul
-            className={`ml-4 flex flex-col divide-y w-1/2 divide-[#3d3d3d] pt-10 text-2xl`}
+            className={` flex flex-col divide-y w-1/2 divide-[#3d3d3d] pt-10 text-2xl`}
           >
             <LinksM />
           </ul>
-          <ul className="ml-4 flex pt-10 w-1/2 select-none items-center justify-between">
+          <ul className=" flex pt-10 w-1/2 select-none items-center justify-between">
             <ToggleSwitchM />
             <LanguageSwitchM />
           </ul>

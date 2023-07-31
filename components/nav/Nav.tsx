@@ -14,7 +14,7 @@ export default function Nav() {
 
   return (
     <header
-      className={`${navTheme[arr]} sticky top-0 z-30 mb-[5dvw] hidden h-12 items-center drop-shadow-lg backdrop-blur transition duration-300 sm:flex sm:h-[4dvw]`}
+      className={`${navTheme[arr]} sticky top-0 z-30 hidden h-12 items-center drop-shadow-lg backdrop-blur transition duration-300 sm:flex sm:h-[4dvw]`}
     >
       <nav
         className={`container sticky left-0 right-0 top-0 mx-auto grid h-auto select-none grid-cols-4 items-stretch gap-5 px-10 font-inter text-[4.5px] font-medium sm:text-[7.5px] lg:text-[12px] 2xl:text-[18px]`}

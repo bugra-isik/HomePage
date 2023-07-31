@@ -13,7 +13,7 @@ export default function Main() {
     <>
       <TopButton />
       <main
-        className={`${text[arr]} container mx-auto px-10 pb-[5dvw] text-sm font-hyperlegible `}
+        className={`${text[arr]} container mx-auto px-10 mt-10 text-sm font-hyperlegible `}
       >
         {click === null && <Home />}
         {click === "Home" && <Home />}

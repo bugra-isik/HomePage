@@ -77,7 +77,7 @@ export default function Home() {
       key={index}
       href={item.link}
       target="_blank"
-      className={`${techBg[arr]} ${techBgHover[arr]} flex items-center gap-[0.5dvw] rounded-xl p-1 text-xs drop-shadow-lg transition duration-300`}
+      className={`${techBg[arr]} ${techBgHover[arr]} flex w-fit items-center gap-1 rounded-xl p-1 text-base drop-shadow-lg transition duration-300`}
     >
       {socialIcons[index]}
       {item.name}
@@ -94,7 +94,7 @@ export default function Home() {
             {about.aboutMe.header[langArr].toUpperCase()}
           </h1>
           <div
-            className={`h-[0.2dvw] grow rounded-l-full ${bg[arr]} transition-colors duration-300`}
+            className={`h-0.5 grow rounded-l-full ${bg[arr]} transition-colors duration-300`}
           ></div>
         </header>
         <p
@@ -112,7 +112,7 @@ export default function Home() {
             {about.tech.header[langArr].toUpperCase()}
           </h1>
           <div
-            className={`h-[0.2dvw] grow rounded-l-full ${bg[arr]} transition-colors duration-300`}
+            className={`h-0.5 grow rounded-l-full ${bg[arr]} transition-colors duration-300`}
           ></div>
         </header>
         <section
@@ -122,20 +122,27 @@ export default function Home() {
           {tech}
         </section>
       </section>
+      {/* ----------------------------------------------------------------------------------------------- */}
       <section className="mt-5 ">
-        <h1
-          className={`${text[arr]} ${header} mb-5 select-none pr-5 transition duration-300`}
-        >
-          {about.footer.header[langArr]}
-        </h1>
-        <div
-          className={`flex gap-[2dvw] text-[6px] leading-[0.5rem] sm:text-xs lg:text-base 2xl:text-2xl `}
-        >
-          {social}
+        <header className="mb-5 flex select-none items-center justify-between ">
+          <h1
+            className={`${text[arr]} ${header} select-none pr-5 transition duration-300`}
+          >
+            {about.footer.header[langArr]}
+          </h1>
           <div
-            className={`${techBg[arr]} ${techBgHover[arr]} flex select-all items-center gap-[0.5dvw] rounded-xl p-1 text-xs  drop-shadow-lg transition duration-300`}
+            className={`h-0.5 grow rounded-l-full ${bg[arr]} transition-colors duration-300`}
+          ></div>
+        </header>
+        <div
+          className={`flex flex-wrap gap-5  `}
+        >
+          <div className="flex gap-5 ">{social}</div>
+          <div
+            className={`${techBg[arr]} ${techBgHover[arr]} flex w-fit  select-all items-center gap-1 rounded-xl p-1 text-base  drop-shadow-lg transition duration-300`}
           >
             <AiOutlineMail />
+
             <div>{about.footer.name}</div>
           </div>
         </div>
