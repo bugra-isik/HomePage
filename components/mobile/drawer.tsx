@@ -25,7 +25,7 @@ export default function Drawer() {
       >
         <div className="flex flex-col ">
           <i
-            className={`flex justify-end pr-2 pt-2 text-3xl ${iconColor[arr]} transition duration-300`}
+            className={`flex justify-end pr-2 pt-2 text-3xl ${iconColor[arr]} cursor-pointer transition duration-300`}
           >
             <AiOutlineClose onClick={() => setIsOpen(!isOpen)} />
           </i>

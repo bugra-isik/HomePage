@@ -2,6 +2,7 @@ import data from "@/api/about.json";
 import MainContext from "@/context/Context";
 import Link from "next/link";
 import { useContext } from "react";
+import { AiOutlineMail } from "react-icons/ai";
 import {
   BiLogoCss3,
   BiLogoHtml5,
@@ -22,6 +23,7 @@ export default function Home() {
     social: any[];
     aboutMe: Header;
     tech: Header & { links: string[] };
+    footer: { header: string[]; name: string };
   } = data;
 
   const github: string[] = ["text-light", "text-dark"];
@@ -48,19 +50,7 @@ export default function Home() {
   const text: string[] = ["text-yellow", "text-blue"];
   const bg: string[] = ["bg-yellow", "bg-blue"];
   const header: string =
-    "text-xl sm:text-xl lg:text-3xl 2xl:text-5xl font-black";
-
-  const social = about.social.map((item, index) => (
-    <Link
-      key={index}
-      href={item.link}
-      target="_blank"
-      className={`${techBg[arr]} ${techBgHover[arr]} flex  items-center gap-[0.5dvw] rounded-xl p-1  drop-shadow-lg transition duration-300`}
-    >
-      {socialIcons[index]}
-      {item.name}
-    </Link>
-  ));
+    "text-3xl sm:text-xl lg:text-3xl 2xl:text-5xl font-black";
 
   const tech = about.tech.contents.map((item, index) => (
     <Link
@@ -82,6 +72,18 @@ export default function Home() {
     </Link>
   ));
 
+  const social = about.social.map((item, index) => (
+    <Link
+      key={index}
+      href={item.link}
+      target="_blank"
+      className={`${techBg[arr]} ${techBgHover[arr]} flex items-center gap-[0.5dvw] rounded-xl p-1 text-xs drop-shadow-lg transition duration-300`}
+    >
+      {socialIcons[index]}
+      {item.name}
+    </Link>
+  ));
+
   return (
     <>
       <section className={`mb-[4dvw] text-justify `}>
@@ -96,15 +98,10 @@ export default function Home() {
           ></div>
         </header>
         <p
-          className={` pb-[1dvw] text-[6px] leading-[0.5rem] transition duration-300 sm:text-xs lg:text-base 2xl:text-2xl`}
+          className={` hyphens-auto pb-[1dvw] text-lg transition duration-300 sm:text-xs lg:text-base 2xl:text-2xl`}
         >
           {about.aboutMe.contents[langArr]}
         </p>
-        <div
-          className={`flex gap-[2dvw] text-[6px] leading-[0.5rem] sm:text-xs lg:text-base 2xl:text-2xl `}
-        >
-          {social}
-        </div>
       </section>
       {/* ----------------------------------------------------------------------------------------------- */}
       <section>
@@ -120,10 +117,28 @@ export default function Home() {
         </header>
         <section
           id="techs"
-          className={`grid grid-cols-2 sm:grid-cols-3 gap-[5dvw] justify-items-center `}
+          className={`grid grid-cols-2 justify-items-center gap-[5dvw] sm:grid-cols-3 `}
         >
           {tech}
         </section>
+      </section>
+      <section className="mt-5 ">
+        <h1
+          className={`${text[arr]} ${header} mb-5 select-none pr-5 transition duration-300`}
+        >
+          {about.footer.header[langArr]}
+        </h1>
+        <div
+          className={`flex gap-[2dvw] text-[6px] leading-[0.5rem] sm:text-xs lg:text-base 2xl:text-2xl `}
+        >
+          {social}
+          <div
+            className={`${techBg[arr]} ${techBgHover[arr]} flex select-all items-center gap-[0.5dvw] rounded-xl p-1 text-xs  drop-shadow-lg transition duration-300`}
+          >
+            <AiOutlineMail />
+            <div>{about.footer.name}</div>
+          </div>
+        </div>
       </section>
     </>
   );

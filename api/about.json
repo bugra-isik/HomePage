@@ -27,5 +27,9 @@
       "https://react.dev/",
       "https://tailwindcss.com/"
     ]
+  },
+  "footer": {
+    "header": ["Benimle Bağlantı Kurun", "Connect with me"],
+    "name": "contact@devbugra.com"
   }
 }
