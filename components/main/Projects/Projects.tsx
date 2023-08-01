@@ -4,6 +4,7 @@ import Link from "next/link";
 import "./index.css";
 import Image from "next/image";
 import projectsApi from "@/api/projects.json";
+import { motion } from "framer-motion";
 
 export default function Projects() {
   const projects: any[] = projectsApi;
@@ -13,10 +14,31 @@ export default function Projects() {
   const tags: string[] = ["text-[#424242]", "text-[#eeeeee]"];
   const bg: string[] = ["bg-yellow", "bg-blue"];
 
-  const grid = projects.map((item, index) => (
-    <main
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
+  const grid = projects.map((i, index) => (
+    <motion.main
       key={index}
-      className="flip-card h-40 w-72 sm:h-40 sm:w-60 2xl:h-40 2xl:w-96 bg-transparent font-hyperlegible"
+      variants={item}
+      className="item flip-card h-40 w-72 bg-transparent font-hyperlegible sm:h-40 sm:w-60 2xl:h-40 2xl:w-96"
     >
       <section className=" flip-card-inner relative h-full w-full">
         <article
@@ -25,30 +47,30 @@ export default function Projects() {
           <h1
             className={`${text[arr]} title select-none text-4xl font-black transition duration-300 lg:text-3xl 2xl:text-5xl`}
           >
-            {item.name[langArr]} {index + 1}
+            {i.name[langArr]} {index + 1}
           </h1>
 
           <p
             className={`${text[arr]} hyphens-auto text-justify text-lg transition duration-300  lg:text-xs 2xl:text-base`}
           >
-            {item.content[langArr]}
+            {i.content[langArr]}
           </p>
           <ul
             className={`${tags[arr]} hover: flex cursor-cell flex-row flex-wrap gap-x-2 text-xs transition duration-300  sm:leading-3 lg:text-xs 2xl:text-base`}
           >
-            {item.tag.map((item: any, index: number) => (
+            {i.tag.map((item: any, index: number) => (
               <li key={index}>#{item}</li>
             ))}
           </ul>
         </article>
         <div className="flip-card-back absolute flex h-full w-full items-center justify-center overflow-hidden rounded-2xl bg-yellow drop-shadow">
           <Link
-            href={item.link}
+            href={i.link}
             target="_blank"
             className="pointer-events-none sm:pointer-events-auto"
           >
             <Image
-              src={item.image}
+              src={i.image}
               width={9999}
               height={9999}
               alt="There should be an image!"
@@ -56,14 +78,19 @@ export default function Projects() {
           </Link>
         </div>
       </section>
-    </main>
+    </motion.main>
   ));
 
   return (
     <>
-      <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 justify-items-center lg:grid-cols-3">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        animate="visible"
+        className="container grid grid-cols-1 justify-items-center gap-10 sm:grid-cols-2 mt-10 lg:grid-cols-3"
+      >
         {grid}
-      </div>
+      </motion.div>
     </>
   );
 }

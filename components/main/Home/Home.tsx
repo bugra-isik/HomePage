@@ -1,5 +1,6 @@
 import data from "@/api/about.json";
 import MainContext from "@/context/Context";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { useContext } from "react";
 import { AiOutlineMail } from "react-icons/ai";
@@ -89,7 +90,11 @@ export default function Home() {
   ));
 
   return (
-    <>
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <section className={`text-justify `}>
         <header className=" flex items-center justify-between">
           <h1
@@ -102,14 +107,16 @@ export default function Home() {
           ></div>
         </header>
         <p
-          className={`hyphens-auto text-lg transition duration-300 mt-3 sm:text-xs lg:mt-5 lg:text-base 2xl:mt-8 2xl:text-2xl`}
+          
+          
+          className={`mt-3 hyphens-auto text-lg transition duration-300 sm:text-xs lg:mt-5 lg:text-base 2xl:mt-8 2xl:text-2xl`}
         >
           {about.aboutMe.contents[langArr]}
         </p>
       </section>
       {/* ----------------------------------------------------------------------------------------------- */}
       <section>
-        <header className="flex select-none items-center justify-between mt-3 lg:mt-5 2xl:mt-8 ">
+        <header className="mt-3 flex select-none items-center justify-between lg:mt-5 2xl:mt-8 ">
           <h1
             className={`${text[arr]} ${header}  select-none pr-5 transition duration-300`}
           >
@@ -121,7 +128,7 @@ export default function Home() {
         </header>
         <section
           id="techs"
-          className={`grid grid-cols-2 gap-y-6 justify-items-center mt-3 sm:gap-y-12 lg:mt-5 lg:grid-cols-3 lg:gap-y-20 2xl:mt-8 2xl:gap-y-32`}
+          className={`mt-3 grid grid-cols-2 justify-items-center gap-y-6 sm:gap-y-12 lg:mt-5 lg:grid-cols-3 lg:gap-y-20 2xl:mt-8 2xl:gap-y-32`}
         >
           {tech}
         </section>
@@ -152,6 +159,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </>
+    </motion.main>
   );
 }

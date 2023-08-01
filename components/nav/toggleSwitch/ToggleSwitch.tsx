@@ -1,4 +1,5 @@
 import MainContext from "@/context/Context";
+import { motion } from "framer-motion";
 import { useCallback, useContext, useEffect, useState } from "react";
 import { BiSolidMoon, BiSolidSun } from "react-icons/bi";
 
@@ -27,7 +28,9 @@ export default function ToggleSwitch() {
   const mouseOver = data?.content.mouseOverText.themeSwitch[langArr];
 
   return (
-    <li
+    <motion.li
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       title={mouseOver}
       className={`hidden  items-center justify-end gap-1 sm:flex `}
     >
@@ -43,6 +46,6 @@ export default function ToggleSwitch() {
       >
         <BiSolidSun />
       </div>
-    </li>
+    </motion.li>
   );
 }

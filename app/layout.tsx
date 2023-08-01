@@ -30,6 +30,7 @@ export default function RootLayout({
   }, [arr]);
 
   const scrollBar = ["#1c1c1c #030712 ", " #9ca3af #f3f4f6"];
+  const htmlBg = ["#161616", "#fcfcfc"];
 
   return (
     <html
@@ -38,7 +39,9 @@ export default function RootLayout({
         scrollbarColor: scrollBar[arr],
         scrollbarWidth: "none",
         scrollBehavior: "smooth",
+        background: htmlBg[arr],
       }}
+      className={`${htmlBg[arr]} transition-colors duration-300`}
     >
       <head>
         <meta charSet="UTF-8" />

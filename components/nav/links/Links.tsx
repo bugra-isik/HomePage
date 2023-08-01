@@ -1,6 +1,7 @@
 "use client";
 
 import MainContext from "@/context/Context";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import React, { useContext, useCallback, useState } from "react";
 
@@ -20,9 +21,11 @@ export default function Links() {
   const clickColor = ["text-yellow", "text-blue"];
 
   const list = data?.nav.map((item: any, index: number) => (
-    <li
+    <motion.li
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       key={index}
-      className={`hidden sm:flex items-center justify-between gap-[5dvw]  `}
+      className={`hidden items-center justify-between gap-[5dvw] sm:flex  `}
     >
       <Link
         href={`#${item[1].toLowerCase()}`}
@@ -33,7 +36,7 @@ export default function Links() {
       >
         {item[langArr]}
       </Link>
-    </li>
+    </motion.li>
   ));
   return <>{list}</>;
 }
