@@ -82,7 +82,7 @@ export default function Home() {
       key={index}
       href={item.link}
       target="_blank"
-      className={`${techBg[arr]} ${techBgHover[arr]} flex w-fit items-center gap-1 rounded-xl p-1 text-base drop-shadow-lg transition duration-300`}
+      className={`${techBg[arr]} ${techBgHover[arr]} text-lg lg:text-base 2xl:text-2xl flex w-fit items-center gap-1 rounded-xl p-1  drop-shadow-lg transition duration-300`}
     >
       {socialIcons[index]}
       {item.name}
@@ -107,9 +107,7 @@ export default function Home() {
           ></div>
         </header>
         <p
-          
-          
-          className={`mt-3 hyphens-auto text-lg transition duration-300 sm:text-xs lg:mt-5 lg:text-base 2xl:mt-8 2xl:text-2xl`}
+          className={`mt-3 hyphens-auto text-lg transition duration-300  lg:mt-5 lg:text-base 2xl:mt-8 2xl:text-2xl`}
         >
           {about.aboutMe.contents[langArr]}
         </p>
@@ -145,10 +143,10 @@ export default function Home() {
             className={`h-0.5 grow rounded-l-full ${bg[arr]} transition-colors duration-300`}
           ></div>
         </header>
-        <div className={`flex flex-wrap gap-5 pb-3 sm:mt-3 lg:mt-5 2xl:mt-8`}>
-          <div className="flex gap-5 ">{social}</div>
+        <div className={`flex flex-wrap gap-5 pb-3 sm:mt-3 lg:mt-5 2xl:mt-8 `}>
+          <div className="flex gap-5  ">{social}</div>
           <div
-            className={`${techBg[arr]} ${techBgHover[arr]} flex w-fit select-all items-center gap-1 rounded-xl p-1 text-base  drop-shadow-lg 
+            className={`${techBg[arr]} ${techBgHover[arr]}  flex w-fit select-all items-center gap-1 rounded-xl p-1 text-lg lg:text-base 2xl:text-2xl  drop-shadow-lg 
             transition duration-300`}
           >
             <AiOutlineMail
