@@ -53,7 +53,7 @@ export default function Home() {
   const text: string[] = ["text-yellow", "text-blue"];
   const bg: string[] = ["bg-yellow", "bg-blue"];
   const header: string =
-    "text-3xl sm:text-xl lg:text-3xl 2xl:text-5xl font-black";
+    "text-3xl sm:text-3xl lg:text-3xl 2xl:text-5xl font-black";
 
   const tech = about.tech.contents.map((item, index) => (
     <Link
@@ -61,8 +61,7 @@ export default function Home() {
       key={index}
       target="_blank"
       className={`${techBg[arr]} ${techBgHover[arr]} flex h-32 w-32 flex-col items-center justify-center 
-      gap-[1.2dvw] rounded drop-shadow-lg transition duration-300 sm:h-24 sm:w-24 
-      sm:h-40 sm:w-40 2xl:h-60 2xl:w-60`}
+      gap-[1.2dvw] rounded-3xl drop-shadow-lg transition duration-300 sm:h-40 sm:w-40 2xl:h-60 2xl:w-60`}
     >
       <i
         className={`${techIconText[arr]} text-5xl transition duration-300  sm:text-6xl lg:text-5xl 2xl:text-8xl`}
@@ -103,14 +102,14 @@ export default function Home() {
           ></div>
         </header>
         <p
-          className={`hyphens-auto text-lg transition duration-300 sm:mt-3 sm:text-xs lg:mt-5 lg:text-base 2xl:mt-8 2xl:text-2xl`}
+          className={`hyphens-auto text-lg transition duration-300 mt-3 sm:text-xs lg:mt-5 lg:text-base 2xl:mt-8 2xl:text-2xl`}
         >
           {about.aboutMe.contents[langArr]}
         </p>
       </section>
       {/* ----------------------------------------------------------------------------------------------- */}
       <section>
-        <header className="flex select-none items-center justify-between sm:mt-3 lg:mt-5 2xl:mt-8 ">
+        <header className="flex select-none items-center justify-between mt-3 lg:mt-5 2xl:mt-8 ">
           <h1
             className={`${text[arr]} ${header}  select-none pr-5 transition duration-300`}
           >
@@ -122,13 +121,13 @@ export default function Home() {
         </header>
         <section
           id="techs"
-          className={`grid grid-cols-2 justify-items-center sm:mt-3 lg:mt-5 lg:grid-cols-3 2xl:mt-8 2xl:gap-y-32 lg:gap-y-20 sm:gap-y-12`}
+          className={`grid grid-cols-2 gap-y-6 justify-items-center mt-3 sm:gap-y-12 lg:mt-5 lg:grid-cols-3 lg:gap-y-20 2xl:mt-8 2xl:gap-y-32`}
         >
           {tech}
         </section>
       </section>
       {/* ----------------------------------------------------------------------------------------------- */}
-      <section className="sm:mt-3 sm:pb-3 lg:mt-5 lg:pb-5 2xl:mt-8 2xl:pb-8">
+      <section className="mt-3 sm:pb-3 lg:mt-5 lg:pb-5 2xl:mt-8 2xl:pb-8">
         <header className="mb-5 flex select-none items-center justify-between ">
           <h1
             className={`${text[arr]} ${header} select-none pr-5 transition duration-300`}
@@ -139,7 +138,7 @@ export default function Home() {
             className={`h-0.5 grow rounded-l-full ${bg[arr]} transition-colors duration-300`}
           ></div>
         </header>
-        <div className={`flex flex-wrap gap-5 sm:mt-3 lg:mt-5 2xl:mt-8`}>
+        <div className={`flex flex-wrap gap-5 pb-3 sm:mt-3 lg:mt-5 2xl:mt-8`}>
           <div className="flex gap-5 ">{social}</div>
           <div
             className={`${techBg[arr]} ${techBgHover[arr]} flex w-fit select-all items-center gap-1 rounded-xl p-1 text-base  drop-shadow-lg 
