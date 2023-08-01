@@ -15,30 +15,31 @@ export default function Drawer() {
 
   const drawerBg: string[] = ["bg-dark3", "bg-light3"];
   const iconColor: string[] = ["text-yellow", "text-blue"];
+  const bgColor: string[] = ["bg-dark", "bg-light"];
 
   return (
     <div className="flex sm:hidden">
       <div
-        className={`fixed h-full ${isOpen ? "left-0" : "-left-3/4"} ${
+        className={`fixed inset-y-0 ${isOpen ? "left-0" : "-left-3/4"} ${
           drawerBg[arr]
-        }  z-50 w-3/4 overflow-hidden drop-shadow  duration-300 ease-in-out`}
+        }  z-50 w-3/4 overflow-hidden drop-shadow-xl duration-300 ease-in-out`}
       >
-        <div className="pl-8 flex flex-col ">
+        <ul className="flex flex-col ">
           <i
-            className={`flex justify-end pr-2 pt-2 text-3xl ${iconColor[arr]} cursor-pointer transition duration-300`}
+            className={`${iconColor[arr]} ${bgColor[arr]} flex h-12 cursor-pointer items-center justify-end pr-4 text-3xl drop-shadow-lg transition duration-300`}
           >
             <AiOutlineClose onClick={() => setIsOpen(!isOpen)} />
           </i>
-          <ul
-            className={` flex flex-col divide-y w-1/2 divide-[#3d3d3d] pt-10 text-2xl`}
-          >
-            <LinksM />
-          </ul>
-          <ul className=" flex pt-10 w-1/2 select-none items-center justify-between">
-            <ToggleSwitchM />
-            <LanguageSwitchM />
-          </ul>
-        </div>
+          <div className={`pl-8`}>
+            <ul className={` flex w-full flex-col pt-10 text-2xl`}>
+              <LinksM />
+            </ul>
+            <ul className=" mt-4 flex w-1/2 select-none flex-col items-start justify-between gap-8">
+              <ToggleSwitchM />
+              <LanguageSwitchM />
+            </ul>
+          </div>
+        </ul>
       </div>
       <div
         onClick={() => setIsOpen(false)}

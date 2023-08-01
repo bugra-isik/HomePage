@@ -1,7 +1,7 @@
 {
   "logo": ["/logodark.png", "/logolight.png"],
   "nav": [
-    ["Ana Sayfa", "Home"],
+    ["Anasayfa", "Home"],
     ["Projeler", "Projects"]
   ],
   "content": {

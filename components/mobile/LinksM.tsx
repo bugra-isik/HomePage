@@ -18,17 +18,18 @@ export default function LinksM() {
 
   const hover = ["hover:text-yellow", "hover:text-blue"];
   const clickColor = ["text-yellow", "text-blue"];
+  const bgColor = ["bg-dark", "bg-light2"];
 
   const list = data?.nav.map((item: any, index: number) => (
     <li
       key={index}
-      className={`flex py-4 items-center justify-between `}
+      className={`flex py-4 items-center`}
     >
       <Link
         href={`#${item[1].toLowerCase()}`}
         className={`${hover[arr]} ${
           click === item[1] ? clickColor[arr] : text[arr]
-        } transition duration-300 ${zort} `}
+        } transition duration-300 ${zort}  rounded`}
         onClick={() => handleClick(item[1])}
       >
         {item[langArr]}

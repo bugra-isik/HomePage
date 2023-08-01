@@ -17,7 +17,7 @@ export default function Logo() {
       <li
         title="Librouse!"
         onClick={() => reload()}
-        className={`${textColor[arr]} ${hover[arr]} ${bgColor[arr]} cursor-pointer   font-hyperlegible text-3xl font-black transition duration-300 
+        className={`${textColor[arr]} ${hover[arr]} ${bgColor[arr]} cursor-pointer px-2 font-hyperlegible font-black transition duration-300 
         sm:text-[12.5px] lg:text-[20px] 2xl:text-[30px]`}
       >
         {langArr == 0 ? "./BUGRA" : "./BUGRA"}

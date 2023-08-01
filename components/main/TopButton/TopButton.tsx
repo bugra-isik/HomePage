@@ -21,7 +21,7 @@ export default function TopButton() {
 
   
 
-  const themeColors = ["text-yellow", "text-blue"];
+  const bgColor = ["text-yellow2", "text-blue2"];
 
   const scrollToTop = useCallback(() => {
     const p = document.documentElement || document.body;
@@ -35,7 +35,7 @@ export default function TopButton() {
   return (
     <BsFillArrowUpCircleFill
       onClick={() => scrollToTop()}
-      className={`${themeColors[arr]} ${scale}  ${rotate} fixed right-[5dvw] top-[90vh] cursor-pointer transition duration-700`}
+      className={`${bgColor[arr]} ${scale}  ${rotate} drop-shadow-2xl z-10 fixed right-[5dvw] top-[90vh] cursor-pointer transition duration-700`}
     />
   );
 }

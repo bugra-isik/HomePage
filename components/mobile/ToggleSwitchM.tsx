@@ -24,19 +24,21 @@ export default function ToggleSwitchM() {
     }
   }, [switchTheme]);
 
+  const bgColor = ["bg-dark", "bg-light2"];
+
   const mouseOver = data?.content.mouseOverText.themeSwitch[langArr];
 
   return (
     <li title={mouseOver} className={`flex items-center justify-end gap-1 `}>
       <div
         onClick={() => switchTheme()}
-        className={`${moonCheck} cursor-pointer  text-2xl text-[#767676] transition duration-700 `}
+        className={`${moonCheck} cursor-pointer text-2xl text-[#767676] transition-colors duration-300 `}
       >
         <BiSolidMoon />
       </div>
       <div
         onClick={() => switchTheme()}
-        className={`${sunCheck} cursor-pointer text-2xl text-blue transition duration-700`}
+        className={`${sunCheck} cursor-pointer text-2xl text-blue transition-colors duration-300`}
       >
         <BiSolidSun />
       </div>
