@@ -63,7 +63,9 @@ export default function Projects() {
             ))}
           </ul>
         </article>
-        <div className="flip-card-back absolute flex h-full w-full items-center justify-center overflow-hidden rounded-2xl bg-yellow drop-shadow">
+        <div
+          className={`flip-card-back absolute flex h-full w-full items-center justify-center overflow-hidden rounded-2xl ${bg[arr]} drop-shadow`}
+        >
           <Link
             href={i.link}
             target="_blank"
