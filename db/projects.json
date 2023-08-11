@@ -1,0 +1,12 @@
+[
+  {
+    "name": ["Proje", "Project"],
+    "content": [
+      "13 mini proje barındıran bir proje vitrini.",
+      "A project showcase with 13 mini projects."
+    ],
+    "image": "/images/1.png",
+    "tag": ["HTML5", "Tailwind CSS", "JavaScript"],
+    "link": "https://bugra-isik.github.io/13Projects/"
+  }
+]

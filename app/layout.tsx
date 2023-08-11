@@ -3,7 +3,7 @@
 import "./global.sass";
 import MainContext from "@/context/Context";
 import { useState, useEffect } from "react";
-import data from "@/api/data.json";
+import data from "@/db/data.json";
 
 const metadata = {
   title: "Librouse",

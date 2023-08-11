@@ -1,4 +1,4 @@
-import data from "@/api/about.json";
+import data from "@/db/about.json";
 import MainContext from "@/context/Context";
 import { motion } from "framer-motion";
 import Link from "next/link";

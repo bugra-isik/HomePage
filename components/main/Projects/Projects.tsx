@@ -3,7 +3,7 @@ import { useContext, useCallback, useState } from "react";
 import Link from "next/link";
 import "./index.css";
 import Image from "next/image";
-import projectsApi from "@/api/projects.json";
+import projectsApi from "@/db/projects.json";
 import { motion } from "framer-motion";
 
 export default function Projects() {
@@ -87,7 +87,7 @@ export default function Projects() {
         variants={container}
         initial="hidden"
         animate="visible"
-        className="container grid grid-cols-1 justify-items-center gap-10 sm:grid-cols-2 mt-10 lg:grid-cols-3"
+        className="container mt-10 grid grid-cols-1 justify-items-center gap-10 sm:grid-cols-2 lg:grid-cols-3"
       >
         {grid}
       </motion.div>
