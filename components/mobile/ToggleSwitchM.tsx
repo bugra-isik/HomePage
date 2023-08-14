@@ -18,7 +18,7 @@ export default function ToggleSwitch() {
   const hiddenity = [true, false];
   const mouseOver = data?.content.mouseOverText.themeSwitch[langArr];
   return (
-    <motion.li
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       title={mouseOver}
@@ -38,6 +38,6 @@ export default function ToggleSwitch() {
       >
         <BiSolidSun />
       </div>
-    </motion.li>
+    </motion.div>
   );
 }

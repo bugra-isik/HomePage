@@ -6,7 +6,7 @@ import "/node_modules/flag-icons/css/flag-icons.min.css";
 const LanguageSwitch = () => {
   const { setLangArr, data, langArr, arr, text } = useContext(MainContext);
   const [lang, setLang] = useState();
-  const ref = useRef<HTMLLIElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (localStorage.getItem("lang") == "1") {
@@ -30,15 +30,15 @@ const LanguageSwitch = () => {
       className="hidden cursor-pointer sm:block 
     "
     >
-      <li
+      <div
         className={`${text[arr]} ${hoverColor[arr]} ${hidden[langArr]} transition duration-300`}
         title={mouseOver}
         onClick={() => handle()}
       >
         {" "}
         <span className="fi fi-tr"></span>
-      </li>
-      <li
+      </div>
+      <div
         className={`${text[arr]} ${hoverColor[arr]} ${
           hidden[langArr == 0 ? 1 : 0]
         }   transition duration-300`}
@@ -47,7 +47,7 @@ const LanguageSwitch = () => {
         onClick={() => handle()}
       >
         <span className="fi fi-us"></span>
-      </li>
+      </div>
     </motion.div>
   );
 };

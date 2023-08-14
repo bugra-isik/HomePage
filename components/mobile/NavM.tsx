@@ -15,17 +15,17 @@ export default function NavM() {
     >
       <nav className={`w-full select-none px-10`}>
         <ul className="flex items-center justify-between">
-          <ul
+          <li
             onClick={() => setIsOpen(!isOpen)}
             className={`text-3xl ${
               arr == 0 ? "text-yellow" : "text-blue"
             } cursor-pointer transition duration-300 sm:hidden`}
           >
             <GiHamburgerMenu />
-          </ul>
-          <ul>
+          </li>
+          <li>
             <LogoM />
-          </ul>
+          </li>
         </ul>
       </nav>
     </header>

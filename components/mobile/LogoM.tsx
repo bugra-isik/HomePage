@@ -13,14 +13,12 @@ export default function LogoM() {
   const bgColor: string[] = ["bg-yellow", "bg-blue"];
 
   return (
-    <>
-      <li
-        title="Librouse!"
-        onClick={() => reload()}
-        className={`${textColor[arr]} ${hover[arr]} ${bgColor[arr]} px-2 cursor-pointer font-hyperlegible text-3xl font-black transition duration-300`}
-      >
-        {langArr == 0 ? "./BUGRA" : "./BUGRA"}
-      </li>
-    </>
+    <div
+      title="Librouse!"
+      onClick={() => reload()}
+      className={`${textColor[arr]} ${hover[arr]} ${bgColor[arr]} cursor-pointer px-2 font-hyperlegible text-3xl font-black transition duration-300`}
+    >
+      {langArr == 0 ? "./BUGRA" : "./BUGRA"}
+    </div>
   );
 }

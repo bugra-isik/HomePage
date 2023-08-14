@@ -30,11 +30,12 @@ export default function RootLayout({
   }, [arr]);
 
   const scrollBar = ["#1c1c1c #030712 ", " #9ca3af #f3f4f6"];
-  const htmlBg = ["#161616", "#fcfcfc"];
+  const htmlBg = ["bg-dark", "bg-light"];
 
   return (
     <html
       lang="en"
+      dir="ltl"
       style={{
         scrollbarColor: scrollBar[arr],
         scrollbarWidth: "none",
@@ -54,16 +55,23 @@ export default function RootLayout({
         />
         <meta
           name="description"
-          content="Merhaba! Ben Buğra Işık, bir web geliştiriciyim. Bu kişisel web sitesinde web geliştirme projelerimi ve deneyimlerimi paylaşıyorum. Frontend ve backend teknolojileriyle ilgileniyorum. Projelerimi inceleyin ve benimle iletişime geçmekten çekinmeyin."
+          content="Bu kişisel web sitesinde web geliştirme projelerimi ve deneyimlerimi paylaşıyorum. Projelerimi inceleyin ve benimle iletişime geçmekten çekinmeyin."
         />
         <meta name="robots" content="index,follow" />
         <meta name="author" content="Buğra Işık" />
+        <meta name="msapplication-config" content="browserconfig.xml" />
         <link
           rel="shortcut icon"
           href="favicon-196x196.png"
           type="image/x-icon"
         />
+        <link rel="apple-touch-icon" href="apple-touch-icon-180x180.png" />
+        <link
+          rel="canonical"
+          href="http://example.com/2017/09/a-new-article-to-red.html"
+        />
       </head>
+
       <body>
         <MainContext.Provider
           value={{

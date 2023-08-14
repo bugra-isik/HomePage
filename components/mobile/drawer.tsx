@@ -31,39 +31,43 @@ export default function Drawer() {
   const bgColor: string[] = ["bg-dark", "bg-light"];
 
   return (
-    <div
-      className="flex sm:hidden select-none"
+    <main
+      className="flex select-none sm:hidden"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
     >
-      <div
+      <section
         className={`fixed inset-y-0 ${isOpen ? "left-0" : "-left-3/4"} ${
           drawerBg[arr]
         }  z-50 w-3/4 overflow-hidden drop-shadow-xl duration-300 ease-in-out`}
       >
         <ul className="flex flex-col ">
-          <i
-            className={`${iconColor[arr]} ${bgColor[arr]} flex h-12 cursor-pointer items-center justify-end pr-4 text-3xl drop-shadow-lg transition duration-300`}
-          >
-            <AiOutlineClose onClick={toggleDrawer} />
-          </i>
-          <div className={`pl-8`}>
-            <ul className={` flex w-full flex-col pt-10 text-2xl`}>
+          <li>
+            <i
+              className={`${iconColor[arr]} ${bgColor[arr]} flex h-12 cursor-pointer items-center justify-end pr-4 text-3xl drop-shadow-lg transition duration-300`}
+            >
+              <AiOutlineClose onClick={toggleDrawer} />
+            </i>
+          </li>
+          <li className={`pl-8`}>
+            <div className={` flex w-full flex-col pt-10 text-2xl`}>
               <LinksM />
-            </ul>
-            <ul className=" mt-4 flex w-1/2 select-none flex-col items-start justify-between gap-8">
+            </div>
+            <div className=" mt-4 flex w-1/2 select-none flex-col items-start justify-between gap-8">
               <ToggleSwitchM />
               <LanguageSwitchM />
-            </ul>
-          </div>
+            </div>
+          </li>
         </ul>
-      </div>
-      <div
+      </section>
+      <section
         onClick={() => setIsOpen(false)}
         className={`${
-          isOpen ? "left-0" : "-left-full"
-        } absolute inset-y-0 z-40 w-full  overflow-hidden bg-black/0`}
-      ></div>
-    </div>
+          isOpen
+            ? "left-0 bg-black/50 backdrop-blur"
+            : "-left-full bg-black/0 backdrop-blur-none "
+        } absolute inset-y-0 z-40 w-full  overflow-hidden  transition duration-300`}
+      ></section>
+    </main>
   );
 }

@@ -31,10 +31,10 @@ export default function Nav() {
         <ul
           className={`col-span-1 hidden h-[4dvw] items-center justify-end sm:flex`}
         >
-          <ul className="flex h-[4dvw]  w-1/3 items-center justify-between ">
+          <li className="flex h-[4dvw]  w-1/3 items-center justify-between ">
             <ToggleSwitch />
             <LanguageSwitch />
-          </ul>
+          </li>
         </ul>
       </nav>
     </header>

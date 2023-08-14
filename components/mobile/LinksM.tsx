@@ -18,7 +18,7 @@ export default function LinksM() {
   const bgColor = ["bg-dark", "bg-light2"];
 
   const list = data?.nav.map((item: any, index: number) => (
-    <li key={index} className={`flex items-center py-4`}>
+    <div key={index} className={`flex items-center py-4`}>
       <Link
         href={`#${item[1].toLowerCase()}`}
         className={`${hover[arr]} ${
@@ -31,7 +31,7 @@ export default function LinksM() {
       >
         {item[langArr]}
       </Link>
-    </li>
+    </div>
   ));
   return <>{list}</>;
 }

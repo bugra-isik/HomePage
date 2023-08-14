@@ -12,13 +12,13 @@ export default function Page() {
   const theme = ["bg-dark", "bg-light"];
 
   return (
-    <div
+    <main
       className={`${theme[arr]} relative inset-0 min-h-[100dvh] transition-colors duration-300`}
     >
       <NavM />
       <Drawer />
       <Nav />
       <Main />
-    </div>
+    </main>
   );
 }

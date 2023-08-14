@@ -5,7 +5,7 @@ import "/node_modules/flag-icons/css/flag-icons.min.css";
 export default function LanguageSwitchM() {
   const { setLangArr, data, langArr, arr, text } = useContext(MainContext);
   const [lang, setLang] = useState();
-  const ref = useRef<HTMLLIElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (localStorage.getItem("lang") == "1") {
@@ -24,27 +24,26 @@ export default function LanguageSwitchM() {
   const bgColor = ["bg-dark", "bg-light2"];
 
   return (
-    <div
-      className="cursor-pointer 
-    "
-    >
-      <li
-        className={`${text[arr]} ${hoverColor[arr]} ${hidden[langArr]} ${bgColor[arr]} flex items-center justify-center rounded transition duration-300`}
+    <>
+      <div
+        className={`${text[arr]} ${hoverColor[arr]} ${hidden[langArr]} ${bgColor[arr]} flex cursor-pointer items-center justify-center rounded transition duration-300`}
         title={mouseOver}
         onClick={() => handle()}
       >
         <span className="fi fi-tr text-2xl"></span>
-      </li>
-      <li
+      </div>
+      <div
         className={`${text[arr]} ${hoverColor[arr]} ${
           hidden[langArr == 0 ? 1 : 0]
-        } ${bgColor[arr]} flex items-center justify-center transition rounded duration-300`}
+        } ${
+          bgColor[arr]
+        } flex cursor-pointer items-center justify-center rounded transition duration-300`}
         ref={ref}
         title={mouseOver}
         onClick={() => handle()}
       >
         <span className="fi fi-us text-2xl"></span>
-      </li>
-    </div>
+      </div>
+    </>
   );
 }

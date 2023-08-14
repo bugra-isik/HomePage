@@ -9,14 +9,15 @@ export default function TopButton() {
 
   const [{ x, y }, scrollTo] = useWindowScroll();
 
-  let scale: string = "",
-    rotate: string = "";
+  let scale: string = "scale-0",
+    rotate: string = "-rotate-180",
+    hidden: string = "hidden";
 
   if (y != null) {
-    if (y < 300) {
-      scale = "scale-0";
-      rotate = "-rotate-180";
-    } else if (y > 300) {
+    if (y > 100) {
+      hidden = " ";
+    }
+    if (y > 300) {
       scale = "scale-[2]";
       rotate = "rotate-0";
     }
@@ -36,9 +37,7 @@ export default function TopButton() {
   return (
     <BsFillArrowUpCircleFill
       onClick={() => scrollToTop()}
-      className={`${bgColor[arr]} ${scale}  ${rotate} fixed right-[5dvw] top-[90vh] z-10 cursor-pointer drop-shadow-2xl transition duration-700`}
+      className={`${bgColor[arr]} ${scale} ${rotate} ${hidden} fixed right-[5dvw] top-[90vh] z-10 cursor-pointer drop-shadow-2xl transition duration-700`}
     />
   );
 }
-
-//${opacity} ${rotate}

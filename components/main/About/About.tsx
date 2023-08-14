@@ -105,7 +105,7 @@ export default function About() {
             {about.aboutMe.header[langArr]}
           </h1>
           <div
-            className={` grow rounded-l-full lg:h-[1.3px] 2xl:h-0.5 ${bg[arr]} transition-colors duration-300`}
+            className={` grow rounded-l-full h-0.5 lg:h-[1.3px] 2xl:h-0.5 ${bg[arr]} transition-colors duration-300`}
           ></div>
         </header>
         <p
@@ -123,7 +123,7 @@ export default function About() {
             {about.tech.header[langArr]}
           </h1>
           <div
-            className={` grow rounded-l-full lg:h-[1.3px] 2xl:h-0.5 ${bg[arr]} transition-colors duration-300`}
+            className={` grow rounded-l-full h-0.5 lg:h-[1.3px] 2xl:h-0.5 ${bg[arr]} transition-colors duration-300`}
           ></div>
         </header>
         <section
@@ -142,7 +142,7 @@ export default function About() {
             {about.footer.header[langArr]}
           </h1>
           <div
-            className={` grow rounded-l-full lg:h-[1.3px] 2xl:h-0.5 ${bg[arr]} transition-colors duration-300`}
+            className={` grow rounded-l-full h-0.5 lg:h-[1.3px] 2xl:h-0.5 ${bg[arr]} transition-colors duration-300`}
           ></div>
         </header>
         <div className={`flex flex-wrap gap-5 pb-3 sm:mt-3 lg:mt-5 2xl:mt-8 `}>

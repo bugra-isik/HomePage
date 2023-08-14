@@ -23,7 +23,6 @@ export default function Home() {
       autoPlay
       muted
       loop
-      disablePictureInPicture={true}
     >
       <source src={video[arr]} type="video/mp4" />
     </motion.video>
