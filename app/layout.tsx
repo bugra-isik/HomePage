@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 import "./global.sass";
 import { Metadata } from "next";
 
-export const metadata = {
-  title: "Bugra",
+const metadata = {
+  title: "Bugra || Web Dev.",
 };
 
 const text = ["text-light", "text-dark"];
