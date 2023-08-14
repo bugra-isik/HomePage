@@ -1,11 +1,11 @@
 "use client";
 import Main from "@/components/main/Main";
-import Drawer from "@/components/mobile/Drawer";
+
 import NavM from "@/components/mobile/NavM";
 import Nav from "@/components/nav/Nav";
 import MainContext from "@/context/Context";
 import { useContext } from "react";
-
+import Drawer from "@/components/mobile/Drawer";
 
 export default function Page() {
   const { arr, data } = useContext(MainContext);
