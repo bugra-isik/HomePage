@@ -5,12 +5,6 @@ import NavM from "@/components/mobile/NavM";
 import Nav from "@/components/nav/Nav";
 import MainContext from "@/context/Context";
 import { useContext } from "react";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Deneme",
-  description: "...",
-};
 
 export default function Page() {
   const { arr } = useContext(MainContext);
