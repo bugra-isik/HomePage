@@ -2,7 +2,8 @@
   "logo": ["/logodark.png", "/logolight.png"],
   "nav": [
     ["Anasayfa", "Home"],
-    ["Projeler", "Projects"]
+    ["Projeler", "Projects"],
+    ["Hakkımda","About"]
   ],
   "content": {
     "siteState": ["Site yapım aşamasında.", "The site is under construction."],

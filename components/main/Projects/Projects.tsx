@@ -1,10 +1,10 @@
 import MainContext from "@/context/Context";
-import { useContext, useCallback, useState } from "react";
-import Link from "next/link";
-import "./index.css";
-import Image from "next/image";
 import projectsApi from "@/db/projects.json";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { useContext } from "react";
+import "./index.css";
 
 export default function Projects() {
   const projects: any[] = projectsApi;
@@ -34,16 +34,22 @@ export default function Projects() {
     },
   };
 
-  const grid = projects.map((i, index) => (
+    const grid = projects.map((i, index) => (
     <motion.main
       key={index}
       variants={item}
-      className="item flip-card h-40 w-72 bg-transparent font-hyperlegible sm:h-40 sm:w-60 2xl:h-40 2xl:w-96"
+      className="item flip-card h-40 w-72  font-hyperlegible sm:h-40 sm:w-60 2xl:h-40 2xl:w-96"
     >
       <section className=" flip-card-inner relative h-full w-full">
         <article
           className={`${bg[arr]} flip-card-front container absolute flex h-full w-full flex-col justify-between rounded-2xl py-2 pl-2 pr-4 text-dark drop-shadow backdrop-blur transition  duration-300 `}
         >
+          <Link
+            href={i.link}
+            target="_blank"
+            className="absolute inset-0 top-0 h-full w-full lg:hidden"
+          ></Link>
+
           <h1
             className={`${text[arr]} title select-none text-4xl font-black transition duration-300 lg:text-3xl 2xl:text-5xl`}
           >

@@ -1,6 +1,6 @@
-import { useWindowScroll } from "@uidotdev/usehooks";
-import { useState, useContext, useCallback } from "react";
 import MainContext from "@/context/Context";
+import { useWindowScroll } from "@uidotdev/usehooks";
+import { useCallback, useContext } from "react";
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
 
 export default function TopButton() {

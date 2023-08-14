@@ -3,12 +3,10 @@
 import MainContext from "@/context/Context";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import React, { useContext, useCallback, useState } from "react";
+import { useCallback, useContext } from "react";
 
 export default function Links() {
   const { data, arr, langArr, setClick, click, text } = useContext(MainContext);
-
-  const [zort, setZort] = useState("");
 
   const handleClick = useCallback(
     (x: string) => {
@@ -25,13 +23,13 @@ export default function Links() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       key={index}
-      className={`hidden items-center justify-between gap-[5dvw] sm:flex  `}
+      className={`items-center justify-between`}
     >
       <Link
         href={`#${item[1].toLowerCase()}`}
         className={`${hover[arr]} ${
           click === item[1] ? clickColor[arr] : text[arr]
-        } transition duration-300 ${zort} `}
+        } transition duration-300`}
         onClick={() => handleClick(item[1])}
       >
         {item[langArr]}

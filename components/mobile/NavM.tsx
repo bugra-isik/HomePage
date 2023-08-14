@@ -1,7 +1,7 @@
-import { useContext, useState, useRef, useEffect } from "react";
-import LogoM from "./LogoM";
 import MainContext from "@/context/Context";
+import { useContext } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
+import LogoM from "./LogoM";
 
 export default function NavM() {
   const { arr, data, drawer, setDrawer, isOpen, setIsOpen } =

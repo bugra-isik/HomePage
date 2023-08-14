@@ -1,5 +1,5 @@
 import MainContext from "@/context/Context";
-import { useContext, useCallback } from "react";
+import { useCallback, useContext } from "react";
 
 export default function LogoM() {
   const { arr, langArr } = useContext(MainContext);
