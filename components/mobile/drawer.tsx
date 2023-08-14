@@ -31,7 +31,7 @@ export default function Drawer() {
   const bgColor: string[] = ["bg-dark", "bg-light"];
 
   return (
-    <main
+    <nav
       className="flex select-none sm:hidden"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
@@ -68,6 +68,6 @@ export default function Drawer() {
             : "-left-full bg-black/0 backdrop-blur-none "
         } absolute inset-y-0 z-40 w-full  overflow-hidden  transition duration-300`}
       ></section>
-    </main>
+    </nav>
   );
 }

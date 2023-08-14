@@ -4,6 +4,7 @@ import data from "@/db/data.json";
 import { useEffect, useState } from "react";
 import "./global.sass";
 import { Metadata } from "next";
+import Script from "next/script";
 
 const metadata = {
   title: "Bugra || Web Developer",
@@ -29,20 +30,10 @@ export default function RootLayout({
     localStorage.setItem("theme", arr.toString());
   }, [arr]);
 
-  const scrollBar = ["#1c1c1c #030712 ", " #9ca3af #f3f4f6"];
-  const htmlBg = ["bg-dark", "bg-light"];
-
   return (
     <html
       lang="en"
-      dir="ltl"
-      style={{
-        scrollbarColor: scrollBar[arr],
-        scrollbarWidth: "none",
-        scrollBehavior: "smooth",
-        background: htmlBg[arr],
-      }}
-      className={`${htmlBg[arr]} transition-colors duration-300`}
+      className={`scrollbar-${arr} transition-colors duration-300`}
     >
       <head>
         <title>{metadata.title}</title>
@@ -66,11 +57,18 @@ export default function RootLayout({
           type="image/x-icon"
         />
         <link rel="apple-touch-icon" href="apple-touch-icon-180x180.png" />
-        <link
-          rel="canonical"
-          href="http://example.com/2017/09/a-new-article-to-red.html"
-        />
       </head>
+
+      <Script src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'GA_MEASUREMENT_ID');
+        `}
+      </Script>
 
       <body>
         <MainContext.Provider
