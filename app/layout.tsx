@@ -6,7 +6,7 @@ import "./global.sass";
 import { Metadata } from "next";
 
 const metadata = {
-  title: "Bugra || Web Dev.",
+  title: "Bugra || Web Developer",
 };
 
 const text = ["text-light", "text-dark"];
