@@ -1,10 +1,9 @@
 "use client";
 import MainContext from "@/context/Context";
 import data from "@/db/data.json";
+import Script from "next/script";
 import { useEffect, useState } from "react";
 import "./global.sass";
-import { Metadata } from "next";
-import Script from "next/script";
 
 const metadata = {
   title: "Bugra || Web Developer",

@@ -15,7 +15,6 @@ export default function LinksM() {
 
   const hover = ["hover:text-yellow", "hover:text-blue"];
   const clickColor = ["text-yellow", "text-blue"];
-  const bgColor = ["bg-dark", "bg-light2"];
 
   const list = data?.nav.map((item: any, index: number) => (
     <div key={index} className={`flex items-center py-4`}>

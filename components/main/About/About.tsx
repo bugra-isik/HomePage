@@ -111,8 +111,7 @@ export default function About() {
         <p
           className={`mt-3 hyphens-auto text-lg transition duration-300  lg:mt-5 lg:text-base 2xl:mt-8 2xl:text-2xl`}
         >
-          <span>{about.aboutMe.contents[langArr]}</span>
-          {" "}<span>&#x1F44B;</span>
+          <span>{about.aboutMe.contents[langArr]}</span> <span>&#x1F44B;</span>
         </p>
       </section>
       {/* ----------------------------------------------------------------------------------------------- */}

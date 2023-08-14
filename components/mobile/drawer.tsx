@@ -1,5 +1,5 @@
 import MainContext from "@/context/Context";
-import { useCallback, useContext, useState } from "react";
+import { useCallback, useContext } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import LanguageSwitchM from "./LanguageSwitchM";
 import LinksM from "./LinksM";
@@ -8,24 +8,20 @@ import ToggleSwitchM from "./ToggleSwitchM";
 export default function Drawer() {
   const { arr, isOpen, setIsOpen } = useContext(MainContext);
 
-  const [startX, setStartX] = useState(0);
-
   const toggleDrawer = useCallback(() => {
     setIsOpen(!isOpen);
   }, [setIsOpen, isOpen]);
 
-  const handleTouchStart = (event) => {
-    setStartX(event.touches[0].clientX);
+  let a: number;
+  const handleTouchStart = (e: any) => {
+    a = e.touches[0].clientX;
   };
-
-  const handleTouchMove = (event) => {
-    const currentX = event.touches[0].clientX;
-    const diffX = startX - currentX;
-
-    if (diffX > 100 && isOpen) {
+  const handleTouchMove = (e: any) => {
+    if (a - e.touches[0].clientX > 100) {
       setIsOpen(false);
     }
   };
+
   const drawerBg: string[] = ["bg-dark3", "bg-light3"];
   const iconColor: string[] = ["text-yellow", "text-blue"];
   const bgColor: string[] = ["bg-dark", "bg-light"];

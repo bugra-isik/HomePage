@@ -1,11 +1,10 @@
 import MainContext from "@/context/Context";
 import { motion } from "framer-motion";
-import { useCallback, useContext, useEffect, useRef, useState } from "react";
+import { useCallback, useContext, useEffect, useRef} from "react";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 const LanguageSwitch = () => {
   const { setLangArr, data, langArr, arr, text } = useContext(MainContext);
-  const [lang, setLang] = useState();
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

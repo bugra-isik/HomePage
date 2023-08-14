@@ -6,8 +6,7 @@ import Logo from "./logo/Logo";
 import ToggleSwitch from "./toggleSwitch/ToggleSwitch";
 
 export default function Nav() {
-  const { arr, data, drawer, setDrawer, isOpen, setIsOpen } =
-    useContext(MainContext);
+  const { arr } = useContext(MainContext);
 
   const navTheme = ["bg-dark2", "bg-light2"];
 

@@ -6,9 +6,8 @@ import Home from "./Home/Home";
 import Projects from "./Projects/Projects";
 import TopButton from "./TopButton/TopButton";
 
-
 export default function Main() {
-  const { click, data, arr, langArr, text } = useContext(MainContext);
+  const { click, arr, text } = useContext(MainContext);
 
   return (
     <>

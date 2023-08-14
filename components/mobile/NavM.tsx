@@ -4,8 +4,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import LogoM from "./LogoM";
 
 export default function NavM() {
-  const { arr, data, drawer, setDrawer, isOpen, setIsOpen } =
-    useContext(MainContext);
+  const { arr, isOpen, setIsOpen } = useContext(MainContext);
 
   const navTheme = ["bg-dark2", "bg-light2"];
 
