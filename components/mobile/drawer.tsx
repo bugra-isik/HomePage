@@ -1,4 +1,3 @@
-
 import MainContext from "@/context/Context";
 import { useCallback, useContext, useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
