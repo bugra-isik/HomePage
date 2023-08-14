@@ -1,3 +1,4 @@
+"use client";
 import MainContext from "@/context/Context";
 import { useWindowScroll } from "@uidotdev/usehooks";
 import { useCallback, useContext } from "react";
@@ -11,15 +12,15 @@ export default function TopButton() {
   let scale: string = "",
     rotate: string = "";
 
-  if (y < 300) {
-    scale = "scale-0";
-    rotate = "-rotate-180";
-  } else if (y > 300) {
-    scale = "scale-[2]";
-    rotate = "rotate-0";
+  if (y != null) {
+    if (y < 300) {
+      scale = "scale-0";
+      rotate = "-rotate-180";
+    } else if (y > 300) {
+      scale = "scale-[2]";
+      rotate = "rotate-0";
+    }
   }
-
-  
 
   const bgColor = ["text-yellow2", "text-blue2"];
 
@@ -35,7 +36,7 @@ export default function TopButton() {
   return (
     <BsFillArrowUpCircleFill
       onClick={() => scrollToTop()}
-      className={`${bgColor[arr]} ${scale}  ${rotate} drop-shadow-2xl z-10 fixed right-[5dvw] top-[90vh] cursor-pointer transition duration-700`}
+      className={`${bgColor[arr]} ${scale}  ${rotate} fixed right-[5dvw] top-[90vh] z-10 cursor-pointer drop-shadow-2xl transition duration-700`}
     />
   );
 }

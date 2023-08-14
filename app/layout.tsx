@@ -3,11 +3,12 @@ import MainContext from "@/context/Context";
 import data from "@/db/data.json";
 import { useEffect, useState } from "react";
 import "./global.sass";
+import { Metadata } from "next";
 
-const metadata = {
-  title: "Librouse",
-  description: "devbugra",
+export const metadata = {
+  title: "Bugra",
 };
+
 const text = ["text-light", "text-dark"];
 
 export default function RootLayout({
@@ -43,11 +44,25 @@ export default function RootLayout({
       className={`${htmlBg[arr]} transition-colors duration-300`}
     >
       <head>
+        <title>{metadata.title}</title>
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{metadata.title}</title>
-        <meta name="description" content="devbugra" />
+        <meta
+          name="keywords"
+          content="Bugra Isik, Web Development, Next.js, Portfolio"
+        />
+        <meta
+          name="description"
+          content="Merhaba! Ben Buğra Işık, bir web geliştiriciyim. Bu kişisel web sitesinde web geliştirme projelerimi ve deneyimlerimi paylaşıyorum. Frontend ve backend teknolojileriyle ilgileniyorum. Projelerimi inceleyin ve benimle iletişime geçmekten çekinmeyin."
+        />
+        <meta name="robots" content="index,follow" />
+        <meta name="author" content="Buğra Işık" />
+        <link
+          rel="shortcut icon"
+          href="favicon-196x196.png"
+          type="image/x-icon"
+        />
       </head>
       <body>
         <MainContext.Provider

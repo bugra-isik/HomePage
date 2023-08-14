@@ -1,9 +1,16 @@
 import MainContext from "@/context/Context";
 import { motion } from "framer-motion";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 export default function Home() {
   const { arr } = useContext(MainContext);
+
+  useEffect(() => {
+    const videoElement = document.getElementById("video") as HTMLVideoElement;
+    if (videoElement) {
+      videoElement.play();
+    }
+  }, []);
 
   const video: string[] = ["/dark.mp4", "/light.mp4"];
   return (
@@ -11,6 +18,7 @@ export default function Home() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       key={arr}
+      id="video"
       className={`select-none rounded`}
       autoPlay
       muted
