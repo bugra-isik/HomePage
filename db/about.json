@@ -13,8 +13,8 @@
   "aboutMe": {
     "header": ["Hakkımda", "About"],
     "contents": [
-      "aLorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati modi, facere pariatur reprehenderit consequatur sed odio perferendis et voluptatem nesciunt?",
-      "aLorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati modi, facere pariatur reprehenderit consequatur sed odio perferendis et voluptatem nesciunt?"
+      "Merhaba, ben Buğra & Web Geliştirme üzerine çalışıyorum. Kendimi, bu alandaki teknolojik yenilikleri takip etmeye, en son trendleri öğrenmeye ve sürekli araştırma yapmaya adayarak çalışmalarımı gerçekleştiriyor ve her geçen gün kendimi daha da ileri taşıyorum. Bu web sitesi projelerimi, yazılım geliştirme deneyimlerimi ve teknoloji dünyasında ilgilendiğim şeyleri içeriyor. Projelerime göz atmaktan ve isterseniz bana ulaşmaktan çekinmeyin. Hoş geldin.",
+      "Hello, I'm Buğra & I'm working on Web Development. I dedicate myself to following technological innovations in this field, learning the latest trends and doing continuous research and I'm moving myself further and further every day. This website contains my projects, my software development experiences and my interests in the world of technology. Feel free to browse my projects and contact me if you like. Welcome."
     ]
   },
   "tech": {
