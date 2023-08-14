@@ -1,8 +1,8 @@
-# devbugra.com
+![image](https://github.com/bugra-isik/HomePage/assets/120986459/bea34e77-7fae-48a2-a34e-affc7eeb5248)# devbugra.com
 
 This project is a [Next.js](https://nextjs.org/) project created with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-![image](https://github.com/bugra-isik/HomePage-Public/assets/120986459/b597288c-67c4-40e8-9d98-b0ea2587d92c)
+![image](https://github.com/bugra-isik/HomePage/assets/120986459/49ae4a94-dafc-4bb0-9492-759d42877e9e)
 
 ## Getting Started
 
