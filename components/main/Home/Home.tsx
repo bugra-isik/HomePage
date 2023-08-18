@@ -1,5 +1,6 @@
 import MainContext from "@/context/Context";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useContext } from "react";
 
 export default function Home() {
@@ -11,24 +12,21 @@ export default function Home() {
   return (
     <>
       <div className={`${opa[arr]} transition duration-300 `}>
-        <motion.img
-          className={`rounded-lg
-        `}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+        <Image
           hidden={!hiddenity[arr]}
-          src="https://onedrive.live.com/embed?resid=C9DCC7798DEEEC1D%2116865&authkey=%21AGDkD01QezbgB9w&width=2560&height=1440"
+          src="/dark.jpg"
           alt="img"
+          width={9999}
+          height={9999}
         />
       </div>
       <div className={`${opa[arr == 0 ? 1 : 0]} transition duration-300 `}>
-        <motion.img
-          className={`rounded-lg`}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+        <Image
           hidden={hiddenity[arr]}
-          src="https://onedrive.live.com/embed?resid=C9DCC7798DEEEC1D%2116864&authkey=%21AGKVXAT2CzDVj4U&width=3840&height=2160"
+          src="/light.jpg"
           alt="img"
+          width={9999}
+          height={9999}
         />
       </div>
     </>

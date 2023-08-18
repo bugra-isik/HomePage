@@ -19,7 +19,7 @@ export default function LinksM() {
   const list = data?.nav.map((item: any, index: number) => (
     <div key={index} className={`flex items-center py-4`}>
       <Link
-        href={`#${item[1].toLowerCase()}`}
+        href={``}
         className={`${hover[arr]} ${
           click === item[1] ? clickColor[arr] : text[arr]
         } rounded transition duration-300`}

@@ -26,7 +26,7 @@ export default function Links() {
       className={`items-center justify-between`}
     >
       <Link
-        href={`#${item[1].toLowerCase()}`}
+        href={``}
         className={`${hover[arr]} ${
           click === item[1] ? clickColor[arr] : text[arr]
         } transition duration-300`}
