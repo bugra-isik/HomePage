@@ -1,12 +1,39 @@
 [
   {
-    "name": ["Proje", "Project"],
+    "name": [
+      "Proje",
+      "Project"
+    ],
+    "content": [
+      "Pokémon listesi.",
+      "List of Pokémon."
+    ],
+    "image": "/images/poke.png",
+    "tag": [
+      "Next.js",
+      "Tailwind CSS",
+      "NextUI",
+      "TypeScript",
+      "Zustand",
+      "Axios"
+    ],
+    "link": "https://pokemon-librouse.vercel.app/"
+  },
+  {
+    "name": [
+      "Proje",
+      "Project"
+    ],
     "content": [
       "13 mini proje barındıran bir proje vitrini.",
       "A project showcase with 13 mini projects."
     ],
     "image": "/images/1.png",
-    "tag": ["HTML5", "Tailwind CSS", "JavaScript"],
+    "tag": [
+      "HTML5",
+      "Tailwind CSS",
+      "JavaScript"
+    ],
     "link": "https://bugra-isik.github.io/13Projects/"
   }
 ]
