@@ -3,12 +3,14 @@ import projectsApi from "@/db/projects.json";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useContext } from "react";
+import { useContext, useRef, useState } from "react";
 import "./index.css";
+import { FaSpinner } from "react-icons/fa";
 
 export default function Projects() {
   const projects: any[] = projectsApi;
   const { arr, langArr } = useContext(MainContext);
+  const [hidden, setHidden] = useState(false);
 
   const text: string[] = ["text-dark", "text-light"];
   const tags: string[] = ["text-[#424242]", "text-[#eeeeee]"];
@@ -34,7 +36,7 @@ export default function Projects() {
     },
   };
 
-    const grid = projects.map((i, index) => (
+  const grid = projects.map((i, index) => (
     <motion.main
       key={index}
       variants={item}
@@ -77,12 +79,21 @@ export default function Projects() {
             target="_blank"
             className="pointer-events-none sm:pointer-events-auto"
           >
-            <Image
-              src={i.image}
-              width={9999}
-              height={9999}
-              alt="There should be an image!"
-            />
+            <>
+              <div
+                className={`z-50 animate-spin text-7xl text-dark`}
+                hidden={hidden}
+              >
+                <FaSpinner />
+              </div>
+
+              <Image
+                src={`https://drive.google.com/uc?export=view&id=${i.image}`}
+                alt="There should be an image!"
+                fill
+                onLoad={() => setHidden(true)}
+              />
+            </>
           </Link>
         </div>
       </section>
