@@ -5,6 +5,28 @@
       "Project"
     ],
     "content": [
+      "Hava durumu uygulaması.",
+      "Weather forecast app."
+    ],
+    "image": "1qtfY-EchijnyFDzceFegq5upHHJHrZlT",
+    "tag": [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "TypeScript",
+      "Zustand",
+      "Axios",
+      "Day.js",
+      "ReCharts"
+    ],
+    "link": "https://weather-tr-vite.vercel.app/"
+  },
+  {
+    "name": [
+      "Proje",
+      "Project"
+    ],
+    "content": [
       "Pokémon listesi.",
       "List of Pokémon."
     ],
