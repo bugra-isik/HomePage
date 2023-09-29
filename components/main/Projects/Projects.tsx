@@ -7,8 +7,16 @@ import { useContext, useRef, useState } from "react";
 import "./index.css";
 import { FaSpinner } from "react-icons/fa";
 
+type Projects = {
+  name: string[];
+  content: string[];
+  image: string;
+  tag: string[];
+  link: string;
+};
+
 export default function Projects() {
-  const projects: any[] = projectsApi;
+  const projects: Projects[] = projectsApi;
   const { arr, langArr } = useContext(MainContext);
   const [hidden, setHidden] = useState(false);
 
