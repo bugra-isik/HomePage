@@ -22,13 +22,13 @@ export default function Drawer() {
     }
   };
 
-  const drawerBg: string[] = ["bg-dark3", "bg-light3"];
+  const drawerBg: string[] = ["bg-dark3/75", "bg-light3/75"];
   const iconColor: string[] = ["text-yellow", "text-blue"];
-  const bgColor: string[] = ["bg-dark", "bg-light"];
+  const bgColor: string[] = ["bg-dark/75", "bg-light/75"];
 
   return (
     <nav
-      className="flex select-none sm:hidden"
+      className="flex select-none lg:hidden"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
     >
@@ -37,10 +37,10 @@ export default function Drawer() {
           drawerBg[arr]
         }  z-50 w-3/4 overflow-hidden drop-shadow-xl duration-300 ease-in-out`}
       >
-        <ul className="flex flex-col ">
+        <ul className="flex flex-col">
           <li>
             <i
-              className={`${iconColor[arr]} ${bgColor[arr]} flex h-12 cursor-pointer items-center justify-end pr-4 text-3xl drop-shadow-lg transition duration-300`}
+              className={`${iconColor[arr]} ${bgColor[arr]} flex py-6 cursor-pointer items-center justify-end pr-4 text-3xl drop-shadow transition duration-300`}
             >
               <AiOutlineClose onClick={toggleDrawer} />
             </i>

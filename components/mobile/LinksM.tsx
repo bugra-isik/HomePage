@@ -1,6 +1,7 @@
 import MainContext from "@/context/Context";
 import Link from "next/link";
 import { useCallback, useContext } from "react";
+import Badge from "../ui/badge";
 
 export default function LinksM() {
   const { data, arr, langArr, setClick, click, text, setIsOpen, isOpen } =
@@ -18,18 +19,21 @@ export default function LinksM() {
 
   const list = data?.nav.map((item: any, index: number) => (
     <div key={index} className={`flex items-center py-4`}>
-      <Link
-        href={``}
-        className={`${hover[arr]} ${
-          click === item[1] ? clickColor[arr] : text[arr]
-        } rounded transition duration-300`}
-        onClick={() => {
-          handleClick(item[1]);
-          setIsOpen(!isOpen);
-        }}
-      >
-        {item[langArr]}
-      </Link>
+      <div className={`flex gap-1`}>
+        <Link
+          href={``}
+          className={`${hover[arr]} ${
+            click === item[1] ? clickColor[arr] : text[arr]
+          } rounded transition duration-300`}
+          onClick={() => {
+            handleClick(item[1]);
+            setIsOpen(!isOpen);
+          }}
+        >
+          {item[langArr]}
+        </Link>
+        {item[1] == "Blog" && <Badge value={langArr ? "soon" : "yakında"} />}
+      </div>
     </div>
   ));
   return <>{list}</>;

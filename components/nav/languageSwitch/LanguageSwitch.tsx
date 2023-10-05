@@ -8,8 +8,8 @@ const LanguageSwitch = () => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (localStorage.getItem("lang") == "1") {
-      ref.current?.click();
+    if (localStorage.getItem("lang") === "1") {
+      //ref.current?.click();
     }
   }, []);
 

@@ -91,6 +91,12 @@ export default function About() {
     </Link>
   ));
 
+  const Line = (e) => (
+    <div
+      className={`h-0.5 grow rounded-l-full lg:h-[1.3px] 2xl:h-0.5 ${bg[arr]} transition-colors duration-300`}
+    />
+  );
+
   return (
     <motion.main
       initial={{ opacity: 0 }}
@@ -98,15 +104,13 @@ export default function About() {
       transition={{ duration: 1 }}
     >
       <section className={`text-justify `}>
-        <header className=" flex items-center justify-between">
+        <header className="flex items-center justify-between gap-x-2">
           <h1
             className={`${text[arr]}  ${header} select-none pr-5 drop-shadow-2xl transition duration-300`}
           >
             {about.aboutMe.header[langArr]}
           </h1>
-          <div
-            className={` h-0.5 grow rounded-l-full lg:h-[1.3px] 2xl:h-0.5 ${bg[arr]} transition-colors duration-300`}
-          ></div>
+          <Line />
         </header>
         <p
           className={`mt-3 hyphens-auto text-lg transition duration-300  lg:mt-5 lg:text-base 2xl:mt-8 2xl:text-2xl`}
@@ -116,15 +120,13 @@ export default function About() {
       </section>
       {/* ----------------------------------------------------------------------------------------------- */}
       <section>
-        <header className="mt-3 flex select-none items-center justify-between lg:mt-5 2xl:mt-8 ">
+        <header className="mt-3 flex select-none flex-row-reverse items-center justify-between lg:mt-5 2xl:mt-8 gap-x-2">
           <h1
             className={`${text[arr]} ${header}  select-none pr-5 transition duration-300`}
           >
             {about.tech.header[langArr]}
           </h1>
-          <div
-            className={` h-0.5 grow rounded-l-full lg:h-[1.3px] 2xl:h-0.5 ${bg[arr]} transition-colors duration-300`}
-          ></div>
+          <Line />
         </header>
         <section
           id="techs"
@@ -135,15 +137,13 @@ export default function About() {
       </section>
       {/* ----------------------------------------------------------------------------------------------- */}
       <section className="mt-3 sm:pb-3 lg:mt-5 lg:pb-5 2xl:mt-8 2xl:pb-8">
-        <header className="mb-5 flex select-none items-center justify-between ">
+        <header className="mb-5 flex select-none items-center justify-between gap-x-2">
           <h1
             className={`${text[arr]} ${header} select-none pr-5 transition duration-300`}
           >
             {about.footer.header[langArr]}
           </h1>
-          <div
-            className={` h-0.5 grow rounded-l-full lg:h-[1.3px] 2xl:h-0.5 ${bg[arr]} transition-colors duration-300`}
-          ></div>
+          <Line />
         </header>
         <div className={`flex flex-wrap gap-5 pb-3 sm:mt-3 lg:mt-5 2xl:mt-8 `}>
           <div className="flex gap-5  ">{social}</div>

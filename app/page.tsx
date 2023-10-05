@@ -1,10 +1,11 @@
 "use client";
 import Main from "@/components/main/Main";
-import Drawer from "../components/mobile/drawer";
+import Drawer from "@/components/mobile/drawer";
 import NavM from "@/components/mobile/NavM";
 import Nav from "@/components/nav/Nav";
 import MainContext from "@/context/Context";
 import { useContext } from "react";
+import Loader from "./loader";
 
 export default function Page() {
   const { arr, setIsOpen } = useContext(MainContext);
@@ -27,6 +28,7 @@ export default function Page() {
       onTouchMove={handleTouchMove}
       className={`${theme[arr]} relative inset-0 min-h-[100dvh] transition-colors duration-300`}
     >
+      <Loader />
       <NavM />
       <Drawer />
       <Nav />

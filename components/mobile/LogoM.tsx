@@ -16,7 +16,7 @@ export default function LogoM() {
     <div
       title="Librouse!"
       onClick={() => reload()}
-      className={`${textColor[arr]} ${hover[arr]} ${bgColor[arr]} cursor-pointer px-2 font-hyperlegible text-3xl font-black transition duration-300`}
+      className={`${textColor[arr]} ${hover[arr]} ${bgColor[arr]} sm:p-px md:p-1 cursor-pointer px-2 font-hyperlegible text-3xl font-black transition duration-300`}
     >
       {langArr == 0 ? "./BUGRA" : "./BUGRA"}
     </div>

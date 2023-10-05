@@ -21,6 +21,8 @@ module.exports = {
         blue: "#305c96",
         blue2: "#87c0f1",
         moon: "#767676",
+        grad1:"#42595d",
+        grad2:"#c5d6b8"
       },
       backgroundImage: {
         grad: "radial-gradient(ellipse 80% 50% at 50% -20%,rgba(4, 0, 255, 0.5), rgba(255,255,255,0) )",

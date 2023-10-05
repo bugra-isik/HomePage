@@ -4,7 +4,7 @@ import { useContext } from "react";
 import About from "./About/About";
 import Home from "./Home/Home";
 import Projects from "./Projects/Projects";
-import TopButton from "./TopButton/TopButton";
+import TopButton from "../ui/TopButton";
 
 export default function Main() {
   const { click, arr, text } = useContext(MainContext);
@@ -13,7 +13,7 @@ export default function Main() {
     <>
       <TopButton />
       <main
-        className={`${text[arr]} container mx-auto mt-10 px-10 font-hyperlegible text-sm sm:px-20 `}
+        className={`${text[arr]} container mx-auto lg:mt-10 px-10 font-hyperlegible text-sm sm:px-20 `}
       >
         {click === null && <Home />}
         {click === "Home" && <Home />}

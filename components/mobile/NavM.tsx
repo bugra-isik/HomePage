@@ -10,7 +10,7 @@ export default function NavM() {
 
   return (
     <header
-      className={`${navTheme[arr]} sticky top-0 z-30 flex h-12 items-center drop-shadow-lg backdrop-blur transition duration-300 sm:hidden sm:h-[4dvw]`}
+      className={`${navTheme[arr]} py-10 sticky top-0 z-30 flex h-12 items-center backdrop-blur transition duration-300 lg:hidden sm:h-[4dvw] drop-shadow-2xl`}
     >
       <nav className={`w-full select-none px-10`}>
         <ul className="flex items-center justify-between">
@@ -18,7 +18,7 @@ export default function NavM() {
             onClick={() => setIsOpen(!isOpen)}
             className={`text-3xl ${
               arr == 0 ? "text-yellow" : "text-blue"
-            } cursor-pointer transition duration-300 sm:hidden`}
+            } cursor-pointer transition duration-300 lg:hidden`}
           >
             <GiHamburgerMenu />
           </li>

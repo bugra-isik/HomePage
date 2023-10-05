@@ -1,5 +1,6 @@
 "use client";
 
+import Badge from "@/components/ui/badge";
 import MainContext from "@/context/Context";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -22,19 +23,29 @@ export default function Links() {
     <motion.li
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
+      id={item[1]}
       key={index}
       className={`items-center justify-between`}
     >
-      <Link
-        href={``}
-        className={`${hover[arr]} ${
-          click === item[1] ? clickColor[arr] : text[arr]
-        } transition duration-300`}
-        onClick={() => handleClick(item[1])}
-      >
-        {item[langArr]}
-      </Link>
+      <div className={`flex gap-1`}>
+        <Link
+          href={``}
+          className={`${hover[arr]} ${
+            click === item[1] ? clickColor[arr] : text[arr]
+          } transition duration-300`}
+          onClick={() => handleClick(item[1])}
+        >
+          {item[langArr]}
+        </Link>
+        {item[1] == "Blog" && <Badge value={langArr ? "soon" : "yakında"} />}
+      </div>
     </motion.li>
   ));
-  return <>{list}</>;
+  return (
+    <ul
+      className={`col-span-2 hidden h-[4dvw] items-center justify-evenly sm:flex`}
+    >
+      {list}
+    </ul>
+  );
 }

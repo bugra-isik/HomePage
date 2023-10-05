@@ -20,6 +20,7 @@ export default function RootLayout({
   const [langArr, setLangArr] = useState<number>(0);
   const [click, setClick] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
+  const [loader, setLoader] = useState<boolean>(true);
 
   useEffect(() => {
     localStorage.setItem("lang", langArr.toString());
@@ -82,6 +83,8 @@ export default function RootLayout({
             text,
             isOpen,
             setIsOpen,
+            loader,
+            setLoader,
           }}
         >
           {children}

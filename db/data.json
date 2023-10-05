@@ -3,7 +3,8 @@
   "nav": [
     ["Anasayfa", "Home"],
     ["Projeler", "Projects"],
-    ["Hakkımda","About"]
+    ["Hakkımda","About"],
+    ["Blog","Blog"]
   ],
   "content": {
     "siteState": ["Site yapım aşamasında.", "The site is under construction."],
