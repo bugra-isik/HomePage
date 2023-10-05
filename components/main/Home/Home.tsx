@@ -38,7 +38,7 @@ export default function Home() {
           }}
         >
           <Image
-            src={driveImg[arr]}
+            src={arr ? "/lightTheme.jpg" : "/darkTheme.jpg"}
             alt="image"
             width={9999}
             height={1}

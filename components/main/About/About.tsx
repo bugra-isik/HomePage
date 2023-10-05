@@ -13,6 +13,12 @@ import {
 } from "react-icons/bi";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { TbBrandNextjs } from "react-icons/tb";
+import { Atkinson_Hyperlegible } from "next/font/google";
+
+const localeFont = Atkinson_Hyperlegible({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 export default function About() {
   const { langArr, arr } = useContext(MainContext);
@@ -102,6 +108,7 @@ export default function About() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
+      className={localeFont.className}
     >
       <section className={`text-justify `}>
         <header className="flex items-center justify-between gap-x-2">
@@ -120,7 +127,7 @@ export default function About() {
       </section>
       {/* ----------------------------------------------------------------------------------------------- */}
       <section>
-        <header className="mt-3 flex select-none flex-row-reverse items-center justify-between lg:mt-5 2xl:mt-8 gap-x-2">
+        <header className="mt-3 flex select-none flex-row-reverse items-center justify-between gap-x-2 lg:mt-5 2xl:mt-8">
           <h1
             className={`${text[arr]} ${header}  select-none pr-5 transition duration-300`}
           >
