@@ -27,6 +27,27 @@
       "Project"
     ],
     "content": [
+      "Login-register işlemleri.",
+      "Login-register operations."
+    ],
+    "image": "1D2tSgIapmJ7n-Pc5Kpki9rLgDJL9Fec3",
+    "tag": [
+      "Next.js",
+      "Tailwind CSS",
+      "MongoDB",
+      "TypeScript",
+      "Zustand",
+      "Axios",
+      "Framer-Motion"
+    ],
+    "link": "https://bugra-login-register.vercel.app/"
+  },
+  {
+    "name": [
+      "Proje",
+      "Project"
+    ],
+    "content": [
       "Pokémon listesi.",
       "List of Pokémon."
     ],
