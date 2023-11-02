@@ -52,7 +52,7 @@ export default function Projects() {
     >
       <section className=" flip-card-inner relative h-full w-full">
         <article
-          className={`${bg[arr]} flip-card-front container absolute flex h-full w-full flex-col justify-between rounded-2xl py-2 pl-2 pr-4 text-dark drop-shadow backdrop-blur transition  duration-300 `}
+          className={`${bg[arr]} flip-card-front container absolute flex h-full w-full flex-col justify-between  py-2 pl-2 pr-4 text-dark drop-shadow backdrop-blur transition  duration-300 `}
         >
           <Link
             href={i.link}
@@ -80,16 +80,16 @@ export default function Projects() {
           </ul>
         </article>
         <div
-          className={`flip-card-back absolute flex h-full w-full items-center justify-center overflow-hidden rounded-2xl ${bg[arr]} drop-shadow`}
+          className={`flip-card-back absolute flex h-full w-full items-center justify-center overflow-hidden ${bg[arr]} drop-shadow-2xl`}
         >
           <Link
             href={i.link}
             target="_blank"
-            className="pointer-events-none sm:pointer-events-auto"
+            className="pointer-events-none sm:pointer-events-auto "
           >
             <>
               <div
-                className={`z-50 animate-spin text-7xl text-dark`}
+                className={`z-50 animate-spin text-7xl text-dark `}
                 hidden={hidden}
               >
                 <FaSpinner />
