@@ -8,7 +8,7 @@
       "Hava durumu uygulaması.",
       "Weather forecast app."
     ],
-    "image": "1qtfY-EchijnyFDzceFegq5upHHJHrZlT",
+    "image": "1Yad43v_L-RZ3BJZo6e1E_wUjULFSSz36",
     "tag": [
       "React",
       "Vite",
@@ -30,7 +30,7 @@
       "Login-register işlemleri.",
       "Login-register operations."
     ],
-    "image": "1D2tSgIapmJ7n-Pc5Kpki9rLgDJL9Fec3",
+    "image": "1_QNfhK8PW0i377DsxlDoRnDUsooapCG_",
     "tag": [
       "Next.js",
       "Tailwind CSS",
@@ -61,6 +61,24 @@
       "Axios"
     ],
     "link": "https://bugra-isik-pokemon.vercel.app/"
+  },
+  {
+    "name": [
+      "Proje",
+      "Project"
+    ],
+    "content": [
+      "Tailwind Sınıf Oluşturucu.",
+      "Tailwind Class Generator."
+    ],
+    "image": "1igsDog-3OEu4J2ogKTr5TK7HRtG7afli",
+    "tag": [
+      "React",
+      "Tailwind CSS",
+      "TypeScript",
+      "Framer-Motion"
+    ],
+    "link": "https://tw-class-generator.vercel.app/"
   },
   {
     "name": [
