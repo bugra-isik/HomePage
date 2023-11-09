@@ -1,12 +1,13 @@
 "use client";
-import Main from "@/components/Main/Main";
-import NavM from "@/components/Mobile/NavM";
-import { useWindowSize } from "@uidotdev/usehooks";
-import Drawer from "@/components/Mobile/Drawer";
+
+import Main from "@/components/main/Main";
+import Drawer from "@/components/mobile/Drawer";
+import NavM from "@/components/mobile/NavM";
+import Navbar from "@/components/navigation/Navbar";
+import Spinner from "@/components/ui/Spinner";
 import { useStore } from "zustand";
 import { Master } from "./store";
-import Spinner from "@/components/UI/Spinner";
-import Navbar from "@/components/Navigation/Navbar";
+import { useWindowSize } from "@uidotdev/usehooks";
 
 export default function Page() {
   const { setIsOpen, theme } = useStore(Master);

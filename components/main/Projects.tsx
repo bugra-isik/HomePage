@@ -44,8 +44,8 @@ export default function Projects() {
       opacity: 1,
     },
   };
-  // w-72 sm:w-60 2xl:w-96
-  const grid = projects.map((i, index) => (
+
+  const grid = projects.map((e, index) => (
     <motion.main
       key={index}
       variants={item}
@@ -53,10 +53,10 @@ export default function Projects() {
     >
       <section className="flip-card-inner relative h-full w-full">
         <article
-          className={`${bg[theme]} flip-card-front container absolute flex h-full w-full flex-col justify-between  px-4 pb-2 pt-3 text-dark1 drop-shadow backdrop-blur transition duration-300 sm:pt-4 md:pt-5 lg:pt-3 xl:pt-4 2xl:pt-5`}
+          className={`${bg[theme]} flip-card-front container absolute flex h-full w-full flex-col justify-between  rounded px-4 pb-2 pt-3 text-dark1 drop-shadow backdrop-blur transition duration-300 sm:pt-4 md:pt-5 lg:pt-3 xl:pt-4 2xl:pt-5`}
         >
           <Link
-            href={i.link}
+            href={e.link}
             target="_blank"
             className="absolute inset-0 top-0 h-full w-full lg:hidden"
           ></Link>
@@ -64,18 +64,18 @@ export default function Projects() {
           <h1
             className={`${text[theme]} title select-none text-4xl font-black transition duration-300 lg:text-3xl 2xl:text-5xl`}
           >
-            {i.name[language]} {index + 1}
+            {e.name[language]} {index + 1}
           </h1>
 
           <p
             className={`${text[theme]} hyphens-auto text-justify text-sm transition duration-300 sm:text-base md:text-xl lg:text-sm xl:text-lg 2xl:text-2xl`}
           >
-            {i.content[language]}
+            {e.content[language]}
           </p>
           <ul
             className={`${tags[theme]} hover: flex cursor-cell flex-row flex-wrap gap-x-2 text-xs transition duration-300  sm:leading-3 lg:text-xs 2xl:text-base`}
           >
-            {i.tag.map((item: any, index: number) => (
+            {e.tag.map((item: any, index: number) => (
               <li key={index}>#{item}</li>
             ))}
           </ul>
@@ -84,7 +84,7 @@ export default function Projects() {
           className={`flip-card-back absolute flex h-full w-full items-center justify-center overflow-hidden ${bg[theme]} drop-shadow-2xl`}
         >
           <Link
-            href={i.link}
+            href={e.link}
             target="_blank"
             className="pointer-events-none sm:pointer-events-auto "
           >
@@ -97,7 +97,7 @@ export default function Projects() {
               </div>
 
               <Image
-                src={`https://drive.google.com/uc?export=view&id=${i.image}`}
+                src={`https://drive.google.com/uc?export=view&id=${e.image}`}
                 alt="Image!"
                 fill
                 onLoad={() => setHidden(true)}
@@ -114,7 +114,7 @@ export default function Projects() {
       variants={container}
       initial="hidden"
       animate="visible"
-      className="container mt-10 grid grid-cols-1 gap-x-5 gap-y-10 sm:grid-cols-2 lg:grid-cols-3"
+      className="mt-10 grid grid-cols-1 gap-x-5 gap-y-10 sm:grid-cols-2 lg:grid-cols-3"
     >
       {grid}
     </motion.div>

@@ -26,8 +26,8 @@ export default function Techs({ theme, language }) {
       target="_blank"
       className={`${
         theme
-          ? "bg-light2 text-colorA hover:text-colorB"
-          : "bg-dark2 text-color1 hover:text-color2"
+          ? "bg-light2 hover:bg-light2/50 text-colorA hover:text-colorB"
+          : "bg-dark2 hover:bg-dark2/50 text-color1 hover:text-color2"
       } flex h-44 w-full flex-col items-center justify-center gap-5 rounded-3xl drop-shadow-lg transition duration-300 sm:h-52 sm:w-52 md:h-60 md:w-60 lg:h-44 lg:w-44 xl:h-52 xl:w-52 2xl:h-60 2xl:w-60`}
     >
       <span

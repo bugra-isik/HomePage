@@ -10,15 +10,7 @@ export default function Home() {
   const { language, theme, setLoader } = useStore(Master);
   const [isClose, setIsClose] = useState<boolean>(true);
 
-  const driveImg = [
-    "https://drive.google.com/uc?export=view&id=1J81eL8ZjlNLJkuI-wynexdUEPQpWOzU5",
-    "https://drive.google.com/uc?export=view&id=1U1uQKzD3ByNYEbFiq36OWuj_wMEeGtHm",
-  ];
-
   const { width } = useWindowSize();
-  const mobileSize = () => {
-    return width && width < 1024;
-  };
 
   const closeText = () =>
     setTimeout(() => {
@@ -71,7 +63,7 @@ export default function Home() {
         )}
       </div>
 
-      {mobileSize() && <About />}
+      {width && width < 1024 && <About />}
     </>
   );
 }
