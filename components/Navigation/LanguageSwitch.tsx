@@ -1,9 +1,8 @@
-import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useRef } from "react";
-import "/node_modules/flag-icons/css/flag-icons.min.css";
 import { Master } from "@/app/store";
-import { useStore } from "zustand";
 import data from "@/db/data.json";
+import { useEffect } from "react";
+import { useStore } from "zustand";
+import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 const LanguageSwitch = () => {
   const { setLanguage, language } = useStore(Master);

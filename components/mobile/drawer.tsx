@@ -1,10 +1,10 @@
+import { Master } from "@/app/store";
 import { useCallback } from "react";
 import { AiOutlineClose } from "react-icons/ai";
-import { Master } from "@/app/store";
 import { useStore } from "zustand";
-import LinksM from "./LinksM";
-import ThemeSwitch from "../navigation/ThemeSwitch";
-import LanguageSwitch from "../navigation/LanguageSwitch";
+import LanguageSwitch from "../navigation/languageSwitch";
+import ThemeSwitch from "../navigation/themeSwitch";
+import LinksM from "./linksM";
 
 export default function Drawer() {
   const { theme, isOpen, setIsOpen } = useStore(Master);

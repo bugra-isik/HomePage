@@ -1,7 +1,7 @@
+import { useCopyToClipboard } from "@uidotdev/usehooks";
 import { useState } from "react";
 import { AiFillCopy } from "react-icons/ai";
 import { BsCheckLg } from "react-icons/bs";
-import { useCopyToClipboard } from "@uidotdev/usehooks";
 
 export default function CopyButton({ value, theme }) {
   const [toggle, setToggle] = useState<boolean>(true);

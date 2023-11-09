@@ -1,7 +1,7 @@
-import { GiHamburgerMenu } from "react-icons/gi";
-import LogoM from "./LogoM";
 import { Master } from "@/app/store";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { useStore } from "zustand";
+import LogoM from "./logoM";
 
 export default function NavM() {
   const { theme, setIsOpen } = useStore(Master);

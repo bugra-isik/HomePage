@@ -2,9 +2,9 @@ import about from "@/db/about.json";
 import Link from "next/link";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { Line, TextHeading } from "../About";
+import { Line, TextHeading } from "./about";
 
-export default function Links({ theme, language }) {
+export default function Social({ theme, language }) {
   const SocialLink = ({ href, children }) => (
     <Link
       className={`${

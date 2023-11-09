@@ -1,7 +1,7 @@
 import about from "@/db/about.json";
-import { Line, TextHeading } from "../About";
+import { Line, TextHeading } from "./about";
 
-export default function AboutMe({ theme, language }) {
+export default function Bio({ theme, language }) {
   return (
     <section
       className={`mb-6 text-justify sm:mb-8 md:mb-10 lg:mb-6 xl:mb-8 2xl:mb-10`}

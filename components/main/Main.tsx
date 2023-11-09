@@ -2,11 +2,11 @@
 
 import { Master } from "@/app/store";
 import { useStore } from "zustand";
-import TopButton from "../ui/TopButton";
-import Home from "./Home";
-import Projects from "./Projects";
-import About from "./About";
-import Blog from "./Blog";
+import TopButton from "../ui/topButton";
+import About from "./about/about";
+import Blog from "./blog";
+import Home from "./home";
+import Projects from "./projects";
 
 export default function Main() {
   const { click, theme } = useStore(Master);

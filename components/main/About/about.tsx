@@ -1,9 +1,9 @@
 import { Master } from "@/app/store";
 import { motion } from "framer-motion";
 import { useStore } from "zustand";
-import AboutMe from "./about/AboutMe";
-import Techs from "./about/Techs";
-import Links from "./about/Links";
+import Bio from "./bio";
+import Social from "./social";
+import Techs from "./techs";
 
 export const TextHeading = ({ theme, children }) => (
   <h1
@@ -33,9 +33,9 @@ export default function About() {
       transition={{ duration: 1 }}
       className={`${theme ? "text-dark1" : "text-light2"}`}
     >
-      <AboutMe theme={theme} language={language} />
+      <Bio theme={theme} language={language} />
       <Techs theme={theme} language={language} />
-      <Links theme={theme} language={language} />
+      <Social theme={theme} language={language} />
     </motion.main>
   );
 }

@@ -34,7 +34,7 @@ export default function Blog() {
         <p
           className={`${
             theme ? "text-colorA" : "text-color1"
-          } col-span-2 text-3xl transition duration-300 sm:text-4xl md:text-5xl lg:text-3xl xl:text-4xl 2xl:text-5xl truncate`}
+          } col-span-2 truncate text-3xl transition duration-300 sm:text-4xl md:text-5xl lg:text-3xl xl:text-4xl 2xl:text-5xl`}
         >
           {e.header[language]}
         </p>

@@ -1,6 +1,6 @@
-import Link from "next/link";
-import data from "@/db/data.json";
 import { Master } from "@/app/store";
+import data from "@/db/data.json";
+import Link from "next/link";
 import { useStore } from "zustand";
 
 export default function LinksM() {

@@ -1,6 +1,6 @@
 "use client";
 
-import CopyButton from "@/components/ui/CopyButton";
+import CopyButton from "@/components/ui/copyButton";
 import Prism from "prismjs";
 import { useEffect, useState } from "react";
 
@@ -23,12 +23,12 @@ export default function Page() {
         <main
           className={`${
             theme ? "bg-light1 text-dark1" : "bg-dark1 text-light1"
-          } w-full min-h-screen`}
+          } min-h-screen w-full`}
         >
           <section
             className={`${
               theme ? "bg-light2" : "bg-dark2"
-            } m-auto min-h-screen w-full sm:w-2/3 px-10 pt-10 pb-10`}
+            } m-auto min-h-screen w-full px-10 pb-10 pt-10 sm:w-2/3`}
           >
             <h1
               className={`${
@@ -88,7 +88,7 @@ export default function Page() {
               <code
                 className={`${
                   theme ? "text-dark1" : "text-light1"
-                } language-json font-black truncate`}
+                } language-json truncate font-black`}
               >
                 {script}
               </code>

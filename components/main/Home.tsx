@@ -1,10 +1,10 @@
+import { Master } from "@/app/store";
+import { useWindowSize } from "@uidotdev/usehooks";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-import About from "./About";
-import { AnimatePresence, motion } from "framer-motion";
-import { useWindowSize } from "@uidotdev/usehooks";
-import { Master } from "@/app/store";
 import { useStore } from "zustand";
+import About from "./about/about";
 
 export default function Home() {
   const { language, theme, setLoader } = useStore(Master);

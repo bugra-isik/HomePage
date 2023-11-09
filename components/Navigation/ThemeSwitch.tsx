@@ -1,9 +1,9 @@
 import { Master } from "@/app/store";
+import data from "@/db/data.json";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 import { BiSolidMoon, BiSolidSun } from "react-icons/bi";
 import { useStore } from "zustand";
-import data from "@/db/data.json";
-import { useEffect } from "react";
 
 export default function ThemeSwitch() {
   const { theme, setTheme, language } = useStore(Master);

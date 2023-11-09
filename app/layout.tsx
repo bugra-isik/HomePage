@@ -1,7 +1,7 @@
 "use client";
 import Script from "next/script";
-import "./global.sass";
 import { useStore } from "zustand";
+import "./global.sass";
 import { Master } from "./store";
 
 const metadata = {
