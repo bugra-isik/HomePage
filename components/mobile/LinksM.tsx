@@ -2,7 +2,6 @@ import Link from "next/link";
 import data from "@/db/data.json";
 import { Master } from "@/app/store";
 import { useStore } from "zustand";
-import Badge from "../UI/Badge";
 
 export default function LinksM() {
   const { theme, language, setClick, click, setIsOpen } = useStore(Master);
@@ -28,7 +27,6 @@ export default function LinksM() {
         >
           {item[language]}
         </Link>
-        {item[1] == "Blog" && <Badge value={language ? "soon" : "yakında"} />}
       </div>
     </div>
   ));

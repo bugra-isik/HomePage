@@ -1,9 +1,9 @@
 import LanguageSwitch from "./LanguageSwitch";
-import Links from "./Links";
-import Logo from "./Logo";
 import { Master } from "@/app/store";
 import { useStore } from "zustand";
 import ThemeSwitch from "./ThemeSwitch";
+import Logo from "./Logo";
+import Links from "./Links";
 
 export default function Navbar() {
   const { theme } = useStore(Master);

@@ -1,6 +1,6 @@
 "use client";
 
-import CopyButton from "@/components/UI/CopyButton";
+import CopyButton from "@/components/ui/CopyButton";
 import Prism from "prismjs";
 import { useEffect, useState } from "react";
 

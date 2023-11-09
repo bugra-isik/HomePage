@@ -1,5 +1,4 @@
 import { Master } from "@/app/store";
-import Badge from "@/components/UI/Badge";
 import data from "@/db/data.json";
 import { motion } from "framer-motion";
 import Link from "next/link";
