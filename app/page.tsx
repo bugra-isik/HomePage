@@ -2,12 +2,12 @@
 
 import Main from "@/components/main/Main";
 import NavM from "@/components/mobile/NavM";
-import Navbar from "@/components/navigation/Navbar";
 import Spinner from "@/components/ui/Spinner";
 import { useStore } from "zustand";
 import { Master } from "./store";
 import { useWindowSize } from "@uidotdev/usehooks";
-import Drawer from "@/components/mobile/Drawer";
+import Navbar from "@/components/navigation/Navbar";
+import Drawer from "@/components/mobile/drawer";
 
 export default function Page() {
   const { setIsOpen, theme } = useStore(Master);
