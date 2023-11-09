@@ -5,8 +5,8 @@ type Store = {
   setTheme: (e: number) => void;
   language: number;
   setLanguage: (e: number) => void;
-  click: null;
-  setClick: (e: null) => void;
+  click: string;
+  setClick: (e: string) => void;
   isOpen: boolean;
   setIsOpen: () => void;
   loader: boolean;
@@ -18,7 +18,7 @@ const Master = create<Store>()((set) => ({
   setTheme: (e) => set(() => ({ theme: e })),
   language: 0,
   setLanguage: (e) => set(() => ({ language: e })),
-  click: null,
+  click: "Home",
   setClick: (e) => set(() => ({ click: e })),
   isOpen: false,
   setIsOpen: () => set((e) => ({ isOpen: !e.isOpen })),

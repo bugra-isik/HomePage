@@ -18,8 +18,8 @@ export default function Main() {
         className={`${
           theme ? "text-light1" : "text-dark1"
         } container mx-auto px-10 font-hyperlegible text-sm sm:px-20 lg:mt-10 `}
-      >
-        {click === (null || "Home") && <Home />}
+      >       
+        {click === "Home" && <Home />}
         {click === "Projects" && <Projects />}
         {click === "About" && <About />}
         {click === "Blog" && <Blog />}
