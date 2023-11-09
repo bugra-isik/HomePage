@@ -1,9 +1,9 @@
 import { Master } from "@/app/store";
 import { motion } from "framer-motion";
 import { useStore } from "zustand";
-import Bio from "./bio";
 import Social from "./social";
 import Techs from "./techs";
+import Bio from "./bio";
 
 export const TextHeading = ({ theme, children }) => (
   <h1
