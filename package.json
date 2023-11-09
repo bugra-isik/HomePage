@@ -6,7 +6,8 @@
     "dev": "next dev -p 8080",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pretty": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json}\""
   },
   "dependencies": {
     "@types/node": "^20.8.10",
@@ -14,20 +15,23 @@
     "@types/react-dom": "^18.2.14",
     "@uidotdev/usehooks": "^2.4.1",
     "autoprefixer": "^10.4.16",
-    "eslint": "^8.52.0",
     "eslint-config-next": "^14.0.1",
     "flag-icons": "^6.11.2",
     "framer-motion": "^10.16.4",
     "next": "^14.0.1",
     "postcss": "^8.4.31",
+    "prismjs": "^1.29.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
     "styled-components": "^6.1.0",
     "tailwindcss": "^3.3.5",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "zustand": "^4.4.6"
   },
   "devDependencies": {
+    "eslint": "^8.53.0",
+    "eslint-plugin-react": "^7.33.2",
     "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.6",
     "sass": "^1.69.5"

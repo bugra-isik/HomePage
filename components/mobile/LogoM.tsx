@@ -1,24 +1,25 @@
-import MainContext from "@/context/Context";
-import { useCallback, useContext } from "react";
+import { Master } from "@/app/store";
+import { useCallback } from "react";
+import { useStore } from "zustand";
 
 export default function LogoM() {
-  const { arr, langArr } = useContext(MainContext);
+  const { theme, language } = useStore(Master);
 
   const reload = useCallback(() => {
     window.location.reload();
   }, []);
 
   const textColor: string[] = ["text-[#141414]", "text-[#fcfcfc]"];
-  const hover: string[] = ["hover:bg-yellow2", "hover:bg-blue2"];
-  const bgColor: string[] = ["bg-yellow", "bg-blue"];
+  const hover: string[] = ["hover:bg-color2", "hover:bg-colorB"];
+  const bgColor: string[] = ["bg-color1", "bg-colorA"];
 
   return (
     <div
       title="Librouse!"
       onClick={() => reload()}
-      className={`${textColor[arr]} ${hover[arr]} ${bgColor[arr]} sm:p-px md:p-1 cursor-pointer px-2 font-hyperlegible text-3xl font-black transition duration-300`}
+      className={`${textColor[theme]} ${hover[theme]} ${bgColor[theme]} cursor-pointer px-2 font-hyperlegible text-3xl font-black transition duration-300 sm:p-px md:p-1`}
     >
-      {langArr == 0 ? "./BUGRA" : "./BUGRA"}
+      {language == 0 ? "./BUGRA" : "./BUGRA"}
     </div>
   );
 }

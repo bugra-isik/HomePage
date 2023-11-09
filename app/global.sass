@@ -28,3 +28,122 @@ html
 #loader
     background-color: #161616
     background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E")
+
+.flip-card
+    perspective: 1000px
+
+.flip-card-inner
+    transition: transform 0.8s
+    transform-style: preserve-3d
+
+.flip-card-front
+.flip-card-back
+    -webkit-backface-visibility: hidden
+    backface-visibility: hidden
+
+    &
+        transform: rotateY(180deg)
+
+@media (min-width: 800px)
+.flip-card:hover .flip-card-inner
+    transform: rotateY(180deg)
+
+/////////////////////////////////////////////////////
+
+code[class*="language-"],
+pre[class*="language-"] 
+    color: #f8f8f2
+    background: 0 0
+    text-shadow: 0 1px rgba(0, 0, 0, 0.3)
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace
+    font-size: 1em
+    text-align: left
+    white-space: pre
+    word-spacing: normal
+    word-break: normal
+    word-wrap: normal
+    line-height: 1.5
+    -moz-tab-size: 4
+    -o-tab-size: 4
+    tab-size: 4
+    -webkit-hyphens: none
+    -moz-hyphens: none
+    -ms-hyphens: none
+    hyphens: none
+
+pre[class*="language-"] 
+    padding: 1em
+    margin: 0.5em 0
+    overflow: auto
+    border-radius: 0.3em
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] 
+    background: #272822
+
+:not(pre) > code[class*="language-"]
+    padding: 0.1em
+    border-radius: 0.3em
+    white-space: normal
+
+.token.cdata,
+.token.comment,
+.token.doctype,
+.token.prolog
+    color: #8292a2
+
+.token.punctuation
+    color: #f8f8f2
+
+.token.namespace
+    opacity: 0.7
+
+.token.constant,
+.token.deleted,
+.token.property,
+.token.symbol,
+.token.tag
+    color: #f92672
+
+.token.boolean,
+.token.number
+    color: #ae81ff
+
+.token.attr-name,
+.token.builtin,
+.token.char,
+.token.inserted,
+.token.selector,
+.token.string
+    color: #a6e22e
+
+.language-css .token.string,
+.style .token.string,
+.token.entity,
+.token.operator,
+.token.url,
+.token.variable
+    color: #f8f8f2
+
+.token.atrule,
+.token.attr-value,
+.token.class-name,
+.token.function
+    color: #e6db74
+
+.token.keyword
+    color: #66d9ef
+
+.token.important,
+.token.regex
+    color: #fd971f
+
+.token.bold,
+.token.important
+    font-weight: 700
+
+.token.italic
+    font-style: italic
+
+.token.entity
+    cursor: help

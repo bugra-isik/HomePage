@@ -1,11 +1,12 @@
-import MainContext from "@/context/Context";
+import { Master } from "@/app/store";
 import { useWindowSize } from "@uidotdev/usehooks";
 import { motion } from "framer-motion";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { TbFidgetSpinner } from "react-icons/tb";
+import { useStore } from "zustand";
 
-export default function Loader() {
-  const { loader } = useContext(MainContext);
+export default function Spinner() {
+  const { loader } = useStore(Master);
   const [delay, setDelay] = useState<boolean>(true);
 
   const { width } = useWindowSize();
@@ -34,7 +35,7 @@ export default function Loader() {
           animate={{ ...switchTranslate, transitionDuration: "0.2s" }}
         >
           <TbFidgetSpinner
-            className={`animate-spin text-7xl text-light-0.75 sm:text-8xl xl:text-9xl 2xl:text-[10rem]`}
+            className={`animate-spin text-7xl text-light1 sm:text-8xl xl:text-9xl 2xl:text-[10rem]`}
           />
         </motion.div>
       )}

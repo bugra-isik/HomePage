@@ -1,15 +1,4 @@
 {
-  "social": [
-    {
-      "name": "bugra-isik",
-      "link": "https://linkedin.com/in/bugra-isik"
-    },
-    {
-      "name": "bugra-isik",
-      "link": "https://github.com/bugra-isik"
-    }
-  ],
-
   "aboutMe": {
     "header": ["Hakkımda", "About"],
     "contents": [
@@ -36,8 +25,16 @@
       "https://nextjs.org/"
     ]
   },
-  "footer": {
+  "social": {
     "header": ["Bağlantılar", "Links"],
+    "linkedin": {
+      "name": "bugra-isik",
+      "link": "https://linkedin.com/in/bugra-isik"
+    },
+    "github": {
+      "name": "bugra-isik",
+      "link": "https://github.com/bugra-isik"
+    },
     "mail": "contact@devbugra.com"
   }
 }

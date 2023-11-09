@@ -1,14 +1,21 @@
-import Link from "next/link";
-import data from "@/db/data.json";
 import { Master } from "@/app/store";
+import Badge from "@/components/UI/Badge";
+import data from "@/db/data.json";
+import { motion } from "framer-motion";
+import Link from "next/link";
 import { useStore } from "zustand";
-import Badge from "../UI/Badge";
 
-export default function LinksM() {
-  const { theme, language, setClick, click, setIsOpen } = useStore(Master);
+export default function Links() {
+  const { theme, language, setClick, click } = useStore(Master);
 
   const list = data?.nav.map((item: any, index: number) => (
-    <div key={index} className={`flex items-center py-4`}>
+    <motion.li
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      id={item[1]}
+      key={index}
+      className={`items-center justify-between`}
+    >
       <div className={`flex gap-1`}>
         <Link
           href={``}
@@ -21,22 +28,18 @@ export default function LinksM() {
               ? "text-dark1"
               : "text-light1"
           } transition duration-300`}
-          onClick={() => {
-            setClick(item[1]);
-            setIsOpen();
-          }}
+          onClick={() => setClick(item[1])}
         >
           {item[language]}
         </Link>
-        {item[1] == "Blog" && <Badge value={language ? "soon" : "yakında"} />}
       </div>
-    </div>
+    </motion.li>
   ));
   return (
-    <li
-      className={`mb-6 flex w-full flex-col gap-6 pt-10 text-3xl sm:mb-8 sm:gap-8 sm:text-4xl md:mb-10 md:gap-10 md:text-5xl`}
+    <ul
+      className={`col-span-2 hidden h-[4dvw] items-center justify-evenly sm:flex`}
     >
       {list}
-    </li>
+    </ul>
   );
 }

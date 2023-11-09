@@ -1,16 +1,16 @@
 "use client";
-import Main from "@/components/main/Main";
-import Drawer from "@/components/mobile/drawer";
-import NavM from "@/components/mobile/NavM";
-import Nav from "@/components/nav/Nav";
-import MainContext from "@/context/Context";
-import { useContext } from "react";
-import Loader from "./loader";
+import Main from "@/components/Main/Main";
+import NavM from "@/components/Mobile/NavM";
+import { useWindowSize } from "@uidotdev/usehooks";
+import Drawer from "@/components/Mobile/Drawer";
+import { useStore } from "zustand";
+import { Master } from "./store";
+import Spinner from "@/components/UI/Spinner";
+import Navbar from "@/components/Navigation/Navbar";
 
 export default function Page() {
-  const { arr, setIsOpen } = useContext(MainContext);
-
-  const theme = ["bg-dark", "bg-light"];
+  const { setIsOpen, theme } = useStore(Master);
+  const { width } = useWindowSize();
 
   let a: number;
   const handleTouchStart = (e: any) => {
@@ -18,7 +18,7 @@ export default function Page() {
   };
   const handleTouchMove = (e: any) => {
     if (e.touches[0].clientX - a > 150) {
-      setIsOpen(true);
+      setIsOpen();
     }
   };
 
@@ -26,12 +26,19 @@ export default function Page() {
     <main
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
-      className={`${theme[arr]} relative inset-0 min-h-[100dvh] transition-colors duration-300`}
+      className={`${
+        theme ? "bg-light1" : "bg-dark1"
+      } relative inset-0 min-h-[100dvh] transition-colors duration-300`}
     >
-      <Loader />
-      <NavM />
-      <Drawer />
-      <Nav />
+      <Spinner />
+      {width && width < 1024 ? (
+        <>
+          <NavM />
+          <Drawer />
+        </>
+      ) : (
+        <Navbar />
+      )}
       <Main />
     </main>
   );

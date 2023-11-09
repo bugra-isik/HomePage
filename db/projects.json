@@ -1,13 +1,7 @@
 [
   {
-    "name": [
-      "Proje",
-      "Project"
-    ],
-    "content": [
-      "Hava durumu uygulaması.",
-      "Weather forecast app."
-    ],
+    "name": ["Proje", "Project"],
+    "content": ["Hava durumu uygulaması.", "Weather forecast app."],
     "image": "1Yad43v_L-RZ3BJZo6e1E_wUjULFSSz36",
     "tag": [
       "React",
@@ -22,14 +16,8 @@
     "link": "https://weather-tr-vite.vercel.app/"
   },
   {
-    "name": [
-      "Proje",
-      "Project"
-    ],
-    "content": [
-      "Login-register işlemleri.",
-      "Login-register operations."
-    ],
+    "name": ["Proje", "Project"],
+    "content": ["Login-register işlemleri.", "Login-register operations."],
     "image": "1_QNfhK8PW0i377DsxlDoRnDUsooapCG_",
     "tag": [
       "Next.js",
@@ -43,14 +31,8 @@
     "link": "https://bugra-login-register.vercel.app/"
   },
   {
-    "name": [
-      "Proje",
-      "Project"
-    ],
-    "content": [
-      "Pokémon listesi.",
-      "List of Pokémon."
-    ],
+    "name": ["Proje", "Project"],
+    "content": ["Pokémon listesi.", "List of Pokémon."],
     "image": "14RMYwRX82ovDAdqxPkhrwdYUpo8DdxT0",
     "tag": [
       "Next.js",
@@ -63,38 +45,20 @@
     "link": "https://bugra-isik-pokemon.vercel.app/"
   },
   {
-    "name": [
-      "Proje",
-      "Project"
-    ],
-    "content": [
-      "Tailwind Sınıf Oluşturucu.",
-      "Tailwind Class Generator."
-    ],
+    "name": ["Proje", "Project"],
+    "content": ["Tailwind Sınıf Oluşturucu.", "Tailwind Class Generator."],
     "image": "1igsDog-3OEu4J2ogKTr5TK7HRtG7afli",
-    "tag": [
-      "React",
-      "Tailwind CSS",
-      "TypeScript",
-      "Framer-Motion"
-    ],
+    "tag": ["React", "Tailwind CSS", "TypeScript", "Framer-Motion"],
     "link": "https://tw-class-generator.vercel.app/"
   },
   {
-    "name": [
-      "Proje",
-      "Project"
-    ],
+    "name": ["Proje", "Project"],
     "content": [
       "13 mini proje barındıran bir proje vitrini.",
       "A project showcase with 13 mini projects."
     ],
     "image": "1jbZpxXDwBlkEcYkl6zTDOFz5uKIVuVzR",
-    "tag": [
-      "HTML5",
-      "Tailwind CSS",
-      "JavaScript"
-    ],
+    "tag": ["HTML5", "Tailwind CSS", "JavaScript"],
     "link": "https://bugra-isik.github.io/13Projects/"
   }
 ]

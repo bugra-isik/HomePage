@@ -1,39 +1,24 @@
 "use client";
-import MainContext from "@/context/Context";
-import data from "@/db/data.json";
 import Script from "next/script";
-import { useEffect, useState } from "react";
 import "./global.sass";
+import { useStore } from "zustand";
+import { Master } from "./store";
 
 const metadata = {
   title: "Bugra || Web Developer",
 };
-
-const text = ["text-light", "text-dark"];
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const [arr, setArr] = useState<number>(0);
-  const [langArr, setLangArr] = useState<number>(0);
-  const [click, setClick] = useState(null);
-  const [isOpen, setIsOpen] = useState(false);
-  const [loader, setLoader] = useState<boolean>(true);
-
-  useEffect(() => {
-    localStorage.setItem("lang", langArr.toString());
-  }, [langArr]);
-
-  useEffect(() => {
-    localStorage.setItem("theme", arr.toString());
-  }, [arr]);
+  const { theme } = useStore(Master);
 
   return (
     <html
       lang="en"
-      className={`scrollbar-${arr} transition-colors duration-300`}
+      className={`scrollbar-${theme} transition-colors duration-300`}
     >
       <head>
         <title>{metadata.title}</title>
@@ -70,26 +55,7 @@ export default function RootLayout({
         `}
       </Script>
 
-      <body>
-        <MainContext.Provider
-          value={{
-            data,
-            arr,
-            setArr,
-            click,
-            setClick,
-            langArr,
-            setLangArr,
-            text,
-            isOpen,
-            setIsOpen,
-            loader,
-            setLoader,
-          }}
-        >
-          {children}
-        </MainContext.Provider>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

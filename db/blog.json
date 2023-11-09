@@ -1,0 +1,10 @@
+[
+  {
+    "route": "/pretty",
+    "header": ["Pretty", "Pretty"],
+    "Description": [
+      "Prettier kullanarak VSCode'daki tüm dosyaları biçimlendirme.",
+      "Format all files in VSCode using Prettier."
+    ]
+  }
+]

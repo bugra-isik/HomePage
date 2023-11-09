@@ -1,11 +1,11 @@
-import MainContext from "@/context/Context";
-import projectsApi from "@/db/projects.json";
+import { Master } from "@/app/store";
+import projectsDB from "@/db/projects.json";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useContext, useRef, useState } from "react";
-import "./index.css";
+import { useState } from "react";
 import { FaSpinner } from "react-icons/fa";
+import { useStore } from "zustand";
 
 type Projects = {
   name: string[];
@@ -16,13 +16,14 @@ type Projects = {
 };
 
 export default function Projects() {
-  const projects: Projects[] = projectsApi;
-  const { arr, langArr } = useContext(MainContext);
+  const { theme, language } = useStore(Master);
+  const projects: Projects[] = projectsDB;
+
   const [hidden, setHidden] = useState(false);
 
-  const text: string[] = ["text-dark", "text-light"];
+  const text: string[] = ["text-dark1", "text-light1"];
   const tags: string[] = ["text-[#424242]", "text-[#eeeeee]"];
-  const bg: string[] = ["bg-yellow", "bg-blue"];
+  const bg: string[] = ["bg-color1", "bg-colorA"];
 
   const container = {
     hidden: { opacity: 1, scale: 0 },
@@ -43,16 +44,16 @@ export default function Projects() {
       opacity: 1,
     },
   };
-
+  // w-72 sm:w-60 2xl:w-96
   const grid = projects.map((i, index) => (
     <motion.main
       key={index}
       variants={item}
-      className="item flip-card h-40 w-72  font-hyperlegible sm:h-40 sm:w-60 2xl:h-40 2xl:w-96"
+      className="item flip-card h-40 font-hyperlegible  sm:h-40 2xl:h-60"
     >
-      <section className=" flip-card-inner relative h-full w-full">
+      <section className="flip-card-inner relative h-full w-full">
         <article
-          className={`${bg[arr]} flip-card-front container absolute flex h-full w-full flex-col justify-between  py-2 pl-2 pr-4 text-dark drop-shadow backdrop-blur transition  duration-300 `}
+          className={`${bg[theme]} flip-card-front container absolute flex h-full w-full flex-col justify-between  px-4 pb-2 pt-3 text-dark1 drop-shadow backdrop-blur transition duration-300 sm:pt-4 md:pt-5 lg:pt-3 xl:pt-4 2xl:pt-5`}
         >
           <Link
             href={i.link}
@@ -61,18 +62,18 @@ export default function Projects() {
           ></Link>
 
           <h1
-            className={`${text[arr]} title select-none text-4xl font-black transition duration-300 lg:text-3xl 2xl:text-5xl`}
+            className={`${text[theme]} title select-none text-4xl font-black transition duration-300 lg:text-3xl 2xl:text-5xl`}
           >
-            {i.name[langArr]} {index + 1}
+            {i.name[language]} {index + 1}
           </h1>
 
           <p
-            className={`${text[arr]} hyphens-auto text-justify text-lg transition duration-300  lg:text-xs 2xl:text-base`}
+            className={`${text[theme]} hyphens-auto text-justify text-sm transition duration-300 sm:text-base md:text-xl lg:text-sm xl:text-lg 2xl:text-2xl`}
           >
-            {i.content[langArr]}
+            {i.content[language]}
           </p>
           <ul
-            className={`${tags[arr]} hover: flex cursor-cell flex-row flex-wrap gap-x-2 text-xs transition duration-300  sm:leading-3 lg:text-xs 2xl:text-base`}
+            className={`${tags[theme]} hover: flex cursor-cell flex-row flex-wrap gap-x-2 text-xs transition duration-300  sm:leading-3 lg:text-xs 2xl:text-base`}
           >
             {i.tag.map((item: any, index: number) => (
               <li key={index}>#{item}</li>
@@ -80,7 +81,7 @@ export default function Projects() {
           </ul>
         </article>
         <div
-          className={`flip-card-back absolute flex h-full w-full items-center justify-center overflow-hidden ${bg[arr]} drop-shadow-2xl`}
+          className={`flip-card-back absolute flex h-full w-full items-center justify-center overflow-hidden ${bg[theme]} drop-shadow-2xl`}
         >
           <Link
             href={i.link}
@@ -89,7 +90,7 @@ export default function Projects() {
           >
             <>
               <div
-                className={`z-50 animate-spin text-7xl text-dark `}
+                className={`z-50 animate-spin text-7xl text-dark1 `}
                 hidden={hidden}
               >
                 <FaSpinner />
@@ -97,7 +98,7 @@ export default function Projects() {
 
               <Image
                 src={`https://drive.google.com/uc?export=view&id=${i.image}`}
-                alt="There should be an image!"
+                alt="Image!"
                 fill
                 onLoad={() => setHidden(true)}
               />
@@ -109,15 +110,13 @@ export default function Projects() {
   ));
 
   return (
-    <>
-      <motion.div
-        variants={container}
-        initial="hidden"
-        animate="visible"
-        className="container mt-10 grid grid-cols-1 justify-items-center gap-10 sm:grid-cols-2 lg:grid-cols-3"
-      >
-        {grid}
-      </motion.div>
-    </>
+    <motion.div
+      variants={container}
+      initial="hidden"
+      animate="visible"
+      className="container mt-10 grid grid-cols-1 gap-x-5 gap-y-10 sm:grid-cols-2 lg:grid-cols-3"
+    >
+      {grid}
+    </motion.div>
   );
 }

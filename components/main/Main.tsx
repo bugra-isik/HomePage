@@ -1,24 +1,29 @@
 "use client";
-import MainContext from "@/context/Context";
-import { useContext } from "react";
-import About from "./About/About";
-import Home from "./Home/Home";
-import Projects from "./Projects/Projects";
-import TopButton from "../ui/TopButton";
+
+import About from "./About";
+import Home from "./Home";
+import Projects from "./Projects";
+import Blog from "./Blog";
+import TopButton from "../UI/TopButton";
+import { Master } from "@/app/store";
+import { useStore } from "zustand";
 
 export default function Main() {
-  const { click, arr, text } = useContext(MainContext);
+  const { click, theme } = useStore(Master);
 
   return (
     <>
       <TopButton />
       <main
-        className={`${text[arr]} container mx-auto lg:mt-10 px-10 font-hyperlegible text-sm sm:px-20 `}
+        className={`${
+          theme ? "text-light1" : "text-dark1"
+        } container mx-auto px-10 font-hyperlegible text-sm sm:px-20 lg:mt-10 `}
       >
         {click === null && <Home />}
         {click === "Home" && <Home />}
         {click === "Projects" && <Projects />}
         {click === "About" && <About />}
+        {click === "Blog" && <Blog />}
       </main>
     </>
   );

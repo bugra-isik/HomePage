@@ -1,11 +1,12 @@
 "use client";
-import MainContext from "@/context/Context";
+import { Master } from "@/app/store";
 import { useWindowScroll } from "@uidotdev/usehooks";
-import { useCallback, useContext } from "react";
+import { useCallback } from "react";
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
+import { useStore } from "zustand";
 
 export default function TopButton() {
-  const { arr } = useContext(MainContext);
+  const { theme } = useStore(Master);
 
   const [{ x, y }, scrollTo] = useWindowScroll();
 
@@ -23,7 +24,7 @@ export default function TopButton() {
     }
   }
 
-  const bgColor = ["text-yellow2", "text-blue2"];
+  const bgColor = ["text-color2", "text-colorB"];
 
   const scrollToTop = useCallback(() => {
     const p = document.documentElement || document.body;
@@ -37,7 +38,7 @@ export default function TopButton() {
   return (
     <BsFillArrowUpCircleFill
       onClick={() => scrollToTop()}
-      className={`${bgColor[arr]} ${scale} ${rotate} ${hidden} fixed right-[5dvw] top-[90vh] z-10 cursor-pointer drop-shadow-2xl transition duration-700`}
+      className={`${bgColor[theme]} ${scale} ${rotate} ${hidden} fixed right-[5dvw] top-[90vh] z-10 cursor-pointer drop-shadow-2xl transition duration-700`}
     />
   );
 }

@@ -5,31 +5,18 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  important: true,
   theme: {
     extend: {
       colors: {
-        dark: "#161616",
-        dark2: "#141414bf",
-        dark3: "#1c1c1c",
-        light: "#fcfcfc",
-        light2: "#f5f5f5bf",
-        light3: "#f8f8f8",
-        "dark-0.75": "rgba(22, 22, 22, 0.75)",
-        "light-0.75": "rgba(252, 252, 252, 0.75)",
-        yellow: "#eed272",
-        yellow2: "#f9eeb4",
-        blue: "#305c96",
-        blue2: "#87c0f1",
-        moon: "#767676",
-        grad1:"#42595d",
-        grad2:"#c5d6b8"
-      },
-      backgroundImage: {
-        grad: "radial-gradient(ellipse 80% 50% at 50% -20%,rgba(4, 0, 255, 0.5), rgba(255,255,255,0) )",
-        dividerDark:
-          "radial-gradient(50% 100% at 50% 100%, #141414bf 0%, rgba(0, 0, 0, 0) 100%)",
-        dividerLight:
-          "radial-gradient(50% 100% at 50% 100%, #f5f5f5bf 0%, rgba(0, 0, 0, 0) 100%)",
+        dark1: "#111111",
+        dark2: "#191919",
+        light1: "#ffffff",
+        light2: "#f5f5f4",
+        color1: "#eed272",
+        color2: "#f9eeb4",
+        colorA: "#305c96",
+        colorB: "#87c0f1",
       },
       fontFamily: {
         inter: [

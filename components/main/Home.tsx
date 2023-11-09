@@ -1,12 +1,13 @@
-import MainContext from "@/context/Context";
 import Image from "next/image";
-import { useContext, useState } from "react";
-import About from "../About/About";
+import { useState } from "react";
+import About from "./About";
 import { AnimatePresence, motion } from "framer-motion";
 import { useWindowSize } from "@uidotdev/usehooks";
+import { Master } from "@/app/store";
+import { useStore } from "zustand";
 
 export default function Home() {
-  const { arr, setLoader, loader, langArr } = useContext(MainContext);
+  const { language, theme, setLoader } = useStore(Master);
   const [isClose, setIsClose] = useState<boolean>(true);
 
   const driveImg = [
@@ -38,11 +39,11 @@ export default function Home() {
           }}
         >
           <Image
-            src={arr ? "/lightTheme.jpg" : "/darkTheme.jpg"}
+            src={theme ? "/lightTheme.jpg" : "/darkTheme.jpg"}
             alt="image"
             width={9999}
             height={1}
-            onLoad={() => setLoader((e) => !e)}
+            onLoad={() => setLoader()}
           />
         </motion.div>
         {width && width >= 1024 && (
@@ -60,10 +61,10 @@ export default function Home() {
                 }}
                 exit={{ opacity: 0, transition: { duration: 0.5 } }}
                 className={`${
-                  arr ? "text-light" : "text-dark"
+                  theme ? "text-light1" : "text-dark1"
                 } absolute inset-0  w-full items-center justify-center font-black`}
               >
-                <span>{langArr ? "Hello!" : "Merhaba!"}</span>
+                <span>{language ? "Hello!" : "Merhaba!"}</span>
               </motion.div>
             )}
           </AnimatePresence>
