@@ -1,6 +1,6 @@
 "use client";
 
-import Main from "../components/main/main";
+import Main from "@/components/main/main";
 import Drawer from "@/components/mobile/drawer";
 import NavM from "@/components/mobile/navM";
 import Navbar from "@/components/navigation/navbar";
