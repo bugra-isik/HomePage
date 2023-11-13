@@ -1,18 +1,16 @@
 "use client";
-
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { stackoverflowDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import CopyButton from "@/components/ui/copyButton";
-import Prism from "prismjs";
 import { useEffect, useState } from "react";
 
 export default function Page() {
   const [theme, setTheme] = useState<number | undefined>(undefined);
 
   useEffect(() => {
-    Prism.highlightAll();
     setTheme(Number(localStorage.getItem("theme")));
-  }, []);
+  }, [setTheme]);
 
-  console.log(theme);
   const install = `npm i -D prettier`;
   const script = `"pretty": "prettier --write \\"./**/*.{js,jsx,mjs,cjs,ts,tsx,json}\\""`;
   const npm = `npm run pretty`;
@@ -48,20 +46,16 @@ export default function Page() {
             >
               Install prettier:
             </h2>
-            <pre
-              className={`${
-                theme ? "bg-light1" : "bg-dark1"
-              } relative mb-5 flex rounded p-10`}
-            >
-              <CopyButton value={install} theme={theme} />
-              <code
-                className={`${
-                  theme ? "text-dark1" : "text-light1"
-                } language-json font-black`}
+            <div className={`relative`}>
+              <SyntaxHighlighter
+                language="text"
+                style={stackoverflowDark}
+                className={`relative mb-5 flex rounded bg-dark1 p-10`}
               >
                 {install}
-              </code>
-            </pre>
+              </SyntaxHighlighter>
+              <CopyButton value={install} theme={theme} />
+            </div>
             <h2
               className={`mb-5 text-xs sm:text-base md:text-xl lg:text-xs xl:text-base 2xl:text-xl`}
             >
@@ -79,39 +73,31 @@ export default function Page() {
               </span>
               :
             </h2>
-            <pre
-              className={`${
-                theme ? "bg-light1" : "bg-dark1"
-              } relative mb-5 flex rounded p-10`}
-            >
-              <CopyButton value={script} theme={theme} />
-              <code
-                className={`${
-                  theme ? "text-dark1" : "text-light1"
-                } language-json truncate font-black`}
+            <div className="relative">
+              <SyntaxHighlighter
+                language="json"
+                style={stackoverflowDark}
+                className={`relative mb-5 flex rounded bg-dark1 p-10`}
               >
                 {script}
-              </code>
-            </pre>
+              </SyntaxHighlighter>
+              <CopyButton value={script} theme={theme} />
+            </div>
             <h2
               className={`mb-5 text-xs sm:text-base md:text-xl lg:text-xs xl:text-base 2xl:text-xl`}
             >
-              Run script
+              Run script:
             </h2>
-            <pre
-              className={`${
-                theme ? "bg-light1" : "bg-dark1"
-              } relative flex rounded p-10`}
-            >
-              <CopyButton value={npm} theme={theme} />
-              <code
-                className={`${
-                  theme ? "text-dark1" : "text-light1"
-                } language-json font-black`}
+            <div className={`relative`}>
+              <SyntaxHighlighter
+                language="text"
+                style={stackoverflowDark}
+                className={`relative mb-5 flex rounded bg-dark1 p-10`}
               >
                 {npm}
-              </code>
-            </pre>
+              </SyntaxHighlighter>
+              <CopyButton value={npm} theme={theme} />
+            </div>
           </section>
         </main>
       )}

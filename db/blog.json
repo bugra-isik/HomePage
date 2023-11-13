@@ -1,6 +1,6 @@
 [
   {
-    "route": "/pretty",
+    "route": "/blogs/pretty",
     "header": ["Pretty", "Pretty"],
     "Description": [
       "Prettier kullanarak VSCode'daki tüm dosyaları biçimlendirme.",
@@ -8,7 +8,7 @@
     ]
   },
   {
-    "route": "/copybutton",
+    "route": "/blogs/copybutton",
     "header": ["CopyButton", "CopyButton"],
     "Description": [
       "Tailwind ile oluşturulan kopyalama butonu.",

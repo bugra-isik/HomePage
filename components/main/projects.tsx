@@ -1,5 +1,5 @@
 import { Master } from "@/app/store";
-import projectsDB from "@/db/projects.json";
+import projects from "@/db/projects.json";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,21 +7,10 @@ import { useState } from "react";
 import { FaSpinner } from "react-icons/fa";
 import { useStore } from "zustand";
 
-type Projects = {
-  name: string[];
-  content: string[];
-  image: string;
-  tag: string[];
-  link: string;
-};
-
 export default function Projects() {
   const { theme, language } = useStore(Master);
-  const projects: Projects[] = projectsDB;
-
   const [hidden, setHidden] = useState(false);
 
-  const text: string[] = ["text-dark1", "text-light1"];
   const tags: string[] = ["text-[#424242]", "text-[#eeeeee]"];
   const bg: string[] = ["bg-color1", "bg-colorA"];
 
@@ -58,22 +47,28 @@ export default function Projects() {
           <Link
             href={e.link}
             target="_blank"
-            className="absolute inset-0 top-0 h-full w-full lg:hidden"
+            className={`absolute inset-0 top-0 h-full w-full lg:hidden`}
           ></Link>
 
           <h1
-            className={`${text[theme]} title select-none text-4xl font-black transition duration-300 lg:text-3xl 2xl:text-5xl`}
+            className={`${
+              theme ? "text-light1" : "text-dark1"
+            } title select-none text-4xl font-black transition duration-300 lg:text-3xl 2xl:text-5xl`}
           >
             {e.name[language]} {index + 1}
           </h1>
 
           <p
-            className={`${text[theme]} hyphens-auto text-justify text-sm transition duration-300 sm:text-base md:text-xl lg:text-sm xl:text-lg 2xl:text-2xl`}
+            className={`${
+              theme ? "text-light1" : "text-dark1"
+            } text-justify text-sm transition duration-300 after:hyphens-auto sm:text-base md:text-xl lg:text-sm xl:text-lg 2xl:text-2xl`}
           >
             {e.content[language]}
           </p>
           <ul
-            className={`${tags[theme]} hover: flex cursor-cell flex-row flex-wrap gap-x-2 text-xs transition duration-300  sm:leading-3 lg:text-xs 2xl:text-base`}
+            className={`${
+              theme ? "text-light1/75" : "text-dark1/75"
+            } hover: flex cursor-cell flex-row flex-wrap gap-x-2 text-xs transition duration-300  sm:leading-3 lg:text-xs 2xl:text-base`}
           >
             {e.tag.map((item: any, index: number) => (
               <li key={index}>#{item}</li>

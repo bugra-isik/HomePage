@@ -9,11 +9,7 @@ export default function CopyButton({ value, theme }) {
 
   return (
     <button
-      className={`${
-        theme
-          ? "border-light2 text-dark1 hover:bg-light2"
-          : "border-dark2 text-light1 hover:bg-dark2"
-      } absolute right-2 top-2 flex w-24 cursor-copy items-center justify-center gap-2 rounded border-2 px-1 py-1 text-xs transition sm:text-sm md:text-base lg:text-xs xl:text-sm 2xl:text-base`}
+      className={`absolute right-2 top-2 flex w-24 cursor-copy items-center justify-center gap-2 rounded border border-light2/50 px-1 py-1 text-xs text-light1 transition hover:bg-dark2 sm:text-sm md:text-base lg:text-xs xl:text-sm 2xl:text-base`}
       onClick={() => {
         value && copyToClipboard(value);
         setToggle(false);
