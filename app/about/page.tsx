@@ -1,15 +1,12 @@
 "use client";
-
-import Main from "@/components/main/main";
 import Drawer from "@/components/mobile/drawer";
 import NavM from "@/components/mobile/navM";
 import Navbar from "@/components/navigation/navbar";
-import Spinner from "@/components/ui/spinner";
 import { useWindowSize } from "@uidotdev/usehooks";
 import { useStore } from "zustand";
-import { Master } from "./store";
-import Home from "@/components/main/home";
+import { Master } from "../store";
 import TopButton from "@/components/ui/topButton";
+import About from "@/components/main/about/about";
 
 export default function Page() {
   const { setIsOpen, theme } = useStore(Master);
@@ -33,7 +30,6 @@ export default function Page() {
         theme ? "bg-light1" : "bg-dark1"
       } relative inset-0 min-h-[100dvh] transition-colors duration-300`}
     >
-      <Spinner />
       {width && width < 1024 ? (
         <>
           <NavM />
@@ -43,12 +39,13 @@ export default function Page() {
         <Navbar />
       )}
       <>
+        <TopButton />
         <main
           className={`${
             theme ? "text-light1" : "text-dark1"
           } container mx-auto px-10 font-hyperlegible text-sm sm:px-20 lg:mt-10 `}
         >
-          <Home />
+          <About />
         </main>
       </>
     </main>

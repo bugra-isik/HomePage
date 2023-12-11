@@ -10,8 +10,6 @@ import { useStore } from "zustand";
 export default function Projects() {
   const { theme, language } = useStore(Master);
   const [hidden, setHidden] = useState(false);
-
-  const tags: string[] = ["text-[#424242]", "text-[#eeeeee]"];
   const bg: string[] = ["bg-color1", "bg-colorA"];
 
   const container = {
@@ -40,7 +38,7 @@ export default function Projects() {
       variants={item}
       className="item flip-card h-40 font-hyperlegible  sm:h-40 2xl:h-60"
     >
-      <section className="flip-card-inner relative h-full w-full">
+      <section className="flip-card-inner relative h-full w-full ">
         <article
           className={`${bg[theme]} flip-card-front container absolute flex h-full w-full flex-col justify-between  rounded px-4 pb-2 pt-3 text-dark1 drop-shadow backdrop-blur transition duration-300 sm:pt-4 md:pt-5 lg:pt-3 xl:pt-4 2xl:pt-5`}
         >
@@ -85,17 +83,18 @@ export default function Projects() {
           >
             <>
               <div
-                className={`z-50 animate-spin text-7xl text-dark1 `}
+                className={`z-50 animate-spin text-7xl text-dark1  `}
                 hidden={hidden}
               >
                 <FaSpinner />
               </div>
 
               <Image
-                src={`https://drive.google.com/uc?export=view&id=${e.image}`}
+                src={`/projects/${e.image}.png`}
                 alt="Image!"
                 fill
                 onLoad={() => setHidden(true)}
+                className={`object-cover`}
               />
             </>
           </Link>

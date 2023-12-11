@@ -36,6 +36,16 @@ export default function Social({ theme, language }) {
           <AiOutlineMail />
           {about.social.mail}
         </SocialLink>
+        {/* <Link
+          href={language?"/cv/en.pdf":"/cv/tr.pdf"}
+          className={`${
+            theme ? "bg-light2" : "bg-dark2"
+          } flex w-fit select-all items-center gap-2 rounded-xl p-1 px-2 text-sm drop-shadow-2xl transition duration-300 sm:text-lg md:text-2xl lg:text-sm xl:text-lg  2xl:text-2xl`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          CV
+        </Link> */}
       </ul>
     </section>
   );

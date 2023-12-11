@@ -7,7 +7,7 @@ import { useStore } from "zustand";
 export default function Links() {
   const { theme, language, setClick, click } = useStore(Master);
 
-  const list = data?.nav.map((item: any, index: number) => (
+  const list = data?.nav.map((item, index) => (
     <motion.li
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -17,15 +17,15 @@ export default function Links() {
     >
       <div className={`flex gap-1`}>
         <Link
-          href={``}
+          href={item[1] == "Home" ? "/" : item[1].toLowerCase()}
           className={`${theme ? "hover:text-colorA" : "hover:text-color1"} ${
             click === item[1]
               ? theme
                 ? "text-colorA"
                 : "text-color1"
               : theme
-              ? "text-dark1"
-              : "text-light1"
+                ? "text-dark1"
+                : "text-light1"
           } transition duration-300`}
           onClick={() => setClick(item[1])}
         >

@@ -17,6 +17,13 @@
   },
   {
     "name": ["Proje", "Project"],
+    "content": ["Verbal", "Verbal"],
+    "image": "1aipjpYaBHps425amaM7t_nTSY6ffnqqN",
+    "tag": ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+    "link": "https://verbal-nextjs.netlify.app/"
+  },
+  {
+    "name": ["Proje", "Project"],
     "content": ["Login-register işlemleri.", "Login-register operations."],
     "image": "1_QNfhK8PW0i377DsxlDoRnDUsooapCG_",
     "tag": [

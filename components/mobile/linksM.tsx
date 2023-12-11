@@ -10,15 +10,15 @@ export default function LinksM() {
     <div key={index} className={`flex items-center py-4`}>
       <div className={`flex gap-1`}>
         <Link
-          href={``}
+          href={item[1] == "Home" ? "/" : item[1].toLowerCase()}
           className={`${theme ? "hover:text-colorA" : "hover:text-color1"} ${
             click === item[1]
               ? theme
                 ? "text-colorA"
                 : "text-color1"
               : theme
-              ? "text-dark1"
-              : "text-light1"
+                ? "text-dark1"
+                : "text-light1"
           } transition duration-300`}
           onClick={() => {
             setClick(item[1]);

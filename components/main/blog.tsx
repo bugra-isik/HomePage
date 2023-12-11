@@ -25,7 +25,6 @@ export default function Blog() {
   const blogElements = blogData.map((e, i) => (
     <motion.div variants={item} key={i}>
       <Link
-        target="_blank"
         className={`${
           theme ? "bg-light2 hover:bg-light1/75" : "bg-dark2 hover:bg-dark1/75"
         } grid h-20 w-full grid-cols-7 items-center gap-5 overflow-hidden rounded pl-5 drop-shadow transition duration-300 sm:gap-5 sm:pl-10`}
