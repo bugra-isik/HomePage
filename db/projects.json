@@ -17,7 +17,7 @@
   },
   {
     "name": ["Proje", "Project"],
-    "content": ["Verbal", "Verbal"],
+    "content": ["Verbal.", "Verbal."],
     "image": "1aipjpYaBHps425amaM7t_nTSY6ffnqqN",
     "tag": ["React", "Next.js", "Tailwind CSS", "TypeScript"],
     "link": "https://verbal-nextjs.netlify.app/"
