@@ -1,4 +1,5 @@
 "use client";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
 import { useStore } from "zustand";
 import "./global.sass";
@@ -55,7 +56,10 @@ export default function RootLayout({
         `}
       </Script>
 
-      <body>{children}</body>
+      <body>
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   );
 }
