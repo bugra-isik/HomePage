@@ -4,6 +4,7 @@ import Script from "next/script";
 import { useStore } from "zustand";
 import "./global.sass";
 import { Master } from "./store";
+import { Analytics } from "@vercel/analytics/react";
 
 const metadata = {
   title: "Bugra || Web Developer",
@@ -59,6 +60,7 @@ export default function RootLayout({
       <body>
         {children}
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
